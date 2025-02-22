@@ -1,0 +1,3376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ampersand Academy - HTML Notes</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="HTML Guide and Notes" />
+    <meta name="author" content="Ampersand Academy" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/simplelightbox/simple-lightbox.min.css"
+    />
+
+    <!-- Dark Github Gist CSS -->
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="assets/css/darkGist.min.css"
+    />
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+
+  <body class="docs-page">
+    <header class="header fixed-top">
+      <div class="branding docs-branding">
+        <div class="container-fluid position-relative py-2">
+          <div class="docs-logo-wrapper">
+            <button
+              id="docs-sidebar-toggler"
+              class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+              type="button"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="site-logo">
+              <a class="navbar-brand" href="index.html"
+                ><img
+                  class="logo me-2"
+                  src="assets/images/Ampersand_Academy_Logo.svg"
+                  alt="logo"
+                  height="50"
+              /></a>
+            </div>
+          </div>
+          <!--//docs-logo-wrapper-->
+          <div
+            class="docs-top-utilities d-flex justify-content-end align-items-center"
+          >
+            <ul
+              class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex"
+            >
+              <li class="list-inline-item">
+                <a
+                  href="https://www.facebook.com/AmpersandAcademy"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default"
+                  target="_blank"
+                  ><i class="fab fa-google fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.linkedin.com/company/ampersandacademy/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.instagram.com/ampersandacad/"
+                  target="_blank"
+                  ><i class="fab fa-instagram fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w"
+                  target="_blank"
+                  ><i class="fab fa-whatsapp fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://t.me/ampersandacad" target="_blank"
+                  ><i class="fab fa-telegram fa-fw"></i
+                ></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//docs-top-utilities-->
+        </div>
+        <!--//container-->
+      </div>
+      <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+      <div id="docs-sidebar" class="docs-sidebar">
+        <div class="top-search-box d-lg-none p-3">
+          <form class="search-form">
+            <input
+              type="text"
+              placeholder="Search the docs..."
+              name="search"
+              class="form-control search-input"
+            />
+            <button type="submit" class="btn search-btn" value="Search">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <nav id="docs-nav" class="docs-nav navbar">
+          <ul class="section-items list-unstyled nav flex-column pb-3">
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-1"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-info-circle"></i></span
+                >Introduction</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-1">What is HTML?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-2">HTML vs HTML5</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-3">Setting Up</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-2"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-box-open"></i></span
+                >HTML Basics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-1"
+                >Document Structure</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-2">Elements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-3">Attributes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-4">Inline Styles</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-3"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-text-height"></i></span
+                >Text Content</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-1">Headings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-2">Paragraphs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-3">Lists</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-4"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-link"></i></span
+                >Media & Hyperlinks</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-1">Links</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-2">Images</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-3">Tables</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-5"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-layer-group"></i></span
+                >Document Organization</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-1">Divs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-2">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-3">IDs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-4">Semantic HTML</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-6"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-file-alt"></i></span
+                >Forms</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-1">Form Basics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-2">Form Attributes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-3">Form Elements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-4">Input Types</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-5">Input Attributes</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-7"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-code"></i></span
+                >HTML5 Features</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-1">New Elements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-2">APIs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-3">Best Practices</a>
+            </li>
+          </ul>
+        </nav>
+        <!--//docs-nav-->
+      </div>
+      <!--//docs-sidebar-->
+      <div class="docs-content">
+        <div class="container">
+          <article class="docs-article" id="section-1">
+            <header class="docs-header">
+              <h1 class="docs-heading">Introduction to HTML</h1>
+              <section class="docs-intro">
+                <p>
+                  HTML (HyperText Markup Language) is the standard markup
+                  language for creating web pages. It defines the structure and
+                  content of a webpage.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+            <section class="docs-section" id="item-1-1">
+              <h2 class="section-heading">What is HTML?</h2>
+              <p>
+                HTML stands for HyperText Markup Language. It is the standard
+                markup language used to create web pages. HTML provides the
+                structure of a webpage, which is then enhanced and modified by
+                other technologies like CSS and JavaScript.
+              </p>
+              <p>Key points about HTML:</p>
+              <ul>
+                <li>
+                  HTML is not a programming language; it is a markup language
+                </li>
+                <li>HTML consists of a series of elements/tags</li>
+                <li>HTML elements tell the browser how to display content</li>
+                <li>HTML documents are also called web pages</li>
+              </ul>
+            </section>
+
+            <section class="docs-section" id="item-1-2">
+              <h2 class="section-heading">HTML vs HTML5</h2>
+              <p>
+                HTML5 is the latest version of HTML, which introduces many new
+                features and improvements over HTML4.
+              </p>
+
+              <h4>Key Differences</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>HTML4</th>
+                      <th>HTML5</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Doctype Declaration</td>
+                      <td>Long and complex</td>
+                      <td>Simple: <code>&lt;!DOCTYPE html&gt;</code></td>
+                    </tr>
+                    <tr>
+                      <td>Character Encoding</td>
+                      <td>Complex declaration</td>
+                      <td>Simple: <code>&lt;meta charset="UTF-8"&gt;</code></td>
+                    </tr>
+                    <tr>
+                      <td>Semantic Elements</td>
+                      <td>Limited (<code>&lt;div&gt;</code> heavily used)</td>
+                      <td>
+                        Many new tags: <code>&lt;header&gt;</code>,
+                        <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>,
+                        etc.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Form Controls</td>
+                      <td>Basic</td>
+                      <td>
+                        Enhanced with new input types: email, date, time, color,
+                        etc.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Multimedia</td>
+                      <td>Required plugins</td>
+                      <td>
+                        Native support with <code>&lt;audio&gt;</code> and
+                        <code>&lt;video&gt;</code> tags
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Graphics</td>
+                      <td>Limited to images</td>
+                      <td>
+                        Added <code>&lt;canvas&gt;</code> and
+                        <code>&lt;svg&gt;</code> for advanced graphics
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Storage</td>
+                      <td>Cookies only</td>
+                      <td>Added localStorage, sessionStorage, and IndexedDB</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="docs-section" id="item-1-3">
+              <h2 class="section-heading">Setting Up</h2>
+              <p>To get started with HTML, you need very little:</p>
+              <ul>
+                <li>
+                  A text editor (e.g., Visual Studio Code, Sublime Text,
+                  Notepad++)
+                </li>
+                <li>A web browser (e.g., Chrome, Firefox, Safari)</li>
+              </ul>
+
+              <h4>Creating Your First HTML Page</h4>
+              <ol>
+                <li>Open your text editor</li>
+                <li>
+                  Create a new file and save it with a .html extension (e.g.,
+                  index.html)
+                </li>
+                <li>Write your HTML code</li>
+                <li>Save the file</li>
+                <li>Open the file in a web browser</li>
+              </ol>
+
+              <h4>Basic Template</h4>
+              <p>Here's a basic HTML template to get you started:</p>
+              <pre>
+                        <code class="language-html">&lt;!DOCTYPE html&gt;
+                            &lt;html lang="en"&gt;
+                            &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                            &lt;title&gt;My First HTML Page&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                            &lt;p&gt;This is my first HTML page.&lt;/p&gt;
+                            &lt;/body&gt;
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
+            </section>
+          </article>
+          <article class="docs-article" id="section-2">
+            <header class="docs-header">
+              <h1 class="docs-heading">HTML Basics</h1>
+              <section class="docs-intro">
+                <p>
+                  Understanding the fundamental building blocks of HTML
+                  documents.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-2-1">
+              <h2 class="section-heading">Document Structure</h2>
+              <p>
+                Every HTML document has a required structure that includes the
+                following declarations and elements:
+              </p>
+
+              <h4>DOCTYPE Declaration</h4>
+              <p>
+                The DOCTYPE declaration is not an HTML tag; it is an instruction
+                to the web browser about what version of HTML the page is
+                written in.
+              </p>
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;</code></pre>
+
+              <h4>HTML Element</h4>
+              <p>
+                The <code>&lt;html&gt;</code> element is the root element of an
+                HTML page. All other elements are contained within it.
+              </p>
+              <pre>
+                        <code class="language-html">&lt;html lang="en"&gt;
+                            &lt;!-- All your HTML content goes here --&gt;
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
+
+              <h4>HEAD Element</h4>
+              <p>
+                The <code>&lt;head&gt;</code> element contains meta-information
+                about the document, such as its title, scripts, and links to
+                stylesheets.
+              </p>
+              <pre><code class="language-html">&lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Page Title&lt;/title&gt;
+                        &lt;/head&gt;</code>
+                    </pre>
+
+              <h4>TITLE Element</h4>
+              <p>
+                The <code>&lt;title&gt;</code> element defines the title of the
+                document, which appears in the browser's title bar or tab.
+              </p>
+              <pre><code class="language-html">&lt;title&gt;My Web Page&lt;/title&gt;</code></pre>
+
+              <h4>BODY Element</h4>
+              <p>
+                The <code>&lt;body&gt;</code> element contains all the content
+                that is displayed on a web page, including text, images, links,
+                and more.
+              </p>
+              <pre><code class="language-html">&lt;body&gt;
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    The structure of an HTML document is hierarchical. The
+                    <code>&lt;html&gt;</code> element contains the
+                    <code>&lt;head&gt;</code> and
+                    <code>&lt;body&gt;</code> elements. The
+                    <code>&lt;head&gt;</code> contains document metadata, while
+                    the <code>&lt;body&gt;</code> contains the visible content.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-2-2">
+              <h2 class="section-heading">Elements</h2>
+              <p>
+                HTML elements are the building blocks of HTML pages. Elements
+                are represented by tags, and they define various content types
+                and their structure.
+              </p>
+
+              <h4>Anatomy of an HTML Element</h4>
+              <p>A typical HTML element consists of:</p>
+              <ul>
+                <li>Opening tag: <code>&lt;tagname&gt;</code></li>
+                <li>
+                  Content: The information between the opening and closing tags
+                </li>
+                <li>Closing tag: <code>&lt;/tagname&gt;</code></li>
+              </ul>
+
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <img
+                    class="figure-img img-fluid shadow rounded w-100 mb-4"
+                    src="assets/images/html-element-structure.png"
+                    alt="HTML Element Structure"
+                    title="Structure of an HTML Element"
+                  />
+                </div>
+              </div>
+
+              <h4>Nesting HTML Elements</h4>
+              <p>
+                HTML elements can be nested inside other elements to create a
+                hierarchical structure.
+              </p>
+              <pre><code class="language-html">&lt;div&gt;
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;p&gt;This paragraph is inside a div element.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Empty Elements</h4>
+              <p>
+                Some HTML elements have no content and therefore no closing tag.
+                These are called empty elements or self-closing tags.
+              </p>
+              <p>Examples:</p>
+              <pre><code class="language-html">&lt;img src="image.jpg" alt="An image"&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;input type="text"&gt;
+&lt;meta charset="UTF-8"&gt;</code></pre>
+
+              <p>
+                In HTML5, the trailing forward slash in self-closing tags is
+                optional:
+              </p>
+              <pre><code class="language-html">&lt;!-- These are equivalent in HTML5 --&gt;
+&lt;img src="image.jpg" alt="An image"&gt;
+&lt;img src="image.jpg" alt="An image" /&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-2-3">
+              <h2 class="section-heading">Attributes</h2>
+              <p>
+                HTML attributes provide additional information about an element.
+                They are always specified in the opening tag and usually come in
+                name/value pairs.
+              </p>
+
+              <h4>Attribute Syntax</h4>
+              <pre><code class="language-html">&lt;element attribute="value"&gt;Content&lt;/element&gt;</code></pre>
+
+              <h4>Common Attributes</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Purpose</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>class</code></td>
+                      <td>Specifies one or more class names for an element</td>
+                      <td><code>&lt;div class="container main"&gt;</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>id</code></td>
+                      <td>Specifies a unique id for an element</td>
+                      <td><code>&lt;div id="header"&gt;</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>src</code></td>
+                      <td>Specifies the URL of an external resource</td>
+                      <td><code>&lt;img src="image.jpg"&gt;</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>href</code></td>
+                      <td>Specifies the URL of a linked resource</td>
+                      <td><code>&lt;a href="https://example.com"&gt;</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>alt</code></td>
+                      <td>Provides alternative text for image elements</td>
+                      <td>
+                        <code
+                          >&lt;img src="logo.png" alt="Company Logo"&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>style</code></td>
+                      <td>Specifies inline CSS styles for an element</td>
+                      <td><code>&lt;p style="color: blue;"&gt;</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>title</code></td>
+                      <td>Provides additional information (tooltip text)</td>
+                      <td>
+                        <code
+                          >&lt;abbr title="HyperText Markup
+                          Language"&gt;HTML&lt;/abbr&gt;</code
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Boolean Attributes</h4>
+              <p>
+                Some attributes are boolean, meaning they can be present or
+                absent, but don't have a value assigned to them.
+              </p>
+              <pre><code class="language-html">&lt;!-- These are equivalent --&gt;
+&lt;input type="checkbox" checked&gt;
+&lt;input type="checkbox" checked="checked"&gt;</code></pre>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    Important
+                  </h4>
+                  <p>
+                    In HTML, attribute names are not case-sensitive, but it's a
+                    best practice to use lowercase. Values should be enclosed in
+                    double quotes, though single quotes can also be used.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-2-4">
+              <h2 class="section-heading">Inline Styles</h2>
+              <p>
+                The <code>style</code> attribute allows you to add CSS styles
+                directly to an HTML element. While separating content (HTML)
+                from presentation (CSS) is generally recommended, inline styles
+                can be useful for quick styling or testing.
+              </p>
+
+              <h4>Basic Syntax</h4>
+              <pre><code class="language-html">&lt;element style="property1: value1; property2: value2;"&gt;Content&lt;/element&gt;</code></pre>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Text color and font size --&gt;
+&lt;p style="color: red; font-size: 20px;"&gt;This is a red paragraph with larger text.&lt;/p&gt;
+
+&lt;!-- Background color and text alignment --&gt;
+&lt;div style="background-color: #f0f0f0; text-align: center; padding: 10px;"&gt;
+Centered text in a gray box
+&lt;/div&gt;
+
+&lt;!-- Multiple styling properties --&gt;
+&lt;h2 style="color: #003366; font-family: Arial, sans-serif; text-decoration: underline; margin-bottom: 15px;"&gt;
+Styled Heading
+&lt;/h2&gt;</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    While inline styles work, they're generally not recommended
+                    for production websites because:
+                  </p>
+                  <ul class="mb-0">
+                    <li>They mix content with presentation</li>
+                    <li>They make maintenance harder</li>
+                    <li>
+                      They can't be easily reused across multiple elements
+                    </li>
+                    <li>
+                      They override external stylesheets due to their high
+                      specificity
+                    </li>
+                  </ul>
+                  <p class="mb-0">
+                    For larger projects, use external CSS files instead.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+          <article class="docs-article" id="section-3">
+            <header class="docs-header">
+              <h1 class="docs-heading">Text Content</h1>
+              <section class="docs-intro">
+                <p>
+                  HTML provides various elements to structure and format text
+                  content on web pages.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-3-1">
+              <h2 class="section-heading">Headings</h2>
+              <p>
+                HTML offers six levels of headings, from
+                <code>&lt;h1&gt;</code> (most important) to
+                <code>&lt;h6&gt;</code> (least important). Headings are
+                block-level elements and automatically add space before and
+                after the content.
+              </p>
+
+              <h4>Heading Elements</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <pre><code class="language-html">&lt;h1&gt;This is Heading 1&lt;/h1&gt;
+&lt;h2&gt;This is Heading 2&lt;/h2&gt;
+&lt;h3&gt;This is Heading 3&lt;/h3&gt;
+&lt;h4&gt;This is Heading 4&lt;/h4&gt;
+&lt;h5&gt;This is Heading 5&lt;/h5&gt;
+&lt;h6&gt;This is Heading 6&lt;/h6&gt;</code></pre>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <h1 style="font-size: 2rem">This is Heading 1</h1>
+                    <h2 style="font-size: 1.75rem">This is Heading 2</h2>
+                    <h3 style="font-size: 1.5rem">This is Heading 3</h3>
+                    <h4 style="font-size: 1.25rem">This is Heading 4</h4>
+                    <h5 style="font-size: 1rem">This is Heading 5</h5>
+                    <h6 style="font-size: 0.875rem">This is Heading 6</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Best Practices for Headings
+                  </h4>
+                  <ul class="mb-0">
+                    <li>
+                      Use <code>&lt;h1&gt;</code> for the main heading of your
+                      page (typically once per page)
+                    </li>
+                    <li>
+                      Structure headings hierarchically (h1, then h2, then h3,
+                      etc.)
+                    </li>
+                    <li>
+                      Don't skip heading levels for proper document outline
+                    </li>
+                    <li>Headings are important for accessibility and SEO</li>
+                  </ul>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-3-2">
+              <h2 class="section-heading">Paragraphs</h2>
+              <p>
+                The <code>&lt;p&gt;</code> element defines a paragraph in HTML.
+                Browsers automatically add some margin before and after each
+                paragraph.
+              </p>
+
+              <h4>Basic Usage</h4>
+              <pre><code class="language-html">&lt;p&gt;This is a paragraph of text. Paragraphs are block-level elements in HTML.&lt;/p&gt;
+&lt;p&gt;This is another paragraph. Notice how browsers add space between paragraphs.&lt;/p&gt;</code></pre>
+
+              <h4>Formatting Within Paragraphs</h4>
+              <p>
+                You can use various inline elements within paragraphs to format
+                text:
+              </p>
+              <pre><code class="language-html">&lt;p&gt;
+  This text is normal, &lt;b&gt;this text is bold&lt;/b&gt;, and &lt;i&gt;this text is italic&lt;/i&gt;.
+  You can also use &lt;em&gt;emphasis&lt;/em&gt; or &lt;strong&gt;strong importance&lt;/strong&gt;.
+  This text contains a &lt;br&gt; line break.
+&lt;/p&gt;</code></pre>
+
+              <div class="p-3 bg-light rounded">
+                <p>
+                  This text is normal, <b>this text is bold</b>, and
+                  <i>this text is italic</i>. You can also use
+                  <em>emphasis</em> or <strong>strong importance</strong>. This
+                  text contains a <br />
+                  line break.
+                </p>
+              </div>
+
+              <h4>Other Text Formatting Elements</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Element</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;mark&gt;</code></td>
+                      <td>Highlighted text</td>
+                      <td><mark>Highlighted text</mark></td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;del&gt;</code></td>
+                      <td>Deleted text</td>
+                      <td><del>Deleted text</del></td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;ins&gt;</code></td>
+                      <td>Inserted text</td>
+                      <td><ins>Inserted text</ins></td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;sub&gt;</code></td>
+                      <td>Subscript text</td>
+                      <td>H<sub>2</sub>O</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;sup&gt;</code></td>
+                      <td>Superscript text</td>
+                      <td>E=mc<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;code&gt;</code></td>
+                      <td>Computer code</td>
+                      <td><code>function example() { ... }</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;pre&gt;</code></td>
+                      <td>Preformatted text</td>
+                      <td>
+                        <pre>
+  This text
+  preserves spaces
+  and line breaks</pre
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="docs-section" id="item-3-3">
+              <h2 class="section-heading">Lists</h2>
+              <p>
+                HTML provides three types of lists to organize content:
+                unordered lists, ordered lists, and definition lists.
+              </p>
+
+              <h4>Unordered Lists</h4>
+              <p>
+                Unordered lists (<code>&lt;ul&gt;</code>) display items with
+                bullet points. Each list item is defined with the
+                <code>&lt;li&gt;</code> tag.
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <ul>
+                      <li>Coffee</li>
+                      <li>Tea</li>
+                      <li>Milk</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Ordered Lists</h4>
+              <p>
+                Ordered lists (<code>&lt;ol&gt;</code>) display items with
+                numbers. Each list item is defined with the
+                <code>&lt;li&gt;</code> tag.
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <pre><code class="language-html">&lt;ol&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+  &lt;li&gt;Third step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <ol>
+                      <li>First step</li>
+                      <li>Second step</li>
+                      <li>Third step</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Definition Lists</h4>
+              <p>
+                Definition lists (<code>&lt;dl&gt;</code>) display items as
+                term-definition pairs, useful for glossaries or metadata.
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <dl>
+                      <dt>HTML</dt>
+                      <dd>HyperText Markup Language</dd>
+
+                      <dt>CSS</dt>
+                      <dd>Cascading Style Sheets</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Nested Lists</h4>
+              <p>Lists can be nested inside one another:</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Beverages
+    &lt;ul&gt;
+      &lt;li&gt;Coffee&lt;/li&gt;
+      &lt;li&gt;Tea&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Desserts
+    &lt;ul&gt;
+      &lt;li&gt;Cake&lt;/li&gt;
+      &lt;li&gt;Ice cream&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <ul>
+                      <li>
+                        Beverages
+                        <ul>
+                          <li>Coffee</li>
+                          <li>Tea</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Desserts
+                        <ul>
+                          <li>Cake</li>
+                          <li>Ice cream</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+          <article class="docs-article" id="section-4">
+            <header class="docs-header">
+              <h1 class="docs-heading">Media & Hyperlinks</h1>
+              <section class="docs-intro">
+                <p>
+                  Learn how to incorporate links, images, and tables into your
+                  HTML documents.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-4-1">
+              <h2 class="section-heading">Links</h2>
+              <p>
+                Links, or hyperlinks, allow users to navigate between web pages.
+                In HTML, links are created using the
+                <code>&lt;a&gt;</code> (anchor) element with the
+                <code>href</code> attribute.
+              </p>
+
+              <h4>Basic Link Syntax</h4>
+              <pre><code class="language-html">&lt;a href="url"&gt;Link text&lt;/a&gt;</code></pre>
+
+              <h4>Types of Links</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Example</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Absolute URL</td>
+                      <td>
+                        <code
+                          >&lt;a href="https://www.example.com"&gt;Example
+                          Website&lt;/a&gt;</code
+                        >
+                      </td>
+                      <td>Links to an external resource with full URL</td>
+                    </tr>
+                    <tr>
+                      <td>Relative URL</td>
+                      <td>
+                        <code
+                          >&lt;a href="about.html"&gt;About Us&lt;/a&gt;</code
+                        >
+                      </td>
+                      <td>Links to a page within the same website</td>
+                    </tr>
+                    <tr>
+                      <td>Email Link</td>
+                      <td>
+                        <code
+                          >&lt;a href="mailto:info@example.com"&gt;Email
+                          Us&lt;/a&gt;</code
+                        >
+                      </td>
+                      <td>Opens the user's email client</td>
+                    </tr>
+                    <tr>
+                      <td>Phone Link</td>
+                      <td>
+                        <code
+                          >&lt;a href="tel:+1234567890"&gt;Call
+                          Us&lt;/a&gt;</code
+                        >
+                      </td>
+                      <td>Initiates a phone call on mobile devices</td>
+                    </tr>
+                    <tr>
+                      <td>ID Link (Bookmark)</td>
+                      <td>
+                        <code
+                          >&lt;a href="#section1"&gt;Go to Section
+                          1&lt;/a&gt;</code
+                        >
+                      </td>
+                      <td>
+                        Links to an element with a specific ID on the same page
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Link Attributes</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Value</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>target</code></td>
+                      <td><code>_blank</code></td>
+                      <td>Opens the link in a new tab/window</td>
+                    </tr>
+                    <tr>
+                      <td><code>title</code></td>
+                      <td>Text</td>
+                      <td>Displays tooltip text on hover</td>
+                    </tr>
+                    <tr>
+                      <td><code>download</code></td>
+                      <td>Filename or empty</td>
+                      <td>
+                        Suggests downloading the link instead of navigating
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>rel</code></td>
+                      <td>
+                        <code>nofollow</code>, <code>noopener</code>, etc.
+                      </td>
+                      <td>
+                        Specifies relationship between current and linked
+                        document
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- External link that opens in a new tab --&gt;
+&lt;a href="https://www.example.com" target="_blank" rel="noopener"&gt;Visit Example.com&lt;/a&gt;
+
+&lt;!-- Link to an email address with subject line --&gt;
+&lt;a href="mailto:contact@example.com?subject=Website%20Inquiry"&gt;Email Us&lt;/a&gt;
+
+&lt;!-- Link to a section on the same page --&gt;
+&lt;a href="#contact"&gt;Contact Section&lt;/a&gt;
+...
+&lt;section id="contact"&gt;
+&lt;h2&gt;Contact Us&lt;/h2&gt;
+...
+&lt;/section&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-4-2">
+              <h2 class="section-heading">Images</h2>
+              <p>
+                The <code>&lt;img&gt;</code> element is used to embed images in
+                an HTML document. It's an empty element (has no closing tag) and
+                requires the <code>src</code> attribute to specify the image
+                URL.
+              </p>
+
+              <h4>Basic Image Syntax</h4>
+              <pre><code class="language-html">&lt;img src="image_url" alt="alternative text"&gt;</code></pre>
+
+              <h4>Important Attributes</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>src</code></td>
+                      <td>Required. Specifies the path to the image</td>
+                      <td><code>src="images/logo.png"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>alt</code></td>
+                      <td>
+                        Required. Provides alternative text for screen readers
+                        and if the image cannot load
+                      </td>
+                      <td><code>alt="Company Logo"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>width</code></td>
+                      <td>Specifies the width of the image in pixels</td>
+                      <td><code>width="300"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>height</code></td>
+                      <td>Specifies the height of the image in pixels</td>
+                      <td><code>height="200"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>loading</code></td>
+                      <td>Specifies how the browser should load the image</td>
+                      <td><code>loading="lazy"</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Basic image --&gt;
+&lt;img src="cat.jpg" alt="A cat sitting on a windowsill"&gt;
+
+&lt;!-- Image with specified dimensions --&gt;
+&lt;img src="logo.png" alt="Company Logo" width="200" height="100"&gt;
+
+&lt;!-- Responsive image that loads lazily --&gt;
+&lt;img src="banner.jpg" alt="Website banner" width="100%" loading="lazy"&gt;
+
+&lt;!-- Image with a link --&gt;
+&lt;a href="product.html"&gt;
+&lt;img src="product-thumbnail.jpg" alt="Product thumbnail"&gt;
+&lt;/a&gt;</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Best Practices for Images
+                  </h4>
+                  <ul class="mb-0">
+                    <li>
+                      Always include the <code>alt</code> attribute for
+                      accessibility
+                    </li>
+                    <li>
+                      Specify image dimensions to help the browser allocate
+                      space properly
+                    </li>
+                    <li>
+                      Use appropriate image formats (JPG for photos, PNG for
+                      graphics with transparency, SVG for icons and logos)
+                    </li>
+                    <li>
+                      Optimize images for web to reduce file size and improve
+                      loading speed
+                    </li>
+                    <li>
+                      Consider using the <code>loading="lazy"</code> attribute
+                      for images that are not in the initial viewport
+                    </li>
+                  </ul>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-4-3">
+              <h2 class="section-heading">Tables</h2>
+              <p>
+                HTML tables are used to display data in rows and columns. While
+                they should not be used for layout purposes (use CSS for that),
+                tables are excellent for presenting tabular data.
+              </p>
+
+              <h4>Basic Table Structure</h4>
+              <pre><code class="language-html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Header 1&lt;/th&gt;
+&lt;th&gt;Header 2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+&lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+&lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+              <h4>Table Elements</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Element</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;table&gt;</code></td>
+                      <td>Defines an HTML table</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;thead&gt;</code></td>
+                      <td>Groups the header content in a table</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;tbody&gt;</code></td>
+                      <td>Groups the body content in a table</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;tfoot&gt;</code></td>
+                      <td>Groups the footer content in a table</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;tr&gt;</code></td>
+                      <td>Defines a row in a table</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;th&gt;</code></td>
+                      <td>Defines a header cell in a table</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;td&gt;</code></td>
+                      <td>Defines a data cell in a table</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;caption&gt;</code></td>
+                      <td>Provides a title or explanation for the table</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Table Attributes</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Element</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>colspan</code></td>
+                      <td><code>&lt;th&gt;</code>, <code>&lt;td&gt;</code></td>
+                      <td>Specifies how many columns a cell should span</td>
+                    </tr>
+                    <tr>
+                      <td><code>rowspan</code></td>
+                      <td><code>&lt;th&gt;</code>, <code>&lt;td&gt;</code></td>
+                      <td>Specifies how many rows a cell should span</td>
+                    </tr>
+                    <tr>
+                      <td><code>scope</code></td>
+                      <td><code>&lt;th&gt;</code></td>
+                      <td>
+                        Specifies whether a header cell is for a column, row, or
+                        group
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Complex Table Example</h4>
+              <pre><code class="language-html">&lt;table&gt;
+&lt;caption&gt;Monthly Savings&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope="col"&gt;Month&lt;/th&gt;
+&lt;th scope="col"&gt;Income&lt;/th&gt;
+&lt;th scope="col"&gt;Expenses&lt;/th&gt;
+&lt;th scope="col"&gt;Savings&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;January&lt;/td&gt;
+&lt;td&gt;$5000&lt;/td&gt;
+&lt;td&gt;$3500&lt;/td&gt;
+&lt;td&gt;$1500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;February&lt;/td&gt;
+&lt;td&gt;$5200&lt;/td&gt;
+&lt;td&gt;$3200&lt;/td&gt;
+&lt;td&gt;$2000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;
+&lt;tr&gt;
+&lt;th scope="row"&gt;Total&lt;/th&gt;
+&lt;td&gt;$10200&lt;/td&gt;
+&lt;td&gt;$6700&lt;/td&gt;
+&lt;td&gt;$3500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+
+              <h4>Cells Spanning Multiple Rows or Columns</h4>
+              <pre><code class="language-html">&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th colspan="2"&gt;Contact Info&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;John Doe&lt;/td&gt;
+&lt;td&gt;john@example.com&lt;/td&gt;
+&lt;td&gt;555-1234&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="2"&gt;Jane Smith&lt;/td&gt;
+&lt;td&gt;jane@example.com&lt;/td&gt;
+&lt;td&gt;555-5678&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jane.smith@work.com&lt;/td&gt;
+&lt;td&gt;555-8765&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </section>
+          </article>
+          <article class="docs-article" id="section-5">
+            <header class="docs-header">
+              <h1 class="docs-heading">Document Organization</h1>
+              <section class="docs-intro">
+                <p>
+                  Learn how to organize and structure your HTML documents with
+                  divs, classes, IDs, and semantic elements.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-5-1">
+              <h2 class="section-heading">Divs</h2>
+              <p>
+                The <code>&lt;div&gt;</code> element is a generic container for
+                grouping content. It has no semantic meaning but is useful for
+                styling purposes with CSS or for organizing content into logical
+                blocks.
+              </p>
+
+              <h4>Basic Usage</h4>
+              <pre><code class="language-html">&lt;div&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;
+&lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;
+&lt;p&gt;This is another paragraph inside the same div.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Nested Divs</h4>
+              <p>Divs can be nested to create more complex layouts:</p>
+              <pre><code class="language-html">&lt;div class="container"&gt;
+&lt;div class="header"&gt;
+&lt;h1&gt;Website Title&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="content"&gt;
+&lt;div class="sidebar"&gt;
+&lt;ul&gt;
+&lt;li&gt;Menu Item 1&lt;/li&gt;
+&lt;li&gt;Menu Item 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="main"&gt;
+&lt;h2&gt;Article Title&lt;/h2&gt;
+&lt;p&gt;Article content goes here...&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footer"&gt;
+&lt;p&gt;Copyright 2025&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    Important Note
+                  </h4>
+                  <p>
+                    While <code>&lt;div&gt;</code> elements are very useful,
+                    they should not be overused. In HTML5, it's better to use
+                    semantic elements (like <code>&lt;header&gt;</code>,
+                    <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>,
+                    etc.) whenever possible as they provide meaning to both
+                    browsers and developers.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-5-2">
+              <h2 class="section-heading">Classes</h2>
+              <p>
+                The <code>class</code> attribute is used to specify one or more
+                class names for an HTML element. Classes allow you to define
+                styles for elements with the specified class name through CSS.
+              </p>
+
+              <h4>Basic Syntax</h4>
+              <pre><code class="language-html">&lt;element class="classname"&gt;Content&lt;/element&gt;</code></pre>
+
+              <h4>Multiple Classes</h4>
+              <p>An element can have multiple classes, separated by spaces:</p>
+              <pre><code class="language-html">&lt;div class="container centered highlight"&gt;
+  This div has three classes: container, centered, and highlight.
+&lt;/div&gt;</code></pre>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Elements with the same class --&gt;
+&lt;p class="important"&gt;This is an important paragraph.&lt;/p&gt;
+&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
+&lt;p class="important"&gt;This is another important paragraph.&lt;/p&gt;
+
+&lt;!-- Different elements with the same class --&gt;
+&lt;h2 class="highlight"&gt;Highlighted Heading&lt;/h2&gt;
+&lt;p class="highlight"&gt;Highlighted paragraph.&lt;/p&gt;
+
+&lt;!-- Elements with multiple classes --&gt;
+&lt;div class="card shadow rounded"&gt;
+  &lt;h3&gt;Card Title&lt;/h3&gt;
+  &lt;p&gt;Card content...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    CSS and Classes
+                  </h4>
+                  <p>
+                    Classes are particularly useful when styling with CSS. You
+                    can target elements with a specific class using the dot
+                    selector:
+                  </p>
+                  <pre><code class="language-css">.important {
+  color: red;
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.rounded {
+  border-radius: 8px;
+}</code></pre>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-5-3">
+              <h2 class="section-heading">IDs</h2>
+              <p>
+                The <code>id</code> attribute is used to specify a unique
+                identifier for an HTML element. Unlike classes, IDs must be
+                unique within a document.
+              </p>
+
+              <h4>Basic Syntax</h4>
+              <pre><code class="language-html">&lt;element id="uniqueid"&gt;Content&lt;/element&gt;</code></pre>
+
+              <h4>Primary Uses for IDs</h4>
+              <ol>
+                <li>
+                  <p>
+                    <strong>Linking to a specific section of a page</strong>
+                  </p>
+                  <pre><code class="language-html">&lt;!-- Link to the section --&gt;
+&lt;a href="#contact"&gt;Go to Contact Section&lt;/a&gt;
+
+&lt;!-- The section with the ID --&gt;
+&lt;section id="contact"&gt;
+  &lt;h2&gt;Contact Us&lt;/h2&gt;
+  &lt;p&gt;Contact information and form...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                </li>
+                <li>
+                  <p><strong>JavaScript manipulation</strong></p>
+                  <pre><code class="language-html">&lt;button id="submitBtn"&gt;Submit&lt;/button&gt;
+
+&lt;script&gt;
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    alert('Button clicked!');
+  });
+&lt;/script&gt;</code></pre>
+                </li>
+                <li>
+                  <p><strong>Styling specific elements with CSS</strong></p>
+                  <pre><code class="language-html">&lt;div id="main-header"&gt;Website Header&lt;/div&gt;
+
+&lt;style&gt;
+  #main-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+&lt;/style&gt;</code></pre>
+                </li>
+              </ol>
+
+              <h4>ID vs Class</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>ID</th>
+                      <th>Class</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Uniqueness</td>
+                      <td>Must be unique in a document</td>
+                      <td>Can be used on multiple elements</td>
+                    </tr>
+                    <tr>
+                      <td>Usage per element</td>
+                      <td>An element can have only one ID</td>
+                      <td>An element can have multiple classes</td>
+                    </tr>
+                    <tr>
+                      <td>CSS selector</td>
+                      <td><code>#id_name</code></td>
+                      <td><code>.class_name</code></td>
+                    </tr>
+                    <tr>
+                      <td>JavaScript access</td>
+                      <td><code>getElementById()</code></td>
+                      <td><code>getElementsByClassName()</code></td>
+                    </tr>
+                    <tr>
+                      <td>CSS specificity</td>
+                      <td>Higher (more specific)</td>
+                      <td>Lower (less specific)</td>
+                    </tr>
+                    <tr>
+                      <td>URL targeting</td>
+                      <td>
+                        Can be targeted with <code>#id_name</code> in URLs
+                      </td>
+                      <td>Cannot be targeted in URLs</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    Best Practices
+                  </h4>
+                  <ul class="mb-0">
+                    <li>Use IDs sparingly and only when necessary</li>
+                    <li>Prefer classes for styling multiple elements</li>
+                    <li>Ensure IDs are unique within a document</li>
+                    <li>Use meaningful, descriptive names for IDs</li>
+                    <li>
+                      ID names should not start with numbers and should not
+                      contain spaces
+                    </li>
+                  </ul>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-5-4">
+              <h2 class="section-heading">Semantic HTML</h2>
+              <p>
+                Semantic HTML uses HTML elements that clearly describe their
+                meaning to both the browser and the developer. HTML5 introduced
+                many semantic elements to better structure web documents.
+              </p>
+
+              <h4>Benefits of Semantic HTML</h4>
+              <ul>
+                <li>
+                  Improved accessibility for screen readers and assistive
+                  technologies
+                </li>
+                <li>Better SEO (Search Engine Optimization)</li>
+                <li>Easier code maintenance and readability</li>
+                <li>Clearer document structure</li>
+              </ul>
+
+              <h4>Common Semantic Elements</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Element</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;header&gt;</code></td>
+                      <td>
+                        Represents introductory content, typically a group of
+                        navigational aids or introductory information
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;nav&gt;</code></td>
+                      <td>Defines a section of navigation links</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;main&gt;</code></td>
+                      <td>
+                        Specifies the main content of a document (should be
+                        unique to the document)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;article&gt;</code></td>
+                      <td>
+                        Represents a self-contained composition in a document,
+                        which could be independently distributable or reusable
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;section&gt;</code></td>
+                      <td>
+                        Defines a thematic grouping of content, typically with a
+                        heading
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;aside&gt;</code></td>
+                      <td>
+                        Represents content that is tangentially related to the
+                        content around it (like a sidebar)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;footer&gt;</code></td>
+                      <td>
+                        Defines a footer for a document or section, typically
+                        containing authorship, copyright, or contact information
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;figure&gt;</code></td>
+                      <td>
+                        Represents self-contained content, like illustrations,
+                        diagrams, photos, code listings, etc.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;figcaption&gt;</code></td>
+                      <td>Defines a caption or legend for a figure</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;time&gt;</code></td>
+                      <td>Represents a specific period in time or a date</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;mark&gt;</code></td>
+                      <td>
+                        Represents text that is highlighted or marked for
+                        reference
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Example of Semantic HTML Structure</h4>
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Semantic HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Featured Articles&lt;/h2&gt;
+      &lt;article&gt;
+        &lt;header&gt;
+          &lt;h3&gt;Article Title&lt;/h3&gt;
+          &lt;p&gt;Published on &lt;time datetime="2025-02-14"&gt;February 14, 2025&lt;/time&gt;&lt;/p&gt;
+        &lt;/header&gt;
+        &lt;p&gt;Article content goes here...&lt;/p&gt;
+        &lt;figure&gt;
+          &lt;img src="image.jpg" alt="Descriptive image text"&gt;
+          &lt;figcaption&gt;Caption for the image&lt;/figcaption&gt;
+        &lt;/figure&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;
+      &lt;h3&gt;Related Links&lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Related Article 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Related Article 2&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 My Website. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+              <div class="callout-block callout-block-success">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-thumbs-up"></i> </span
+                    ><!--//icon-holder-->
+                    Non-Semantic vs. Semantic HTML
+                  </h4>
+                  <p><strong>Non-Semantic Example:</strong></p>
+                  <pre><code class="language-html">&lt;div class="header"&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;div class="nav"&gt;
+    &lt;!-- Navigation links --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="main-content"&gt;
+  &lt;div class="article"&gt;
+    &lt;!-- Article content --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footer"&gt;
+  &lt;!-- Footer content --&gt;
+&lt;/div&gt;</code></pre>
+                  <p><strong>Semantic Example:</strong></p>
+                  <pre><code class="language-html">&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;!-- Navigation links --&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;!-- Article content --&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;!-- Footer content --&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+          <article class="docs-article" id="section-6">
+            <header class="docs-header">
+              <h1 class="docs-heading">Forms</h1>
+              <section class="docs-intro">
+                <p>
+                  HTML forms are used to collect user input. They contain
+                  various input elements like text fields, checkboxes, radio
+                  buttons, and more.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-6-1">
+              <h2 class="section-heading">Form Basics</h2>
+              <p>
+                HTML forms are created using the
+                <code>&lt;form&gt;</code> element, which contains various input
+                elements and buttons for user interaction.
+              </p>
+
+              <h4>Basic Form Structure</h4>
+              <pre><code class="language-html">&lt;form action="/submit-form" method="post"&gt;
+  &lt;!-- Form elements go here --&gt;
+  &lt;input type="text" name="username" placeholder="Username"&gt;
+  &lt;input type="password" name="password" placeholder="Password"&gt;
+  &lt;input type="submit" value="Login"&gt;
+&lt;/form&gt;</code></pre>
+
+              <h4>Form Process Flow</h4>
+              <ol>
+                <li>The user fills out the form with data</li>
+                <li>
+                  The user submits the form by clicking a submit button or
+                  pressing Enter
+                </li>
+                <li>
+                  The browser sends the form data to the server specified in the
+                  <code>action</code> attribute
+                </li>
+                <li>
+                  The server processes the data using the method specified in
+                  the <code>method</code> attribute
+                </li>
+                <li>
+                  The server sends a response back to the browser, typically a
+                  new page or a redirect
+                </li>
+              </ol>
+            </section>
+
+            <section class="docs-section" id="item-6-2">
+              <h2 class="section-heading">Form Attributes</h2>
+              <p>
+                The <code>&lt;form&gt;</code> element can have several
+                attributes that control how the form behaves.
+              </p>
+
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>action</code></td>
+                      <td>
+                        Specifies where to send the form data when the form is
+                        submitted
+                      </td>
+                      <td><code>action="/submit-form"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>method</code></td>
+                      <td>
+                        Specifies the HTTP method to use when sending form data
+                        (get or post)
+                      </td>
+                      <td><code>method="post"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>enctype</code></td>
+                      <td>
+                        Specifies how form data should be encoded when submitted
+                        (used with method="post")
+                      </td>
+                      <td><code>enctype="multipart/form-data"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>autocomplete</code></td>
+                      <td>
+                        Specifies whether the browser should autocomplete form
+                        fields
+                      </td>
+                      <td><code>autocomplete="off"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>novalidate</code></td>
+                      <td>
+                        Specifies that the form should not be validated when
+                        submitted
+                      </td>
+                      <td><code>novalidate</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>target</code></td>
+                      <td>
+                        Specifies where to display the response after submitting
+                        the form
+                      </td>
+                      <td><code>target="_blank"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>name</code></td>
+                      <td>Specifies a name for the form (for DOM access)</td>
+                      <td><code>name="loginForm"</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Basic form with post method --&gt;
+&lt;form action="/submit" method="post"&gt;
+  &lt;!-- Form elements --&gt;
+&lt;/form&gt;
+
+&lt;!-- Form with file uploads --&gt;
+&lt;form action="/upload" method="post" enctype="multipart/form-data"&gt;
+  &lt;input type="file" name="document"&gt;
+  &lt;input type="submit" value="Upload"&gt;
+&lt;/form&gt;
+
+&lt;!-- Form with autocomplete disabled --&gt;
+&lt;form action="/login" method="post" autocomplete="off"&gt;
+  &lt;input type="text" name="username"&gt;
+  &lt;input type="password" name="password"&gt;
+  &lt;input type="submit" value="Login"&gt;
+&lt;/form&gt;
+
+&lt;!-- Form that opens response in a new tab --&gt;
+&lt;form action="/search" method="get" target="_blank"&gt;
+  &lt;input type="text" name="query"&gt;
+  &lt;input type="submit" value="Search"&gt;
+&lt;/form&gt;</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    GET vs. POST
+                  </h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Feature</th>
+                          <th>GET</th>
+                          <th>POST</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Visibility</td>
+                          <td>Form data is visible in the URL</td>
+                          <td>Form data is not visible in the URL</td>
+                        </tr>
+                        <tr>
+                          <td>Bookmarking</td>
+                          <td>Can be bookmarked</td>
+                          <td>Cannot be bookmarked</td>
+                        </tr>
+                        <tr>
+                          <td>Data size</td>
+                          <td>Limited (about 2048 characters)</td>
+                          <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                          <td>Security</td>
+                          <td>Less secure (data in URL)</td>
+                          <td>More secure (data in request body)</td>
+                        </tr>
+                        <tr>
+                          <td>Cache</td>
+                          <td>Can be cached</td>
+                          <td>Not cached</td>
+                        </tr>
+                        <tr>
+                          <td>Best for</td>
+                          <td>Retrieving data (searches, filters)</td>
+                          <td>Submitting data (logins, uploads, forms)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-6-3">
+              <h2 class="section-heading">Form Elements</h2>
+              <p>
+                HTML provides various form elements to capture different types
+                of user input.
+              </p>
+
+              <h4>Common Form Elements</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Element</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;input&gt;</code></td>
+                      <td>
+                        Creates various input controls based on its type
+                        attribute
+                      </td>
+                      <td>
+                        <code>&lt;input type="text" name="username"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;label&gt;</code></td>
+                      <td>
+                        Defines a label for a form element, improving
+                        accessibility
+                      </td>
+                      <td>
+                        <code
+                          >&lt;label
+                          for="username"&gt;Username:&lt;/label&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;select&gt;</code></td>
+                      <td>Creates a dropdown list</td>
+                      <td>
+                        <code
+                          >&lt;select
+                          name="country"&gt;&lt;option&gt;USA&lt;/option&gt;&lt;/select&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;option&gt;</code></td>
+                      <td>Defines an option in a select list</td>
+                      <td>
+                        <code
+                          >&lt;option value="us"&gt;United
+                          States&lt;/option&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;textarea&gt;</code></td>
+                      <td>Creates a multi-line text input</td>
+                      <td>
+                        <code
+                          >&lt;textarea name="message"
+                          rows="4"&gt;&lt;/textarea&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;button&gt;</code></td>
+                      <td>Creates a clickable button</td>
+                      <td>
+                        <code
+                          >&lt;button type="submit"&gt;Send&lt;/button&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;fieldset&gt;</code></td>
+                      <td>Groups related form elements</td>
+                      <td>
+                        <code
+                          >&lt;fieldset&gt;&lt;legend&gt;Personal
+                          Info&lt;/legend&gt;...&lt;/fieldset&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;legend&gt;</code></td>
+                      <td>Defines a caption for a fieldset</td>
+                      <td>
+                        <code
+                          >&lt;legend&gt;Contact
+                          Information&lt;/legend&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;datalist&gt;</code></td>
+                      <td>
+                        Provides a list of predefined options for an input
+                      </td>
+                      <td>
+                        <code
+                          >&lt;datalist id="browsers"&gt;&lt;option
+                          value="Chrome"&gt;&lt;/datalist&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;output&gt;</code></td>
+                      <td>Represents the result of a calculation</td>
+                      <td>
+                        <code
+                          >&lt;output name="result"&gt;0&lt;/output&gt;</code
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Label and input field --&gt;
+&lt;label for="fullname"&gt;Full Name:&lt;/label&gt;
+&lt;input type="text" id="fullname" name="fullname"&gt;
+
+&lt;!-- Textarea for comments --&gt;
+&lt;label for="comments"&gt;Comments:&lt;/label&gt;
+&lt;textarea id="comments" name="comments" rows="4" cols="50"&gt;&lt;/textarea&gt;
+
+&lt;!-- Dropdown select list --&gt;
+&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value=""&gt;Select a country&lt;/option&gt;
+  &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;option value="ca"&gt;Canada&lt;/option&gt;
+  &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Grouped form elements --&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Personal Information&lt;/legend&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;
+  &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;
+  &lt;label for="lname"&gt;Last name:&lt;/label&gt;
+  &lt;input type="text" id="lname" name="lname"&gt;
+&lt;/fieldset&gt;
+
+&lt;!-- Datalist for suggestions --&gt;
+&lt;label for="browser"&gt;Choose your browser:&lt;/label&gt;
+&lt;input list="browsers" id="browser" name="browser"&gt;
+&lt;datalist id="browsers"&gt;
+  &lt;option value="Chrome"&gt;
+  &lt;option value="Firefox"&gt;
+  &lt;option value="Safari"&gt;
+  &lt;option value="Edge"&gt;
+&lt;/datalist&gt;
+
+&lt;!-- Button types --&gt;
+&lt;button type="button"&gt;Click Me&lt;/button&gt;
+&lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;button type="reset"&gt;Reset Form&lt;/button&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-6-4">
+              <h2 class="section-heading">Input Types</h2>
+              <p>
+                The <code>&lt;input&gt;</code> element is the most versatile
+                form element and can be transformed into different controls
+                based on its <code>type</code> attribute.
+              </p>
+
+              <h4>Basic Input Types (HTML4)</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>text</code></td>
+                      <td>Single-line text input</td>
+                      <td>
+                        <code>&lt;input type="text" name="name"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>password</code></td>
+                      <td>Password field (characters are masked)</td>
+                      <td>
+                        <code>&lt;input type="password" name="pwd"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>radio</code></td>
+                      <td>Radio button (for selecting one option from many)</td>
+                      <td>
+                        <code
+                          >&lt;input type="radio" name="gender"
+                          value="male"&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>checkbox</code></td>
+                      <td>Checkbox (for selecting multiple options)</td>
+                      <td>
+                        <code
+                          >&lt;input type="checkbox" name="vehicle"
+                          value="bike"&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>submit</code></td>
+                      <td>Button to submit the form</td>
+                      <td>
+                        <code>&lt;input type="submit" value="Submit"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>reset</code></td>
+                      <td>Button to reset the form</td>
+                      <td>
+                        <code>&lt;input type="reset" value="Reset"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>button</code></td>
+                      <td>
+                        Clickable button (requires JavaScript to have an effect)
+                      </td>
+                      <td>
+                        <code
+                          >&lt;input type="button" value="Click Me"
+                          onclick="alert('Hello')"&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>file</code></td>
+                      <td>File upload control</td>
+                      <td>
+                        <code>&lt;input type="file" name="upload"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>hidden</code></td>
+                      <td>Hidden input field (not visible to users)</td>
+                      <td>
+                        <code
+                          >&lt;input type="hidden" name="id"
+                          value="123"&gt;</code
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>HTML5 Input Types</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>email</code></td>
+                      <td>Input field for email addresses (with validation)</td>
+                      <td>
+                        <code>&lt;input type="email" name="email"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>url</code></td>
+                      <td>Input field for URLs (with validation)</td>
+                      <td>
+                        <code>&lt;input type="url" name="website"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>tel</code></td>
+                      <td>Input field for telephone numbers</td>
+                      <td>
+                        <code>&lt;input type="tel" name="phone"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>number</code></td>
+                      <td>Input field for numeric values (with min/max)</td>
+                      <td>
+                        <code
+                          >&lt;input type="number" name="quantity" min="1"
+                          max="5"&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>range</code></td>
+                      <td>Slider control for selecting a number</td>
+                      <td>
+                        <code
+                          >&lt;input type="range" name="volume" min="0"
+                          max="100"&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>date</code></td>
+                      <td>Date picker (YYYY-MM-DD)</td>
+                      <td>
+                        <code>&lt;input type="date" name="birthday"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>month</code></td>
+                      <td>Month and year picker (YYYY-MM)</td>
+                      <td>
+                        <code>&lt;input type="month" name="expiry"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>week</code></td>
+                      <td>Week and year picker (YYYY-Www)</td>
+                      <td>
+                        <code>&lt;input type="week" name="week"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>time</code></td>
+                      <td>Time picker (HH:MM)</td>
+                      <td>
+                        <code>&lt;input type="time" name="meeting"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>datetime-local</code></td>
+                      <td>Date and time picker (no timezone)</td>
+                      <td>
+                        <code
+                          >&lt;input type="datetime-local"
+                          name="appointment"&gt;</code
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>color</code></td>
+                      <td>Color picker</td>
+                      <td>
+                        <code>&lt;input type="color" name="favcolor"&gt;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>search</code></td>
+                      <td>Search field (functionally similar to text)</td>
+                      <td>
+                        <code>&lt;input type="search" name="query"&gt;</code>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Text and password inputs --&gt;
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;&lt;br&gt;
+&lt;label for="pwd"&gt;Password:&lt;/label&gt;
+&lt;input type="password" id="pwd" name="pwd"&gt;
+
+&lt;!-- Radio buttons --&gt;
+&lt;p&gt;Choose your favorite programming language:&lt;/p&gt;
+&lt;input type="radio" id="html" name="fav_language" value="HTML"&gt;
+&lt;label for="html"&gt;HTML&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="css" name="fav_language" value="CSS"&gt;
+&lt;label for="css"&gt;CSS&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" id="javascript" name="fav_language" value="JavaScript"&gt;
+&lt;label for="javascript"&gt;JavaScript&lt;/label&gt;
+
+&lt;!-- Checkboxes --&gt;
+&lt;p&gt;Select the technologies you know:&lt;/p&gt;
+&lt;input type="checkbox" id="html" name="tech" value="HTML"&gt;
+&lt;label for="html"&gt;HTML&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" id="css" name="tech" value="CSS"&gt;
+&lt;label for="css"&gt;CSS&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" id="javascript" name="tech" value="JavaScript"&gt;
+&lt;label for="javascript"&gt;JavaScript&lt;/label&gt;
+
+&lt;!-- HTML5 inputs --&gt;
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+
+&lt;label for="website"&gt;Website:&lt;/label&gt;
+&lt;input type="url" id="website" name="website"&gt;&lt;br&gt;
+
+&lt;label for="phone"&gt;Phone:&lt;/label&gt;
+&lt;input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"&gt;&lt;br&gt;
+
+&lt;label for="quantity"&gt;Quantity (between 1 and 5):&lt;/label&gt;
+&lt;input type="number" id="quantity" name="quantity" min="1" max="5"&gt;&lt;br&gt;
+
+&lt;label for="birthday"&gt;Birthday:&lt;/label&gt;
+&lt;input type="date" id="birthday" name="birthday"&gt;&lt;br&gt;
+
+&lt;label for="favcolor"&gt;Favorite Color:&lt;/label&gt;
+&lt;input type="color" id="favcolor" name="favcolor"&gt;&lt;br&gt;
+
+&lt;label for="volume"&gt;Volume (0-100):&lt;/label&gt;
+&lt;input type="range" id="volume" name="volume" min="0" max="100"&gt;</code></pre>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    Browser Compatibility
+                  </h4>
+                  <p>
+                    While all modern browsers support HTML5 input types, older
+                    browsers may not. When an HTML5 input type is not supported,
+                    the browser will treat it as a regular text input.
+                  </p>
+                  <p>
+                    This degradation is actually beneficial as it ensures forms
+                    remain usable across all browsers, even if the enhanced
+                    functionality isn't available.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-6-5">
+              <h2 class="section-heading">Input Attributes</h2>
+              <p>
+                Input elements can have various attributes that control their
+                behavior, appearance, and validation.
+              </p>
+
+              <h4>Common Input Attributes</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Attribute</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>name</code></td>
+                      <td>
+                        Specifies the name of an input element (used when
+                        submitting form data)
+                      </td>
+                      <td><code>name="username"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>value</code></td>
+                      <td>Specifies the initial value of an input element</td>
+                      <td><code>value="John"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>placeholder</code></td>
+                      <td>Provides a hint describing the expected value</td>
+                      <td><code>placeholder="Enter your username"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>required</code></td>
+                      <td>Specifies that an input field must be filled out</td>
+                      <td><code>required</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>disabled</code></td>
+                      <td>Specifies that an input field should be disabled</td>
+                      <td><code>disabled</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>readonly</code></td>
+                      <td>
+                        Specifies that an input field is read-only (cannot be
+                        modified)
+                      </td>
+                      <td><code>readonly</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>size</code></td>
+                      <td>
+                        Specifies the width (in characters) of an input field
+                      </td>
+                      <td><code>size="30"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>maxlength</code></td>
+                      <td>
+                        Specifies the maximum number of characters allowed
+                      </td>
+                      <td><code>maxlength="50"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>min</code>, <code>max</code></td>
+                      <td>
+                        Specifies minimum and maximum values for numeric inputs
+                      </td>
+                      <td><code>min="1" max="100"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>step</code></td>
+                      <td>
+                        Specifies the legal number intervals for numeric inputs
+                      </td>
+                      <td><code>step="0.5"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>pattern</code></td>
+                      <td>
+                        Specifies a regular expression to check the input value
+                        against
+                      </td>
+                      <td><code>pattern="[A-Za-z]{3}"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>autocomplete</code></td>
+                      <td>
+                        Specifies whether an input field should have
+                        autocomplete on or off
+                      </td>
+                      <td><code>autocomplete="off"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>autofocus</code></td>
+                      <td>
+                        Specifies that an input field should automatically get
+                        focus when the page loads
+                      </td>
+                      <td><code>autofocus</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>form</code></td>
+                      <td>Specifies which form the input element belongs to</td>
+                      <td><code>form="form1"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>list</code></td>
+                      <td>
+                        Refers to a datalist element that contains pre-defined
+                        options
+                      </td>
+                      <td><code>list="browsers"</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>multiple</code></td>
+                      <td>Specifies that a user can enter multiple values</td>
+                      <td><code>multiple</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Required field with placeholder --&gt;
+&lt;input type="text" name="username" placeholder="Enter your username" required&gt;
+
+&lt;!-- Email with pattern validation --&gt;
+&lt;input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address"&gt;
+
+&lt;!-- Number with min, max, and step --&gt;
+&lt;input type="number" name="rating" min="1" max="5" step="0.5" value="3"&gt;
+
+&lt;!-- Disabled and readonly inputs --&gt;
+&lt;input type="text" name="country" value="United States" readonly&gt;
+&lt;input type="text" name="id" value="12345" disabled&gt;
+
+&lt;!-- Text with maxlength and size --&gt;
+&lt;input type="text" name="bio" maxlength="200" size="50" placeholder="Brief description (max 200 characters)"&gt;
+
+&lt;!-- Autofocus on page load --&gt;
+&lt;input type="text" name="search" autofocus placeholder="Search..."&gt;
+
+&lt;!-- File upload with multiple files and specific file types --&gt;
+&lt;input type="file" name="photos" multiple accept="image/png, image/jpeg"&gt;</code></pre>
+            </section>
+          </article>
+          <article class="docs-article" id="section-7">
+            <header class="docs-header">
+              <h1 class="docs-heading">HTML5 Features</h1>
+              <section class="docs-intro">
+                <p>
+                  HTML5 introduced many new elements, attributes, and APIs that
+                  enhance the capabilities of web pages.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-7-1">
+              <h2 class="section-heading">New Elements</h2>
+              <p>
+                HTML5 introduced several new elements that provide better
+                structure, multimedia support, and interactive features.
+              </p>
+
+              <h4>Structural Elements</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Element</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;header&gt;</code></td>
+                      <td>Defines a header for a document or section</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;nav&gt;</code></td>
+                      <td>Defines navigation links</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;main&gt;</code></td>
+                      <td>Specifies the main content of a document</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;section&gt;</code></td>
+                      <td>Defines a section in a document</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;article&gt;</code></td>
+                      <td>Defines an independent, self-contained content</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;aside&gt;</code></td>
+                      <td>
+                        Defines content aside from the page content (like a
+                        sidebar)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;footer&gt;</code></td>
+                      <td>Defines a footer for a document or section</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;figure&gt;</code></td>
+                      <td>
+                        Specifies self-contained content, like illustrations,
+                        diagrams, photos, code listings, etc.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;figcaption&gt;</code></td>
+                      <td>
+                        Defines a caption for a
+                        <code>&lt;figure&gt;</code> element
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Multimedia and Graphics Elements</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Element</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;audio&gt;</code></td>
+                      <td>Defines sound content</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;video&gt;</code></td>
+                      <td>Defines a video or movie</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;source&gt;</code></td>
+                      <td>
+                        Defines multiple media resources for media elements
+                        (<code>&lt;video&gt;</code> and
+                        <code>&lt;audio&gt;</code>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;track&gt;</code></td>
+                      <td>Defines text tracks for media elements</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;canvas&gt;</code></td>
+                      <td>Used to draw graphics via JavaScript</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;svg&gt;</code></td>
+                      <td>Defines a container for SVG graphics</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Form Elements</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Element</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;datalist&gt;</code></td>
+                      <td>
+                        Specifies a list of pre-defined options for input
+                        controls
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;output&gt;</code></td>
+                      <td>Represents the result of a calculation</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;progress&gt;</code></td>
+                      <td>Represents the progress of a task</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;meter&gt;</code></td>
+                      <td>
+                        Represents a scalar measurement within a known range
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Other New Elements</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Element</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>&lt;details&gt;</code></td>
+                      <td>
+                        Defines additional details that the user can open and
+                        close on demand
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;summary&gt;</code></td>
+                      <td>
+                        Defines a visible heading for a
+                        <code>&lt;details&gt;</code> element
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;dialog&gt;</code></td>
+                      <td>Defines a dialog box or window</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;mark&gt;</code></td>
+                      <td>Defines marked/highlighted text</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;time&gt;</code></td>
+                      <td>Defines a date/time</td>
+                    </tr>
+                    <tr>
+                      <td><code>&lt;wbr&gt;</code></td>
+                      <td>Defines a possible line-break</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Audio element --&gt;
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Video element --&gt;
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.webm" type="video/webm"&gt;
+  &lt;track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;!-- Canvas element --&gt;
+&lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"&gt;
+  Your browser does not support the canvas element.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(0, 0, 150, 75);
+&lt;/script&gt;
+
+&lt;!-- Progress and meter elements --&gt;
+&lt;label for="file"&gt;Downloading progress:&lt;/label&gt;
+&lt;progress id="file" value="32" max="100"&gt; 32% &lt;/progress&gt;
+
+&lt;p&gt;Disk usage: &lt;meter value="6" min="0" max="10"&gt;6 out of 10&lt;/meter&gt;&lt;/p&gt;
+
+&lt;!-- Details and summary elements --&gt;
+&lt;details&gt;
+  &lt;summary&gt;Click to show more information&lt;/summary&gt;
+  &lt;p&gt;This is additional information that is hidden by default.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-7-2">
+              <h2 class="section-heading">APIs</h2>
+              <p>
+                HTML5 introduced several JavaScript APIs that enable web
+                applications to do more without plugins.
+              </p>
+
+              <h4>Key HTML5 APIs</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>API</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Geolocation API</td>
+                      <td>
+                        Allows users to share their location with web
+                        applications
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Drag and Drop API</td>
+                      <td>Makes elements draggable and defines drop targets</td>
+                    </tr>
+                    <tr>
+                      <td>Web Storage API</td>
+                      <td>
+                        Provides methods for storing data in the browser
+                        (localStorage and sessionStorage)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Web Workers API</td>
+                      <td>Allows scripts to run in the background</td>
+                    </tr>
+                    <tr>
+                      <td>Canvas API</td>
+                      <td>
+                        Provides 2D drawing functions for the
+                        <code>&lt;canvas&gt;</code> element
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>WebGL API</td>
+                      <td>
+                        Provides 3D graphics capabilities for the
+                        <code>&lt;canvas&gt;</code> element
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Audio and Video API</td>
+                      <td>Provides methods to control media playback</td>
+                    </tr>
+                    <tr>
+                      <td>History API</td>
+                      <td>Allows manipulation of the browser history</td>
+                    </tr>
+                    <tr>
+                      <td>File API</td>
+                      <td>
+                        Allows interaction with files on the local filesystem
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>IndexedDB API</td>
+                      <td>
+                        Provides a way to store large amounts of structured data
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <pre><code class="language-html">&lt;!-- Geolocation API --&gt;
+&lt;button onclick="getLocation()"&gt;Get My Location&lt;/button&gt;
+&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script&gt;
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    document.getElementById("demo").innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  document.getElementById("demo").innerHTML = "Latitude: " + position.coords.latitude + 
+  "&lt;br&gt;Longitude: " + position.coords.longitude;
+}
+&lt;/script&gt;
+
+&lt;!-- Web Storage API --&gt;
+&lt;script&gt;
+// Store data
+localStorage.setItem("name", "John Doe");
+// Retrieve data
+document.getElementById("result").innerHTML = localStorage.getItem("name");
+&lt;/script&gt;
+
+&lt;!-- Drag and Drop API --&gt;
+&lt;style&gt;
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+&lt;/style&gt;
+
+&lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"&gt;
+
+&lt;script&gt;
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+&lt;/script&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-7-3">
+              <h2 class="section-heading">Best Practices</h2>
+              <p>
+                Following these HTML best practices will help you create robust,
+                accessible, and maintainable web pages.
+              </p>
+
+              <h4>Document Structure</h4>
+              <ul>
+                <li>
+                  Always declare the document type with
+                  <code>&lt;!DOCTYPE html&gt;</code>
+                </li>
+                <li>
+                  Specify the language attribute in the html tag:
+                  <code>&lt;html lang="en"&gt;</code>
+                </li>
+                <li>
+                  Use UTF-8 character encoding:
+                  <code>&lt;meta charset="UTF-8"&gt;</code>
+                </li>
+                <li>
+                  Include the viewport meta tag for responsive design:
+                  <code
+                    >&lt;meta name="viewport" content="width=device-width,
+                    initial-scale=1.0"&gt;</code
+                  >
+                </li>
+                <li>
+                  Provide a descriptive page title:
+                  <code>&lt;title&gt;Page Title | Site Name&lt;/title&gt;</code>
+                </li>
+              </ul>
+
+              <h4>Semantic HTML</h4>
+              <ul>
+                <li>
+                  Use HTML5 semantic elements (<code>&lt;header&gt;</code>,
+                  <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, etc.)
+                  instead of generic <code>&lt;div&gt;</code> elements whenever
+                  appropriate
+                </li>
+                <li>
+                  Use heading elements (<code>&lt;h1&gt;</code> to
+                  <code>&lt;h6&gt;</code>) in a hierarchical order
+                </li>
+                <li>
+                  Use <code>&lt;button&gt;</code> for clickable buttons instead
+                  of styled <code>&lt;div&gt;</code> or
+                  <code>&lt;a&gt;</code> elements
+                </li>
+                <li>
+                  Use <code>&lt;a&gt;</code> elements for navigation, not for
+                  buttons that perform actions
+                </li>
+                <li>
+                  Use <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> for
+                  lists of items
+                </li>
+                <li>
+                  Use <code>&lt;table&gt;</code> only for tabular data, not for
+                  layout
+                </li>
+              </ul>
+
+              <h4>Accessibility</h4>
+              <ul>
+                <li>Use appropriate <code>alt</code> attributes for images</li>
+                <li>
+                  Associate <code>&lt;label&gt;</code> elements with form inputs
+                </li>
+                <li>
+                  Use ARIA (Accessible Rich Internet Applications) attributes
+                  when necessary
+                </li>
+                <li>
+                  Ensure keyboard navigation works for all interactive elements
+                </li>
+                <li>Maintain sufficient color contrast for text</li>
+                <li>Use appropriate heading hierarchy</li>
+                <li>Provide captions or transcripts for multimedia content</li>
+              </ul>
+
+              <h4>Performance</h4>
+              <ul>
+                <li>
+                  Minimize HTTP requests by combining CSS and JavaScript files
+                </li>
+                <li>Optimize image sizes and use appropriate formats</li>
+                <li>
+                  Use lazy loading for images:
+                  <code
+                    >&lt;img loading="lazy" src="image.jpg"
+                    alt="Description"&gt;</code
+                  >
+                </li>
+                <li>
+                  Place CSS in the head and JavaScript before the closing body
+                  tag
+                </li>
+                <li>
+                  Specify image dimensions to help the browser allocate space
+                  before the image loads
+                </li>
+              </ul>
+
+              <h4>Coding Style</h4>
+              <ul>
+                <li>
+                  Use lowercase for HTML element names, attributes, and values
+                </li>
+                <li>Use double quotes for attribute values</li>
+                <li>Indent nested elements for better readability</li>
+                <li>
+                  Close all elements properly, even self-closing elements in
+                  XHTML or XML style if preferred:
+                  <code>&lt;img src="image.jpg" alt="Description" /&gt;</code>
+                </li>
+                <li>Use meaningful names for IDs and classes</li>
+                <li>Keep markup clean and minimal</li>
+              </ul>
+
+              <h4>Validation</h4>
+              <ul>
+                <li>
+                  Validate your HTML using the W3C Validator
+                  (https://validator.w3.org/)
+                </li>
+                <li>Ensure your HTML is well-formed and follows standards</li>
+                <li>Fix validation errors and warnings</li>
+              </ul>
+
+              <h4>SEO</h4>
+              <ul>
+                <li>Use descriptive, keyword-rich page titles</li>
+                <li>Include meta description tags</li>
+                <li>Use heading elements appropriately</li>
+                <li>
+                  Provide descriptive text for links instead of generic phrases
+                  like "click here"
+                </li>
+                <li>
+                  Use semantic markup that helps search engines understand your
+                  content
+                </li>
+                <li>
+                  Include structured data when appropriate (using schema.org
+                  vocabulary)
+                </li>
+              </ul>
+
+              <div class="callout-block callout-block-success">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-thumbs-up"></i> </span
+                    ><!--//icon-holder-->
+                    HTML5 vs. HTML4: Key Differences
+                  </h4>
+                  <p>HTML5 introduced many improvements over HTML4:</p>
+                  <ol class="mb-0">
+                    <li>
+                      <strong>Simplified DOCTYPE declaration</strong>: HTML5
+                      uses <code>&lt;!DOCTYPE html&gt;</code> instead of the
+                      lengthy DOCTYPE in HTML4.
+                    </li>
+                    <li>
+                      <strong>New semantic elements</strong>: HTML5 added
+                      elements like <code>&lt;header&gt;</code>,
+                      <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>,
+                      etc., for better document structure.
+                    </li>
+                    <li>
+                      <strong>Multimedia support</strong>: Native support for
+                      audio and video with <code>&lt;audio&gt;</code> and
+                      <code>&lt;video&gt;</code> elements.
+                    </li>
+                    <li>
+                      <strong>Graphics capabilities</strong>: Added
+                      <code>&lt;canvas&gt;</code> and
+                      <code>&lt;svg&gt;</code> for drawing and vector graphics.
+                    </li>
+                    <li>
+                      <strong>Form enhancements</strong>: New input types, form
+                      validation, and elements like
+                      <code>&lt;datalist&gt;</code>.
+                    </li>
+                    <li>
+                      <strong>New APIs</strong>: Added APIs for geolocation,
+                      drag-and-drop, web storage, etc.
+                    </li>
+                    <li>
+                      <strong>Mobile-friendly</strong>: Better support for
+                      responsive design and mobile devices.
+                    </li>
+                    <li>
+                      <strong>Improved storage options</strong>: Added
+                      localStorage, sessionStorage, and IndexedDB.
+                    </li>
+                    <li>
+                      <strong>Better error handling</strong>: More forgiving
+                      parsing algorithm.
+                    </li>
+                    <li>
+                      <strong>Removed deprecated elements</strong>: Eliminated
+                      presentational elements like <code>&lt;font&gt;</code> and
+                      <code>&lt;center&gt;</code>.
+                    </li>
+                  </ol>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+          <footer class="footer">
+            <div class="container text-center py-5">
+              <ul class="social-list list-unstyled pb-4 mb-0">
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.facebook.com/AmpersandAcademy"
+                    target="_blank"
+                    ><i class="fab fa-facebook-f fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default"
+                    target="_blank"
+                    ><i class="fab fa-google fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.linkedin.com/company/ampersandacademy/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.instagram.com/ampersandacad/"
+                    target="_blank"
+                    ><i class="fab fa-instagram fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w"
+                    target="_blank"
+                    ><i class="fab fa-whatsapp fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://t.me/ampersandacad" target="_blank"
+                    ><i class="fab fa-telegram fa-fw"></i
+                  ></a>
+                </li>
+              </ul>
+              <!--//social-list-->
+              <small class="copyright"
+                ><a href="https://ampersandacademy.com" target="_blank"
+                  >Ampersand Academy</a
+                >
+                | All rights reserved</small
+              >
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!--//docs-wrapper-->
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+  </body>
+</html>

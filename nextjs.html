@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Ampersand Academy - Next.js Notes</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+	<!-- Dark Github Gist CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/darkGist.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo me-2" src="assets/images/Ampersand_Academy_Logo.svg" alt="logo" height="50"></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">             
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="https://www.facebook.com/AmpersandAcademy" target="_blank"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+			    		<li class="list-inline-item"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default" target="_blank"><i class="fab fa-google fa-fw"></i></a></li> 
+	            		<li class="list-inline-item"><a href="https://www.linkedin.com/company/ampersandacademy/" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a></li>
+	            		<li class="list-inline-item"><a href="https://www.instagram.com/ampersandacad/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+	            		<li class="list-inline-item"><a href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w" target="_blank"><i class="fab fa-whatsapp fa-fw"></i></a></li>
+	            		<li class="list-inline-item"><a href="https://t.me/ampersandacad" target="_blank"><i class="fab fa-telegram fa-fw"></i></a></li>
+		            </ul><!--//social-list-->
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Prerequisites</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Manual Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Automatic Installation</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-folder"></i></span>Project Structure</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Top Level Folders</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Top Level Files</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3"><code>app</code> Routing Conventions</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-folder"></i></span>Building Layouts</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Task Introduction</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Home Page</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Website Layout</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Portal Layout</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+				<article class="docs-article" id="section-1">
+					<header class="docs-header">
+					    <h1 class="docs-heading">Installation</h1>
+					    <section class="docs-intro">
+						    <p>We are going to discuss in detail about prerequisites.</p>
+						</section><!--//docs-intro-->
+				    </header>
+					<section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Prerequisites</h2>
+						<ul>
+							<li>Next.js requires Node.js (version 18.18 or later) to run.</li>
+							<li>npm (Node Package Manager) is used to manage dependencies and install packages.</li>
+							<li>Visit <a href="https://nodejs.org/en/download/package-manager" target="_blank">here</a> to install on your operating system</li>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Manual Installation</h2>
+						<p>If you prefer manual setup, follow these steps:</p>
+						<ol>
+							<li>
+								<p>Install the required packages:</p>
+								<code>npm install next@latest react@latest react-dom@latest</code>
+							</li>
+							<li>
+								<p>Open your <code>package.json</code> file and add the following scripts:</p>
+								<script src="https://gist.github.com/masheriff/1a7c9ec237372729b99f1561d48733f2.js"></script>
+							</li>
+							<li>
+								<p>These scripts correspond to different stages of development:</p>
+								<ul>
+									<li><code>dev</code>: Runs Next.js in development mode.</li>
+									<li><code>build</code>: Builds the application for production usage.</li>
+									<li><code>start</code>: Starts a Next.js production server.</li>
+									<li><code>lint</code>: Sets up Next.js’ built-in ESLint configuration.</li>
+								</ul>
+							</li>
+						</ol>
+						<h4>Creating Routes</h4>
+						<p>Next.js uses file-system routing, which means your routes are determined by how you structure your files. For new applications, I recommend using the App Router. Create an <code>app/</code> folder and add a <code>layout.tsx</code> and <code>page.tsx</code> file. The <code>layout.tsx</code> contains the root layout, and the <code>page.tsx</code> represents the home page.</p>
+						<p>Here’s a basic example:</p>
+						<ol>
+							<li>
+								<p>Create <code>app/layout.tsx</code>:</p>
+								<script src="https://gist.github.com/masheriff/64496c1c4f64d52ccb1f5e7ae8a7a485.js"></script>
+							</li>
+							<li>
+								<p>Create <code>app/page.tsx</code>:</p>
+								<script src="https://gist.github.com/masheriff/e19745c17720a0b9b885ddc6030b555a.js"></script>
+							</li>
+						</ol>
+					</section>
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Automatic Installation</h2>
+						<p>The easiest way to create a new Next.js app is by using <code>create-next-app</code>. This command sets up everything automatically for you. Here’s how you can do it:</p>
+						<ol>
+							<li>
+								<p>Open your terminal and run the following command:</p>
+								<code>npx create-next-app@latest</code>
+							</li>
+							<li>
+								<p>You’ll be prompted with several options:</p>
+								<ul>
+									<li>Project name: Enter a name for your project (e.g., <code>my-app</code>).</li>
+									<li>TypeScript: Choose whether to use TypeScript (Yes/No).</li>
+									<li>ESLint: Decide if you want to use ESLint (Yes/No).</li>
+									<li>Tailwind CSS: Indicate if you’d like to use Tailwind CSS (Yes/No).</li>
+									<li>Code inside a <code>src/</code> directory: Choose whether to organize your code in a separate <code>src/</code> directory (Yes/No).</li>
+									<li>App Router: Opt for the recommended App Router (Yes/No).</li>
+									<li>Turbopack for <code>next dev:</code> Decide if you want to use Turbopack for development (Yes/No).</li>
+									<li>Customize import alias: If you choose Yes, specify the import alias you’d like (e.g., <code>@/*</code>).</li>
+								</ul>
+							</li>
+							<li>After answering the prompts, <code>create-next-app</code> will create a folder with your project name and install the required dependencies. Next.js now ships with TypeScript, ESLint, and Tailwind CSS configuration by default.</li>
+						</ol>
+					</section>
+								
+				</article>
+				<article class="docs-article" id="section-3">
+					<header class="docs-header">
+					    <h1 class="docs-heading">Project Structure</h1>
+					    <section class="docs-intro">
+						    <p>An overview of the project structure of a Next.js application. It covers top-level files and folders, configuration files, and routing conventions within the <code>app</code> and <code>pages</code> directories.</p>
+						</section><!--//docs-intro-->
+				    </header>
+					<section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Top Level Folders</h2>
+						<p>Top-level folders are used to organize your application's code and static assets.</p>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/top-level-folders.avif" alt="" title="Building Blocks of A Web Application"/>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col-12 col-md-6">
+								<table class="table">
+									<thead>
+									  <tr>
+										<th></th>
+										<th></th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/building-your-application/routing" target="_blank"
+											><code>app</code></a
+										  >
+										</td>
+										<td>App Router</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/pages/building-your-application/routing" target="_blank"
+											><code>pages</code></a
+										  >
+										</td>
+										<td>Pages Router</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/building-your-application/optimizing/static-assets" target="_blank"
+											><code>public</code></a
+										  >
+										</td>
+										<td>Static assets to be served</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/building-your-application/configuring/src-directory" target="_blank"
+											><code>src</code></a
+										  >
+										</td>
+										<td>Optional application source folder</td>
+									  </tr>
+									</tbody>
+								  </table>
+							</div>
+						</div>
+					</section>
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Top Level Files</h2>
+						<p>Top-level files are used to configure your application, manage dependencies, run middleware, integrate monitoring tools, and define environment variables.</p>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<table class="table">
+									<thead>
+									  <tr>
+										<th></th>
+										<th></th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td><strong>Next.js</strong></td>
+										<td></td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/next-config-js" target="_blank"
+											><code>next.config.js</code></a
+										  >
+										</td>
+										<td>Configuration file for Next.js</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/getting-started/installation#manual-installation" target="_blank"
+											><code>package.json</code></a
+										  >
+										</td>
+										<td>Project dependencies and scripts</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation" target="_blank"
+											><code>instrumentation.ts</code></a
+										  >
+										</td>
+										<td>OpenTelemetry and Instrumentation file</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/building-your-application/routing/middleware" target="_blank"
+											><code>middleware.ts</code></a
+										  >
+										</td>
+										<td>Next.js request middleware</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/configuring/environment-variables" target="_blank"
+											><code>.env</code></a
+										  >
+										</td>
+										<td>Environment variables</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/configuring/environment-variables" target="_blank"
+											><code>.env.local</code></a
+										  >
+										</td>
+										<td>Local environment variables</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/configuring/environment-variables" target="_blank"
+											><code>.env.production</code></a
+										  >
+										</td>
+										<td>Production environment variables</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/configuring/environment-variables" target="_blank"
+											><code>.env.development</code></a
+										  >
+										</td>
+										<td>Development environment variables</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/building-your-application/configuring/eslint" target="_blank"
+											><code>.eslintrc.json</code></a
+										  >
+										</td>
+										<td>Configuration file for ESLint</td>
+									  </tr>
+									  <tr>
+										<td><code>.gitignore</code></td>
+										<td>Git files and folders to ignore</td>
+									  </tr>
+									  <tr>
+										<td><code>next-env.d.ts</code></td>
+										<td>TypeScript declaration file for Next.js</td>
+									  </tr>
+									  <tr>
+										<td><code>tsconfig.json</code></td>
+										<td>Configuration file for TypeScript</td>
+									  </tr>
+									  <tr>
+										<td><code>jsconfig.json</code></td>
+										<td>Configuration file for JavaScript</td>
+									  </tr>
+									</tbody>
+								  </table>
+								  
+							</div>
+						</div>
+					</section>
+					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading"><code>app</code> Routing Conventions</h2>
+						<p>The following file conventions are used to define routes and handle metadata in the <a href="https://nextjs.org/docs/app" target="_blank"><code>app</code> router</a>.</p>
+						<h4>Routing Files:</h4>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<table class="table">
+									<thead>
+									  <tr>
+										<th></th>
+										<th></th>
+										<th></th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/layout" target="_blank" 
+											><code>layout</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.jsx</code> <code>.tsx</code></td>
+										<td>Layout</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/page" target="_blank"
+											><code>page</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.jsx</code> <code>.tsx</code></td>
+										<td>Page</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/loading" target="_blank"
+											><code>loading</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.jsx</code> <code>.tsx</code></td>
+										<td>Loading UI</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/not-found" target="_blank"
+											><code>not-found</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.jsx</code> <code>.tsx</code></td>
+										<td>Not found UI</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/error" target="_blank"
+											><code>error</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.jsx</code> <code>.tsx</code></td>
+										<td>Error UI</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/error#global-errorjs" target="_blank"
+											><code>global-error</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.jsx</code> <code>.tsx</code></td>
+										<td>Global error UI</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/route" target="_blank"
+											><code>route</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.ts</code></td>
+										<td>API endpoint</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/template" target="_blank"
+											><code>template</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.jsx</code> <code>.tsx</code></td>
+										<td>Re-rendered layout</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/api-reference/file-conventions/default" target="_blank"
+											><code>default</code></a
+										  >
+										</td>
+										<td><code>.js</code> <code>.jsx</code> <code>.tsx</code></td>
+										<td>Parallel route fallback page</td>
+									  </tr>
+									</tbody>
+								  </table>								  
+							</div>
+						</div>
+						<h4>Nested Routes:</h4>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<table class="table">
+									<thead>
+									  <tr>
+										<th></th>
+										<th></th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/building-your-application/routing#route-segments" target="_blank"
+											><code>folder</code></a
+										  >
+										</td>
+										<td>Route segment</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a href="https://nextjs.org/docs/app/building-your-application/routing#nested-routes" target="_blank"
+											><code>folder/folder</code></a
+										  >
+										</td>
+										<td>Nested route segment</td>
+									  </tr>
+									</tbody>
+								  </table>
+								  
+							</div>
+						</div>
+						<h4>Dynamic Routes:</h4>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<table class="table">
+									<thead>
+									  <tr>
+										<th></th>
+										<th></th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#convention" target="_blank"
+											><code>[folder]</code></a
+										  >
+										</td>
+										<td>Dynamic route segment</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#catch-all-segments" target="_blank"
+											><code>[...folder]</code></a
+										  >
+										</td>
+										<td>Catch-all route segment</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#optional-catch-all-segments" target="_blank"
+											><code>[[...folder]]</code></a
+										  >
+										</td>
+										<td>Optional catch-all route segment</td>
+									  </tr>
+									</tbody>
+								  </table>								  
+							</div>
+						</div>
+						<h4>Route Groups and Private Folders:</h4>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<table class="table">
+									<thead>
+									  <tr>
+										<th></th>
+										<th></th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/routing/route-groups#convention" target="_blank"
+											><code>(folder)</code></a
+										  >
+										</td>
+										<td>Group routes without affecting routing</td>
+									  </tr>
+									  <tr>
+										<td>
+										  <a
+											href="https://nextjs.org/docs/app/building-your-application/routing/colocation#private-folders" target="_blank"
+											><code>_folder</code></a
+										  >
+										</td>
+										<td>Opt folder and all child segments out of routing</td>
+									  </tr>
+									</tbody>
+								  </table>
+								  
+							</div>
+						</div>
+					</section>
+				</article>
+				<article class="docs-article" id="section-4">
+					<header class="docs-header">
+					    <h1 class="docs-heading">Building Layouts</h1>
+					    <section class="docs-intro">
+						    <p>This chapter will explain in detail the concepts of Layouts in websites.</p>
+						</section><!--//docs-intro-->
+				    </header>
+					<section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">Task Introduction</h2>
+						<p>We are going to build the following layouts using next.js and tailwind.css. While doing this task you will understand essential concepts of UI development and best practices.</p>
+							<div class="simplelightbox-gallery row mb-3">
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/layout_task/home_layout.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/layout_task/home_layout.png" alt="" title="Home Page Layout"/></a>
+								</div>
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/layout_task/Website_Layout.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/layout_task/Website_Layout.png" alt="" title="Website Layout"/></a>
+								</div><!--//col-->
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/layout_task/Portal_Layout.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/layout_task/Portal_Layout.png" alt="" title="Portal Layout"/></a>
+								</div><!--//col-->
+								
+							</div><!--//gallery-->
+					</section>
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">Home Page Layout</h2>
+						<ol>
+							<li><h4>Create a fresh next.js project</h4></li>
+							<li>
+								<h4><code>layout.tsx</code></h4>
+								<p>Add the following code in the root layout.tsx file. <code>app/layout.tsx</code></p>
+								<script src="https://gist.github.com/masheriff/57c9b3844638f898efbcf0ffc200c4d1.js"></script>
+							</li>
+							<li>
+								<h4><code>page.tsx</code></h4>
+								<p>Add the following code in the root page.tsx file. <code>app/page.tsx</code></p>
+								<script src="https://gist.github.com/masheriff/d833836cf1c07fb54946178ad27413a8.js"></script>
+							</li>
+						</ol>
+						<p>
+							You must get the desired output as the following:
+							<img src="assets/images/layout_task/home_layout.png" class="w-100" alt="">
+						</p>						
+					</section>
+					<section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">Website Layout</h2>
+						<ol>
+							<li>
+								<h4>Create reuasable components in path <code>app/components/</code></h4>
+								<h4><code>header.tsx</code></h4>
+								<script src="https://gist.github.com/masheriff/1db5c73091e9f6be65d0139c5134a411.js"></script>
+								<h4><code>footer.tsx</code></h4>
+								<script src="https://gist.github.com/masheriff/66298b173442973d03610253abeb2cca.js"></script>
+							</li>
+							<li>
+								<h4><code>layout.tsx</code></h4>
+								<p>Add the following code in the layout.tsx file of website folder. <code>app/website/layout.tsx</code></p>
+								<script src="https://gist.github.com/masheriff/e68f6706e138b7a23171bf82c73b3168.js"></script>
+							</li>
+							<li>
+								<h4><code>page.tsx</code></h4>
+								<p>Add the following code in the page.tsx file of website folder. <code>app/website/page.tsx</code></p>
+								<script src="https://gist.github.com/masheriff/8ac5ca0cd170a9f2d86dc5b6360f14bc.js"></script>
+							</li>
+						</ol>
+						<p>
+							You must get the desired output as the following:
+							<img src="assets/images/layout_task/Website_Layout.png" class="w-100" alt="">
+						</p>						
+					</section>
+					<section class="docs-section" id="item-3-4">
+						<h2 class="section-heading">Portal Layout</h2>
+						<ol>
+							<li>
+								<h4>Create reuasable components in path <code>app/components/</code></h4>
+								<h4><code>sidebar.tsx</code></h4>
+								<script src="https://gist.github.com/masheriff/ac9ee27abd64d2f9719f7ec600b56ac7.js"></script>
+							</li>
+							<li>
+								<h4><code>layout.tsx</code></h4>
+								<p>Add the following code in the layout.tsx file of portal folder. <code>app/portal/layout.tsx</code></p>
+								<script src="https://gist.github.com/masheriff/34a0ef409a4a8b19067011fdba92d499.js"></script>
+							</li>
+							<li>
+								<h4><code>page.tsx</code></h4>
+								<p>Add the following code in the page.tsx file of portal folder. <code>app/portal/page.tsx</code></p>
+								<script src="https://gist.github.com/masheriff/8e42581d1221792a66bf9cece98516eb.js"></script>
+							</li>
+						</ol>
+						<p>
+							You must get the desired output as the following:
+							<img src="assets/images/layout_task/Portal_Layout.png" class="w-100" alt="">
+						</p>						
+					</section>
+				</article>
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+						<ul class="social-list list-unstyled pb-4 mb-0">
+							<li class="list-inline-item"><a href="https://www.facebook.com/AmpersandAcademy" target="_blank"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default" target="_blank"><i class="fab fa-google fa-fw"></i></a></li> 
+							<li class="list-inline-item"><a href="https://www.linkedin.com/company/ampersandacademy/" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.instagram.com/ampersandacad/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w" target="_blank"><i class="fab fa-whatsapp fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://t.me/ampersandacad" target="_blank"><i class="fab fa-telegram fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+						<small class="copyright"><a href="https://ampersandacademy.com" target="_blank">Ampersand Academy</a> | All rights reserved</small>
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+

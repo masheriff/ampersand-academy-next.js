@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Ampersand Academy - Next.js Notes</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+	<!-- Dark Github Gist CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/darkGist.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo me-2" src="assets/images/Ampersand_Academy_Logo.svg" alt="logo" height="50"></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">             
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="https://www.facebook.com/AmpersandAcademy" target="_blank"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+			    		<li class="list-inline-item"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default" target="_blank"><i class="fab fa-google fa-fw"></i></a></li> 
+	            		<li class="list-inline-item"><a href="https://www.linkedin.com/company/ampersandacademy/" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a></li>
+	            		<li class="list-inline-item"><a href="https://www.instagram.com/ampersandacad/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+	            		<li class="list-inline-item"><a href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w" target="_blank"><i class="fab fa-whatsapp fa-fw"></i></a></li>
+	            		<li class="list-inline-item"><a href="https://t.me/ampersandacad" target="_blank"><i class="fab fa-telegram fa-fw"></i></a></li>
+		            </ul><!--//social-list-->
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Web Application Architecture</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Evolution of Web Applications</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">SPA, MPA Lifecycle</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Introduction to HTML</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Introduction to CSS</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Introduction to Tailwind CSS</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-7">Introduction to JavaScript</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-8">Advent of Typescript</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-9">Advent of Node.js</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-10">Introduction to React.js</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-11">Introduction to Next.js</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2024-08-29</span></h1>
+						<section class="docs-intro">
+							<ul>
+								<li>Our journey begins with <strong>Web Application Architecture</strong>, where we explore the layers, data sources, and API approaches that underpin modern web apps.</li>
+								
+								<li>The fundamental technologies of web development:
+									<ul>
+										<li><strong>HTML (HyperText Markup Language)</strong> serves as the backbone of web content, providing structure and semantics to your web pages through elements and attributes.</li>
+										
+										<li><strong>CSS (Cascading Style Sheets)</strong> transforms the visual presentation of web pages, handling layout, design, animations, and responsive behaviors across different devices.</li>
+										
+										<li><strong>JavaScript</strong> brings interactivity and dynamic functionality to web pages, enabling real-time updates, user interactions, and complex application logic.</li>
+									</ul>
+								</li>
+						
+								<li>Next, we delve into the <strong>Evolution of Web Applications</strong>, tracing their path from <strong>Multi-Page Applications (MPAs)</strong> to the advent of <strong>Single Page Applications (SPAs)</strong>.</li>
+								
+								<li>Advanced development tools and technologies:
+									<ul>
+										<li><strong>TypeScript</strong>, with its static typing and expressive features, enhances JavaScript development and provides better tooling support.</li>
+										<li><strong>Node.js</strong> revolutionized server-side programming, enabling JavaScript beyond the browser.</li>
+									</ul>
+								</li>
+								
+								<li>Finally, we introduce <strong>Next.js</strong>, a React-based framework that marries <strong>Progressive Enhancement</strong> principles with SPAs.</li>
+								
+								<li>This dynamic landscape focuses on:
+									<ul>
+										<li><strong>Robustness</strong></li>
+										<li><strong>Performance</strong></li>
+										<li><strong>Accessibility</strong></li>
+									</ul>
+								</li>
+							</ul>
+							<p>🌐🚀</p>
+						</section>
+				    </header>
+					<section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Web Application Architecture</h2>
+						<p class="mb-4">Web application architecture refers to the high-level structure and components that make up a web-based software system. It encompasses various layers, each with specific responsibilities.</p>
+						<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/web-application-blocks.png" alt="" title="Building Blocks of A Web Application"/>
+						<p>Here's a breakdown of the key components:</p>
+						<ol>
+							<li>
+								<h4>Data Sources:</h4>
+								<p>Web applications rely on data, which can come from various sources:</p>
+								<ul>
+									<li><strong>Relational Databases (RDBMS):</strong> Structured data stored in tables with predefined schemas (e.g., MySQL, PostgreSQL).</li>
+									<li><strong>NoSQL Databases:</strong> Non-relational databases that handle unstructured or semi-structured data (e.g., MongoDB, Cassandra).</li>
+									<li><strong>Big Data Stores:</strong> For managing large-scale data (e.g., Hadoop, Apache Spark).</li>
+									<li><strong>Flat Files:</strong> Simple text files (e.g., CSV, JSON) containing data.</li>
+									<li><strong>External APIs:</strong> Data accessed from third-party services via APIs.</li>
+								</ul>
+							</li>
+							<li>
+								<h4>API Layer/Server:</h4>
+								<p>The API layer acts as an intermediary between the data sources and the client applications. The following are the responsibilities of the API Layer:</p>
+								<ul>
+									<li><strong>Data Retrieval:</strong> Fetching data from databases, APIs, or other sources.</li>
+									<li><strong>Data Transformation:</strong> Converting data into a format suitable for consumption (e.g., JSON).</li>
+									<li><strong>Business Logic:</strong> Implementing application-specific rules and logic.</li>
+									<li><strong>Authentication and Authorization:</strong> Ensuring secure access to data.</li>
+									<li><strong>Error Handling:</strong> Managing exceptions and providing meaningful responses.</li>
+								</ul>
+								<p>The API layer exposes endpoints (URLs) that clients can use to interact with the system.</p>
+							</li>
+							<li>
+								<h4>Client Applications:</h4>
+								<p>Web applications can be accessed through various client interfaces:</p>
+								<ul>
+									<li><strong>Web Browsers:</strong> Users interact with web applications via browsers (e.g., Chrome, Firefox).</li>
+									<li><strong>Single-Page Applications (SPAs):</strong> Built using frameworks like Angular, React, Vue, or Svelte. SPAs load once and dynamically update content without full page reloads.</li>
+									<li><strong>Mobile Apps:</strong> Native (iOS/Android) or hybrid apps (built using frameworks like React Native).</li>
+									<li><strong>Authentication and Authorization:</strong> Ensuring secure access to data.</li>
+									<li><strong>Other APIs:</strong> Machine-to-machine communication (e.g., microservices communicating via RESTful APIs).</li>
+								</ul>
+							</li>
+							<li>
+								<h4>API Responses:</h4>
+								<ul>
+									<li>
+										<strong>JSON (JavaScript Object Notation):</strong> Lightweight, human-readable data interchange format.
+										<!-- <div class="semi-dark-gist"> -->
+											<script src="https://gist.github.com/masheriff/b09ab1b927792b0b2aaa22ed5592f358.js"></script>
+										<!-- </div> -->
+									</li>
+									<li><strong>Plain Text:</strong> Error messages, logs, or other relevant information.</li>
+									<li><strong>HTML:</strong> Used for rendering web pages directly within a client's browser.</li>
+									<li><strong>XML:</strong> Less common but still used for structured data.</li>
+									<li><strong>Binary Data:</strong> Images, audio files, PDFs, etc.</li>
+									<li><strong>Custom Formats:</strong> Application-specific response formats.</li>
+								</ul>
+							</li>
+						</ol>
+						<p>In summary, web application architecture involves data retrieval, transformation, and communication via APIs. Whether it's a web app, mobile app, or another API, the API layer plays a crucial role in delivering data to clients.</p>
+    					<p>Understanding this architecture is essential for building robust and scalable web applications. 🌐🚀</p>
+					</section>
+					<section class="docs-section" id="item-1-2">
+
+						<h2 class="section-heading">The Evolution of Web Applications</h2>
+						<p class="mb-4">The evolution of web applications has been a fascinating journey, shaped by technological advancements and changing user expectations. Let's explore the different stages:</p>
+						<ol>
+							<li>
+								<h4>Multi-page Applications (MPAs)</h4>
+								<p>In the early days of the internet, Multi-page Applications (MPAs) were the prevailing model. These applications followed a simple principle: every user action that required a server update or resulted in a view change triggered a full page reload. Each interaction meant fetching an entirely new HTML page from the server. While this approach worked well for simpler websites, it had limitations:</p>
+								<ul>
+									<li><strong>Bottleneck:</strong> Frequent round-trips to the server led to slower interactions and less-than-optimal user experiences.</li>
+									<li><strong>Complexity:</strong> As websites grew more complex, managing multiple pages became challenging.</li>
+								</ul>
+								<div class="row">
+									<div class="col-12 col-md-4">
+										<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/MPA.png" alt="" title="Building Blocks of A Web Application"/>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h4>Progressively Enhanced Multi-page Applications (PEMPAs):</h4>
+								<p>To address these limitations, developers embraced Progressive Enhancement. PEMPAs took a pragmatic approach:</p>
+								<ul>
+									<li><strong>Core Functionality for All:</strong> They started with a basic version of the website that all browsers could render. This ensured that all users, regardless of their browser capabilities, received essential content.</li>
+									<li><strong>Layered Enhancements:</strong> Advanced features were added progressively. Browsers that supported JavaScript and modern features received additional enhancements.</li>
+									<li><strong>Responsive and Inclusive:</strong> PEMPAs provided a more interactive and responsive experience without leaving behind users with older browsers.</li>
+								</ul>
+								<div class="row">
+									<div class="col-12 col-md-6">
+										<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/PEMPA.png" alt="" title="Building Blocks of A Web Application"/>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h4>Single Page Applications (SPAs):</h4>
+								<p>As web technologies evolved, Single Page Applications (SPAs) emerged. SPAs revolutionized the user experience:</p>
+								<ul>
+									<li><strong>Dynamic Content:</strong> SPAs load a single HTML page initially and then dynamically update content on the client side as users interact with the app.</li>
+									<li><strong>Smooth Interactions:</strong> No full page reloads during user interactions, resulting in a more app-like feel.</li>
+									<li><strong>JavaScript Power:</strong> Leveraged advancements in JavaScript and AJAX for dynamic content replacement.</li>
+								</ul>
+								<p>However, SPAs introduced challenges:</p>
+								<ul>
+									<li><strong>SEO Difficulties:</strong> Search engine optimization (SEO) suffered due to reliance on JavaScript.</li>
+									<li><strong>Performance Concerns:</strong> Heavy reliance on client-side rendering impacted initial load times.</li>
+									<li><strong>Accessibility Considerations:</strong> Ensuring accessibility for all users remained crucial.</li>
+								</ul>
+								<div class="row">
+									<div class="col-12 col-md-8">
+										<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/SPA.png" alt="" title="Building Blocks of A Web Application"/>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h4>Enter Progressively Enhanced Single Page Applications (PESPAs):</h4>
+								<p>PESPAs combine the best of both worlds:</p>
+								<ol>
+									<li>
+										<strong>Improved Performance:</strong> 
+										<ul>
+											<li>Render the initial view on the server-side or generate it at build time.</li>
+											<li>Fast initial load, especially beneficial for users on slower networks or devices.</li>
+										</ul>
+									</li>
+									<li>
+										<strong>Enhanced SEO:</strong> 
+										<ul>
+											<li>Deliver fully rendered HTML to the browser.</li>
+											<li>Content easily discoverable by search engine crawlers.</li>
+										</ul>
+									</li>
+									<li>
+										<strong>Greater Accessibility:</strong> 
+										<ul>
+											<li>Core functionality accessible to all users, regardless of browser capabilities or network conditions.</li>
+											<li>A more inclusive web experience.</li>
+										</ul>
+									</li>	
+									<li>
+										<strong>Resilience:</strong> 
+										<ul>
+											<li>If enhancements fail to load, users can still interact with the core functionality.</li>
+											<li>Robustness against failures.</li>
+										</ul>
+									</li>									
+									<li>
+										<strong>Better User Experience:</strong> 
+										<ul>
+											<li>Immediate feedback with a fully rendered page.</li>
+											<li>Additional interactivity and functionality layered on top as enhancements load.</li>
+										</ul>
+									</li>	
+								</ol>
+								<div class="row">
+									<div class="col-12 col-md-8">
+										<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/PESPA.png" alt="" title="Building Blocks of A Web Application"/>
+									</div>
+								</div>
+							</li>
+							<p>In summary, PESPAs strike a balance between interactivity, robustness, and accessibility, ensuring a delightful web experience for all. 🌐🚀</p>
+						</ol>	
+					</section>
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">SPA MPA Lifecycle</h2>
+						<p class="mb-4">The below image shows the lifecycle of a page in both the cases of MPAs and SPAs</p>
+						<div class="row">
+							<div class="col-12 col-md-8">
+								<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/spa-mpa-lifecycle.jpg" alt="" title="Building Blocks of A Web Application"/>
+							</div>
+						</div>
+					</section>
+					<section class="docs-section" id="item-1-4">
+						<h2 class="section-heading">Introduction to HTML</h2>
+						<p class="mb-4"><strong>HTML</strong> stands for <strong>Hyper Text Markup Language</strong>. It is the standard markup language for creating web pages.</p>
+						<p class="mb-4"><strong>HTML</strong> describes the structure of a web page and consists of a series of elements. These elements tell the browser how to display the content.</p>
+						<p class="mb-4"><strong>HTML</strong> elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</p>
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/masheriff/f309a509c75ac0880df4d6b030d100d2.js"></script>
+						</div>
+					</section>
+					<section class="docs-section" id="item-1-5">
+						<h2 class="section-heading">Introduction to CSS</h2>
+						<p class="mb-4"><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>.</p>
+						<p class="mb-4"><strong>CSS</strong> describes how HTML elements are to be displayed on screen, paper, or in other media</p>
+						<p class="mb-4"><strong>CSS</strong> saves a lot of work. It can control the layout of multiple web pages all at once</p>
+						<p class="mb-4">External stylesheets are stored in CSS files</p>
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/masheriff/ab2507bd589d4a435cf0f1e342be0c2c.js"></script>
+						</div>
+
+					</section>
+					<section class="docs-section" id="item-1-6">
+						<h2 class="section-heading">Introduction to Tailwind CSS</h2>
+						<p class="mb-4"><strong><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a></strong> is a utility-first CSS framework that enables rapid UI development through pre-built classes.</p>
+						<h4>Key Features:</h4>
+						<ul>
+							<li><strong>Utility Classes:</strong> Small, single-purpose classes that can be combined</li>
+							<li><strong>Responsive Design:</strong> Built-in responsive modifiers</li>
+							<li><strong>Customization:</strong> Highly configurable design system</li>
+						</ul>
+						<p>Benefits of Tailwind CSS:</p>
+						<ul>
+							<li>Faster development with pre-built utilities</li>
+							<li>Consistent spacing and sizing</li>
+							<li>Reduced CSS bundle size through PurgeCSS</li>
+							<li>Maintainable and scalable styling approach</li>
+						</ul>
+					</section>
+					<section class="docs-section" id="item-1-7">
+						<h2 class="section-heading">Introduction to JavaScript</h2>
+						<p class="mb-4">JavaScript is a versatile programming language that adds interactivity and dynamic behavior to web pages.</p>
+						<h4>Core Concepts:</h4>
+						<ul>
+							<li><strong>DOM Manipulation:</strong> Modifying HTML elements dynamically</li>
+							<li><strong>Event Handling:</strong> Responding to user interactions</li>
+							<li><strong>Asynchronous Programming:</strong> Handling operations that take time</li>
+						</ul>
+						<p>Our page uses JavaScript for:</p>
+						<ul>
+							<li>Smooth scrolling navigation</li>
+							<li>Code syntax highlighting</li>
+							<li>Interactive sidebar toggling</li>
+							<li>Dynamic content loading</li>
+						</ul>
+						<div class="row">
+							<div class="col-md-6">
+								<h4>Inline Javascript</h4>
+								<div class="docs-code-block">
+									<script src="https://gist.github.com/masheriff/3ce5e4bd5b11a3ab8414a7d931566aa4.js"></script>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<h4>Javascript enclosed in a script tag</h4>
+								<div class="docs-code-block">
+									<script src="https://gist.github.com/masheriff/da269f6ed4c24becb5da2e4ef321cad7.js"></script>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="docs-section" id="item-1-8">
+						<h2 class="section-heading">Advent of Typescript</h2>
+						<ul>
+							<li>TypeScript is a free and open-source high-level programming language developed by Microsoft which is a superscript of JavaScript</li>
+							<li>It adds static typing with optional type annotations to JavaScript.</li>
+							<li>TypeScript is designed for large applications and transpiles to JavaScript.</li>
+						</ul>
+						<h4>Reasons for TypeScript Invention</h4>
+						<ol>
+							<li>
+								<strong>JavaScript Limitations:</strong> 
+								<ul>
+											<li>JavaScript, while powerful, had limitations for large-scale applications.</li>
+											<li>TypeScript aimed to address these limitations and enhance the development process.</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Static Typing:</strong> 
+								<ul>
+									<li>TypeScript introduced optional static typing.</li>
+									<li>Developers could catch type-related errors early during development.</li>
+									<li>This improved code reliability and stability.</li>
+								</ul>
+							</li>
+						</ol>
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/masheriff/17ff1e1fbf8d5ba3ac3a95c95ee805b1.js"></script>
+						</div>
+					</section>
+					<section class="docs-section" id="item-1-9">
+						<h2 class="section-heading">Advent of Node.js</h2>
+						<h4>Introduction to Node.js</h4>
+						<ul>
+							<li><strong><a href="https://nodejs.org/en" target="_blank">Node.js</a></strong> emerged as a solution to streamline the execution of JavaScript code beyond web browsers.</li>
+							<li>It provides a runtime environment for JavaScript, allowing developers to run code on the server side.</li>
+							<li>Node.js is built on Chrome's V8 JavaScript engine, making it fast and efficient.</li>
+						</ul>
+						<h4>Reasons for Node.js Invention</h4>
+						<ol>
+							<li>
+								<strong>Handling Concurrent Connections:</strong> 
+								<ul>
+									<li>Apache HTTP Server had limitations in handling many concurrent connections (10,000+).</li>
+									<li>Node.js addressed this by using an event-driven architecture capable of asynchronous I/O.</li>
+									<li>It optimized throughput and scalability for web applications with numerous I/O operations.</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Blocking and Sequential Programming:</strong> 
+								<ul>
+									<li>Traditional server-side programming followed a sequential model.</li>
+									<li>Node.js introduced non-blocking I/O, preventing processes from blocking each other.</li>
+									<li>It allowed handling multiple connections without creating separate execution stacks.</li>
+								</ul>
+							</li>
+						</ol>
+						<h4>Impact on API Development Landscape</h4>
+						<ol>
+							<li>
+								<strong>Unified Language:</strong>  Node.js enabled "JavaScript everywhere."
+								<ul>
+									<li>Developers could use the same language (JavaScript) for both server-side and client-side programming.</li>
+									<li>No need to switch between different languages or frameworks.</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Expressive APIs:</strong> 
+								<ul>
+									<li>Node.js, combined with Express (a minimalistic web application framework), simplified API development.</li>
+									<li>Express provided features and middleware for creating flexible and customizable APIs.</li>
+									<li>Developers could build RESTful APIs efficiently using JavaScript.</li>
+								</ul>
+								<div class="row">
+									<div class="col-12 col-md-8">
+										<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/nodejs_apis.png" alt="" title="Building Blocks of A Web Application"/>
+									</div>
+								</div>
+							</li>
+							<li>
+								<strong>Performance and Scalability:</strong> 
+								<ul>
+									<li>Node.js leveraged V8s performance, making APIs fast and responsive.</li>
+									<li>Its event-driven model optimized throughput for real-time applications.</li>
+									<li>Scalability was achievable due to non-blocking I/O.</li>
+								</ul>
+							</li>
+							<li>
+								<strong>npm Ecosystem:</strong> 
+								<ul>
+									<li><a href="https://www.npmjs.com/" target="_blank">npm (Node Package Manager)</a> facilitated package management.</li>
+									<li>Developers could publish, share, and install Node.js packages easily.</li>
+									<li>The ecosystem grew rapidly, enhancing API development.</li>
+								</ul>
+								<code>npm install &lt;package name&gt;</code>
+							</li>
+						</ol>
+						<p>In summary, Node.js revolutionized API development by unifying JavaScript, improving performance, and simplifying server-side programming. It remains a popular choice for building robust APIs. 🌐🚀</p>
+					</section>
+					<section class="docs-section" id="item-1-10">
+						<h2 class="section-heading">Introduction to React.js</h2>
+						<h4 class="mb-4">How does React Work?</h4>
+						<p class="mb-4"><strong><a href="https://react.dev/" target="_blank">React</a></strong> creates a <strong>VIRTUAL DOM</strong> in memory.</p>
+						<p class="mb-4">Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.</p>
+						<p class="mb-4">React only changes what needs to be changed!</p>
+						<p class="mb-4">React finds out what changes have been made, and changes only what needs to be changed.</p>
+						<p class="mb-4">You will learn the various aspects of how React does this in the rest of this tutorial.</p>
+						<div class="docs-code-block">
+							<script src="https://gist.github.com/masheriff/b611496e61960576908d5fae4affe4d5.js"></script>
+						</div>
+					</section>
+					<section class="docs-section" id="item-1-11">
+						<h2 class="section-heading">Introduction to Next.js</h2>
+						<div class="row">
+							<div class="col-12 col-md-8">
+								<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/nextjs-intro.jpeg" alt="" title="Building Blocks of A Web Application"/>
+							</div>
+						</div>
+						<p>Next.js, a React-based framework, bridges the gap between PE and SPAs. It achieves this by offering features like:</p>
+						<ol>
+							<li>
+								<strong>Server-Side Rendering (SSR):</strong>
+								<ul>
+									<li>SSR generates full HTML on the server for each request.</li>
+									<li>Users receive a fully rendered page even before JavaScript loads.</li>
+									<li>Improves performance, especially on slower networks, and aids SEO.</li>
+								</ul>
+								<script src="https://gist.github.com/masheriff/d9464813ac941e9034f4794e095c0410.js"></script>
+								<div class="row">
+									<div class="col-12 col-md-6">
+										<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/SSR.avif" alt="" title="Building Blocks of A Web Application"/>
+									</div>
+								</div>
+							</li>
+							<li>
+								<strong>Static Site Generation (SSG):</strong>
+								<ul>
+									<li>SSG generates HTML at build time, serving static files via CDNs.</li>
+									<li>Excellent performance and scalability.</li>
+									<li>Incremental Static Regeneration (ISR) updates static content without full rebuilds.</li>
+								</ul>
+								<script src="https://gist.github.com/masheriff/7f36bfafc69fa63346ca9f75cc4b8f6c.js"></script>
+							</li>
+							<li>
+								<strong>Client-Side Rendering (CSR):</strong>
+								<ul>
+									<li>Next.js "hydrates" server-rendered or statically generated pages with client-side JavaScript.</li>
+									<li>Subsequent interactions are handled entirely on the client side.</li>
+									<li>Provides a smooth, app-like user experience.</li>
+								</ul>
+								<div class="row">
+									<div class="col-12 col-md-6">
+										<img class="figure-img img-fluid shadow rounded w-100 mb-4" src="assets/images/CSR.avif" alt="" title="Building Blocks of A Web Application"/>
+									</div>
+								</div>
+							</li>
+							<li>
+								<strong>API Routes:</strong>
+								<ul>
+									<li>Easily create server-side API endpoints within Next.js.</li>
+									<li>Interact with server-side data, enhancing your application's capabilities.</li>
+								</ul>
+								<script src="https://gist.github.com/masheriff/8ca53e17e0be23d2aea029d77a5d2e2b.js"></script>
+							</li>
+							<li>
+								<strong>Extra:</strong>
+								<p>Learn more about SSR, CSR, SSG and ISR <a href="https://www.educative.io/answers/ssr-vs-csr-vs-isr-vs-ssg" target="_blank">here</a></p>
+							</li>
+
+						</ol>
+					</section>
+			    </article>
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+						<ul class="social-list list-unstyled pb-4 mb-0">
+							<li class="list-inline-item"><a href="https://www.facebook.com/AmpersandAcademy" target="_blank"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default" target="_blank"><i class="fab fa-google fa-fw"></i></a></li> 
+							<li class="list-inline-item"><a href="https://www.linkedin.com/company/ampersandacademy/" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.instagram.com/ampersandacad/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w" target="_blank"><i class="fab fa-whatsapp fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://t.me/ampersandacad" target="_blank"><i class="fab fa-telegram fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+						<small class="copyright"><a href="https://ampersandacademy.com" target="_blank">Ampersand Academy</a> | All rights reserved</small>
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+

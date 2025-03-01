@@ -1,0 +1,2726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ampersand Academy - Tailwind CSS Notes</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Tailwind CSS Guide and Notes" />
+    <meta name="author" content="Ampersand Academy" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/simplelightbox/simple-lightbox.min.css"
+    />
+
+    <!-- Dark Github Gist CSS -->
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="assets/css/darkGist.min.css"
+    />
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+
+  <body class="docs-page">
+    <header class="header fixed-top">
+      <div class="branding docs-branding">
+        <div class="container-fluid position-relative py-2">
+          <div class="docs-logo-wrapper">
+            <button
+              id="docs-sidebar-toggler"
+              class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+              type="button"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="site-logo">
+              <a class="navbar-brand" href="index.html"
+                ><img
+                  class="logo me-2"
+                  src="assets/images/Ampersand_Academy_Logo.svg"
+                  alt="logo"
+                  height="50"
+              /></a>
+            </div>
+          </div>
+          <!--//docs-logo-wrapper-->
+          <div
+            class="docs-top-utilities d-flex justify-content-end align-items-center"
+          >
+            <ul
+              class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex"
+            >
+              <li class="list-inline-item">
+                <a
+                  href="https://www.facebook.com/AmpersandAcademy"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default"
+                  target="_blank"
+                  ><i class="fab fa-google fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.linkedin.com/company/ampersandacademy/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.instagram.com/ampersandacad/"
+                  target="_blank"
+                  ><i class="fab fa-instagram fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w"
+                  target="_blank"
+                  ><i class="fab fa-whatsapp fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://t.me/ampersandacad" target="_blank"
+                  ><i class="fab fa-telegram fa-fw"></i
+                ></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//docs-top-utilities-->
+        </div>
+        <!--//container-->
+      </div>
+      <!--//branding-->
+    </header>
+    <!--//header-->
+    <div class="docs-wrapper">
+      <div id="docs-sidebar" class="docs-sidebar">
+        <div class="top-search-box d-lg-none p-3">
+          <form class="search-form">
+            <input
+              type="text"
+              placeholder="Search the docs..."
+              name="search"
+              class="form-control search-input"
+            />
+            <button type="submit" class="btn search-btn" value="Search">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <nav id="docs-nav" class="docs-nav navbar">
+          <ul class="section-items list-unstyled nav flex-column pb-3">
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-1"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-info-circle"></i></span
+                >Introduction</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-1"
+                >What is Tailwind CSS?</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-2"
+                >Benefits of Tailwind CSS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-3"
+                >Tailwind vs Other CSS Frameworks</a
+              >
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-2"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-download"></i></span
+                >Installation & Setup</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-1"
+                >Install Tailwind CSS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-2"
+                >Configuration File</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-3">Build Process</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-4"
+                >CDN (Quick Start)</a
+              >
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-3"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-cube"></i></span
+                >Utility Classes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-1">Typography</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-2">Colors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-3">Spacing & Sizing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-4">Flexbox & Grid</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-4"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-mobile-alt"></i></span
+                >Responsive Design</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-1">Breakpoints</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-2"
+                >Responsive Utilities</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-3"
+                >Mobile-First Approach</a
+              >
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-5"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-th"></i></span
+                >Building Components</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-1">Buttons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-2">Cards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-3">Navigation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-4">Forms</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-6"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-code"></i></span
+                >Advanced Styling</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-1">Custom Utilities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-2"
+                >Extending Tailwind</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-3">Dark Mode</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-4">Plugins</a>
+            </li>
+
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-7"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-lightbulb"></i></span
+                >Best Practices</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-1">Organization</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-2">Performance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-3">Common Patterns</a>
+            </li>
+          </ul>
+        </nav>
+        <!--//docs-nav-->
+      </div>
+      <!--//docs-sidebar-->
+      <div class="docs-content">
+        <div class="container">
+          <article class="docs-article" id="section-1">
+            <header class="docs-header">
+              <h1 class="docs-heading">Introduction to Tailwind CSS</h1>
+              <section class="docs-intro">
+                <p>
+                  Tailwind CSS is a utility-first CSS framework that allows you
+                  to build custom designs without leaving your HTML. Unlike
+                  other CSS frameworks that provide pre-designed components,
+                  Tailwind gives you low-level utility classes that let you
+                  build completely custom designs.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+            <section class="docs-section" id="item-1-1">
+              <h2 class="section-heading">What is Tailwind CSS?</h2>
+              <p>
+                Tailwind CSS is a highly customizable, low-level CSS framework
+                that provides you with all the building blocks you need to build
+                bespoke designs without any opinionated styles you have to fight
+                to override.
+              </p>
+
+              <h4>Key Characteristics</h4>
+              <ul>
+                <li>
+                  <strong>Utility-First</strong>: Composed of small,
+                  single-purpose utility classes that can be composed to build
+                  any design
+                </li>
+                <li>
+                  <strong>Responsive</strong>: Built-in responsive modifiers
+                  make it easy to build responsive interfaces
+                </li>
+                <li>
+                  <strong>Component-Friendly</strong>: Utilities can be
+                  extracted into reusable components with tools like @apply
+                </li>
+                <li>
+                  <strong>Customizable</strong>: Tailwind is designed to be
+                  customized to your project's needs
+                </li>
+                <li>
+                  <strong>Production-Ready</strong>: Includes tools to optimize
+                  CSS for production by removing unused styles
+                </li>
+              </ul>
+
+              <h4>How Tailwind Works</h4>
+              <p>
+                Unlike traditional CSS frameworks like Bootstrap or Foundation,
+                Tailwind doesn't provide pre-built components. Instead, it
+                provides utility classes that you can combine to create your own
+                designs directly in your HTML.
+              </p>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    Tailwind CSS is highly optimized for production through its
+                    built-in PurgeCSS integration, which removes unused CSS,
+                    resulting in very small file sizes.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-1-2">
+              <h2 class="section-heading">Benefits of Tailwind CSS</h2>
+              <p>
+                Tailwind CSS offers numerous advantages over traditional CSS
+                frameworks and methodologies:
+              </p>
+
+              <h4>Advantages of Tailwind CSS</h4>
+              <ul>
+                <li>
+                  <strong>Faster Development</strong>: Build custom interfaces
+                  without writing custom CSS
+                </li>
+                <li>
+                  <strong>Consistency</strong>: Predefined spacing, colors, and
+                  other design tokens ensure consistency
+                </li>
+                <li>
+                  <strong>Responsive by Default</strong>: Built-in responsive
+                  variants make building for different screen sizes easy
+                </li>
+                <li>
+                  <strong>Maintainability</strong>: Changes can be made directly
+                  in the HTML without hunting through stylesheets
+                </li>
+                <li>
+                  <strong>Lower CSS File Size</strong>: PurgeCSS integration
+                  removes unused styles for smaller production builds
+                </li>
+                <li>
+                  <strong>Reduced Decision Fatigue</strong>: Well-thought-out
+                  defaults for colors, spacing, etc.
+                </li>
+                <li>
+                  <strong>No Naming Problems</strong>: Avoid coming up with
+                  class names for every element
+                </li>
+              </ul>
+
+              <h4>Comparison with Traditional CSS Workflows</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Traditional CSS</th>
+                      <th>Tailwind CSS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Write custom CSS for each component</td>
+                      <td>Use utility classes directly in HTML</td>
+                    </tr>
+                    <tr>
+                      <td>Create and maintain class naming system</td>
+                      <td>Use pre-defined utility class names</td>
+                    </tr>
+                    <tr>
+                      <td>CSS file size grows as project grows</td>
+                      <td>
+                        CSS file size can remain small with proper purging
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Context switching between HTML and CSS files</td>
+                      <td>Stay in HTML for both structure and styling</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Need to create media queries for responsive design
+                      </td>
+                      <td>Use built-in responsive variants (e.g., md:flex)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="docs-section" id="item-1-3">
+              <h2 class="section-heading">Tailwind vs Other CSS Frameworks</h2>
+              <p>
+                Understanding how Tailwind CSS compares to other popular CSS
+                frameworks helps in choosing the right tool for your project.
+              </p>
+
+              <h4>Tailwind CSS vs Bootstrap</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>Tailwind CSS</th>
+                      <th>Bootstrap</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Approach</td>
+                      <td>Utility-first</td>
+                      <td>Component-based</td>
+                    </tr>
+                    <tr>
+                      <td>Customization</td>
+                      <td>Highly customizable</td>
+                      <td>Less customizable without overrides</td>
+                    </tr>
+                    <tr>
+                      <td>Design Opinion</td>
+                      <td>No predefined look</td>
+                      <td>Strong visual identity</td>
+                    </tr>
+                    <tr>
+                      <td>Learning Curve</td>
+                      <td>Steeper initially, simpler later</td>
+                      <td>Easier to start, harder to customize</td>
+                    </tr>
+                    <tr>
+                      <td>File Size</td>
+                      <td>Potentially smaller with purging</td>
+                      <td>Larger, especially with jQuery</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>When to Choose Tailwind CSS</h4>
+              <p>Tailwind CSS is particularly well-suited for:</p>
+              <ul>
+                <li>
+                  Custom designs that don't follow a specific design system
+                </li>
+                <li>Projects where you want maximum design flexibility</li>
+                <li>Teams that prefer working primarily in HTML/JSX</li>
+                <li>Projects where front-end performance is critical</li>
+                <li>
+                  Applications that need to be highly responsive across devices
+                </li>
+              </ul>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    Important Consideration
+                  </h4>
+                  <p>
+                    Tailwind's utility-first approach can lead to verbose HTML
+                    if not managed properly. For complex components, consider
+                    extracting repeated utility patterns into component classes
+                    using @apply or a component-based JavaScript framework.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+          <article class="docs-article" id="section-2">
+            <header class="docs-header">
+              <h1 class="docs-heading">Installation & Setup</h1>
+              <section class="docs-intro">
+                <p>
+                  Getting started with Tailwind CSS involves installing the
+                  framework, configuring it to your project's needs, and setting
+                  up the build process. This section covers different approaches
+                  to integrating Tailwind into your projects.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-2-1">
+              <h2 class="section-heading">Install Tailwind CSS</h2>
+              <p>
+                There are several ways to install Tailwind CSS, depending on
+                your project setup and requirements.
+              </p>
+
+              <h4>Using npm (Recommended)</h4>
+              <p>The most common way to install Tailwind is through npm:</p>
+              <pre><code class="language-bash"># Install Tailwind CSS, PostCSS and autoprefixer
+npm install -D tailwindcss postcss autoprefixer
+
+# Generate the configuration files
+npx tailwindcss init -p</code></pre>
+
+              <p>This creates two configuration files:</p>
+              <ul>
+                <li>
+                  <code>tailwind.config.js</code> - Tailwind CSS configuration
+                </li>
+                <li><code>postcss.config.js</code> - PostCSS configuration</li>
+              </ul>
+
+              <h4>Framework-specific Guides</h4>
+              <p>
+                Tailwind offers official guides for installing with popular
+                frameworks:
+              </p>
+              <ul>
+                <li>
+                  <strong>React/Next.js</strong>: Additional setup for React
+                  applications
+                </li>
+                <li>
+                  <strong>Vue/Nuxt</strong>: Integration with Vue.js ecosystem
+                </li>
+                <li><strong>Angular</strong>: Setup for Angular projects</li>
+                <li>
+                  <strong>Laravel</strong>: Built-in support through Laravel Mix
+                </li>
+              </ul>
+
+              <h4>Using Play CDN (for prototyping only)</h4>
+              <p>For quick prototyping, you can use the Play CDN:</p>
+              <pre><code class="language-html">&lt;!-- Add to your HTML head --&gt;
+&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    Important
+                  </h4>
+                  <p>
+                    The Play CDN should only be used for development and demos,
+                    not for production. It doesn't include important
+                    optimizations like minimizing file size.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-2-2">
+              <h2 class="section-heading">Configuration File</h2>
+              <p>
+                The <code>tailwind.config.js</code> file allows you to customize
+                virtually every aspect of Tailwind CSS.
+              </p>
+
+              <h4>Basic Configuration Structure</h4>
+              <pre><code class="language-javascript">// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+    "./public/index.html",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}</code></pre>
+
+              <h4>Key Configuration Options</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Option</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>content</code></td>
+                      <td>
+                        Files to scan for class names to include in your CSS
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>theme</code></td>
+                      <td>
+                        Customizations for colors, spacing, typography, etc.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>plugins</code></td>
+                      <td>Additional Tailwind plugins to use</td>
+                    </tr>
+                    <tr>
+                      <td><code>prefix</code></td>
+                      <td>Optional prefix for all utilities (e.g., 'tw-')</td>
+                    </tr>
+                    <tr>
+                      <td><code>important</code></td>
+                      <td>Control the CSS importance level</td>
+                    </tr>
+                    <tr>
+                      <td><code>darkMode</code></td>
+                      <td>Configure dark mode strategy ('media' or 'class')</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Customizing Theme</h4>
+              <p>
+                The theme section is where you customize Tailwind's design
+                tokens:
+              </p>
+              <pre><code class="language-javascript">module.exports = {
+  // ...
+  theme: {
+    // Override defaults
+    colors: {
+      blue: {
+        light: '#85d7ff',
+        DEFAULT: '#1fb6ff',
+        dark: '#009eeb',
+      },
+      // ...
+    },
+    // Extend defaults
+    extend: {
+      spacing: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
+  }
+}</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Tip
+                  </h4>
+                  <p>
+                    Use <code>theme.extend</code> to add to Tailwind's defaults
+                    instead of <code>theme</code> which overrides them entirely.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-2-3">
+              <h2 class="section-heading">Build Process</h2>
+              <p>
+                Tailwind CSS requires a build step to generate your CSS file,
+                especially for production environments.
+              </p>
+
+              <h4>Setting Up Source CSS File</h4>
+              <p>
+                Create a CSS file (e.g., <code>input.css</code>) with the
+                Tailwind directives:
+              </p>
+              <pre><code class="language-css">/* input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
+
+              <h4>Processing CSS with PostCSS</h4>
+              <p>Configure PostCSS to process your CSS:</p>
+              <pre><code class="language-javascript">// postcss.config.js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}</code></pre>
+
+              <h4>Build Scripts</h4>
+              <p>Add build scripts to your package.json:</p>
+              <pre><code class="language-json">{
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  }
+}</code></pre>
+
+              <h4>Optimizing for Production</h4>
+              <p>For production, you'll want to minimize your CSS file:</p>
+              <pre><code class="language-json">{
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  }
+}</code></pre>
+
+              <p>
+                Tailwind automatically purges unused styles when building for
+                production based on your <code>content</code> configuration.
+              </p>
+
+              <h4>Integration with Framework Build Tools</h4>
+              <p>
+                Most modern JavaScript frameworks have build tools that can
+                integrate with Tailwind:
+              </p>
+              <ul>
+                <li>
+                  <strong>Vite</strong>: Configure PostCSS in
+                  <code>vite.config.js</code>
+                </li>
+                <li><strong>Webpack</strong>: Use with postcss-loader</li>
+                <li>
+                  <strong>Next.js</strong>: Built-in support with CSS modules
+                </li>
+              </ul>
+            </section>
+
+            <section class="docs-section" id="item-2-4">
+              <h2 class="section-heading">CDN (Quick Start)</h2>
+              <p>
+                For quick prototyping or small projects, you can use Tailwind
+                CSS directly from a CDN without any build step.
+              </p>
+
+              <h4>Using the Play CDN</h4>
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Tailwind CSS Demo&lt;/title&gt;
+  &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+  &lt;!-- Optional: Configure Tailwind directly in HTML --&gt;
+  &lt;script&gt;
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  &lt;/script&gt;
+  &lt;!-- Optional: Add custom styles --&gt;
+  &lt;style type="text/tailwindcss"&gt;
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container mx-auto px-4 py-8"&gt;
+    &lt;h1 class="text-3xl font-bold text-clifford"&gt;Hello World&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+              <h4>Limitations of CDN Approach</h4>
+              <ul>
+                <li>No file size optimization through PurgeCSS</li>
+                <li>Limited customization options</li>
+                <li>No tree-shaking of unused styles</li>
+                <li>Not suitable for production environments</li>
+                <li>Limited browser caching benefits</li>
+              </ul>
+
+              <div class="callout-block callout-block-success">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-thumbs-up"></i> </span
+                    ><!--//icon-holder-->
+                    Best Practice
+                  </h4>
+                  <p>
+                    Use the CDN approach for small demos, prototypes, or
+                    learning Tailwind CSS. For production projects, always use
+                    the proper installation with npm and build process to
+                    benefit from optimizations.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+
+          <article class="docs-article" id="section-3">
+            <header class="docs-header">
+              <h1 class="docs-heading">Utility Classes</h1>
+              <section class="docs-intro">
+                <p>
+                  Tailwind CSS provides a comprehensive set of utility classes
+                  that can be combined to build any design directly in your
+                  HTML. This section covers the most commonly used utility
+                  classes for typography, colors, spacing, and layout.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-3-1">
+              <h2 class="section-heading">Typography</h2>
+              <p>
+                Tailwind offers a wide range of typography utilities for
+                controlling text appearance.
+              </p>
+
+              <h4>Font Size</h4>
+              <pre><code class="language-html">&lt;!-- Font size utilities --&gt;
+&lt;p class="text-xs"&gt;Extra Small&lt;/p&gt;
+&lt;p class="text-sm"&gt;Small&lt;/p&gt;
+&lt;p class="text-base"&gt;Base&lt;/p&gt;
+&lt;p class="text-lg"&gt;Large&lt;/p&gt;
+&lt;p class="text-xl"&gt;Extra Large&lt;/p&gt;
+&lt;p class="text-2xl"&gt;2XL&lt;/p&gt;
+&lt;p class="text-3xl"&gt;3XL&lt;/p&gt;
+&lt;!-- Up to text-9xl --&gt;</code></pre>
+
+              <h4>Font Weight</h4>
+              <pre><code class="language-html">&lt;!-- Font weight utilities --&gt;
+&lt;p class="font-thin"&gt;Thin (100)&lt;/p&gt;
+&lt;p class="font-extralight"&gt;Extra Light (200)&lt;/p&gt;
+&lt;p class="font-light"&gt;Light (300)&lt;/p&gt;
+&lt;p class="font-normal"&gt;Normal (400)&lt;/p&gt;
+&lt;p class="font-medium"&gt;Medium (500)&lt;/p&gt;
+&lt;p class="font-semibold"&gt;Semibold (600)&lt;/p&gt;
+&lt;p class="font-bold"&gt;Bold (700)&lt;/p&gt;
+&lt;p class="font-extrabold"&gt;Extra Bold (800)&lt;/p&gt;
+&lt;p class="font-black"&gt;Black (900)&lt;/p&gt;</code></pre>
+
+              <h4>Text Alignment</h4>
+              <pre><code class="language-html">&lt;!-- Text alignment --&gt;
+&lt;p class="text-left"&gt;Left aligned text&lt;/p&gt;
+&lt;p class="text-center"&gt;Center aligned text&lt;/p&gt;
+&lt;p class="text-right"&gt;Right aligned text&lt;/p&gt;
+&lt;p class="text-justify"&gt;Justified text&lt;/p&gt;</code></pre>
+
+              <h4>Text Decoration & Transform</h4>
+              <pre><code class="language-html">&lt;!-- Text decoration --&gt;
+&lt;p class="underline"&gt;Underlined text&lt;/p&gt;
+&lt;p class="line-through"&gt;Strikethrough text&lt;/p&gt;
+&lt;p class="no-underline"&gt;No underline&lt;/p&gt;
+
+&lt;!-- Text transform --&gt;
+&lt;p class="uppercase"&gt;uppercase text&lt;/p&gt;
+&lt;p class="lowercase"&gt;LOWERCASE TEXT&lt;/p&gt;
+&lt;p class="capitalize"&gt;capitalize each word&lt;/p&gt;
+&lt;p class="normal-case"&gt;Normal case&lt;/p&gt;</code></pre>
+
+              <h4>Line Height</h4>
+              <pre><code class="language-html">&lt;!-- Line height --&gt;
+&lt;p class="leading-none"&gt;Leading none&lt;/p&gt;
+&lt;p class="leading-tight"&gt;Leading tight&lt;/p&gt;
+&lt;p class="leading-snug"&gt;Leading snug&lt;/p&gt;
+&lt;p class="leading-normal"&gt;Leading normal&lt;/p&gt;
+&lt;p class="leading-relaxed"&gt;Leading relaxed&lt;/p&gt;
+&lt;p class="leading-loose"&gt;Leading loose&lt;/p&gt;</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    Typography values can be customized in your
+                    <code>tailwind.config.js</code> file to match your design
+                    system.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-3-2">
+              <h2 class="section-heading">Colors</h2>
+              <p>
+                Tailwind comes with a default color palette that can be
+                customized to match your brand.
+              </p>
+
+              <h4>Text Colors</h4>
+              <pre><code class="language-html">&lt;!-- Basic colors --&gt;
+&lt;p class="text-black"&gt;Black text&lt;/p&gt;
+&lt;p class="text-white"&gt;White text&lt;/p&gt;
+&lt;p class="text-gray-500"&gt;Gray text (500)&lt;/p&gt;
+
+&lt;!-- Color with opacity --&gt;
+&lt;p class="text-blue-500/75"&gt;Blue text with 75% opacity&lt;/p&gt;
+
+&lt;!-- Color palette shades --&gt;
+&lt;p class="text-red-50"&gt;Lightest red&lt;/p&gt;
+&lt;p class="text-red-100"&gt;...&lt;/p&gt;
+&lt;p class="text-red-900"&gt;Darkest red&lt;/p&gt;</code></pre>
+
+              <h4>Background Colors</h4>
+              <pre><code class="language-html">&lt;!-- Background colors follow the same pattern --&gt;
+&lt;div class="bg-gray-200"&gt;Gray background&lt;/div&gt;
+&lt;div class="bg-blue-500"&gt;Blue background&lt;/div&gt;
+&lt;div class="bg-green-100"&gt;Light green background&lt;/div&gt;
+&lt;div class="bg-indigo-600/50"&gt;Semi-transparent indigo&lt;/div&gt;</code></pre>
+
+              <h4>Border Colors</h4>
+              <pre><code class="language-html">&lt;!-- Border colors --&gt;
+&lt;div class="border border-red-500"&gt;Red border&lt;/div&gt;
+&lt;div class="border-2 border-blue-300"&gt;Thicker blue border&lt;/div&gt;</code></pre>
+
+              <h4>Default Color Palette</h4>
+              <p>Tailwind includes these color families by default:</p>
+              <ul>
+                <li>
+                  <code>slate</code>, <code>gray</code>, <code>zinc</code>,
+                  <code>neutral</code>, <code>stone</code> (Grays)
+                </li>
+                <li>
+                  <code>red</code>, <code>orange</code>, <code>amber</code>,
+                  <code>yellow</code>, <code>lime</code>, <code>green</code>
+                </li>
+                <li>
+                  <code>emerald</code>, <code>teal</code>, <code>cyan</code>,
+                  <code>sky</code>, <code>blue</code>, <code>indigo</code>
+                </li>
+                <li>
+                  <code>violet</code>, <code>purple</code>,
+                  <code>fuchsia</code>, <code>pink</code>, <code>rose</code>
+                </li>
+              </ul>
+
+              <p>Each color has shades from 50 (lightest) to 950 (darkest).</p>
+            </section>
+
+            <section class="docs-section" id="item-3-3">
+              <h2 class="section-heading">Spacing & Sizing</h2>
+              <p>
+                Tailwind provides utilities for controlling margins, padding,
+                width, and height with a consistent spacing scale.
+              </p>
+
+              <h4>Margin & Padding</h4>
+              <pre><code class="language-html">&lt;!-- Margin on all sides --&gt;
+&lt;div class="m-4"&gt;Element with margin on all sides&lt;/div&gt;
+
+&lt;!-- Direction-specific margin --&gt;
+&lt;div class="mt-4"&gt;Top margin&lt;/div&gt;
+&lt;div class="mr-4"&gt;Right margin&lt;/div&gt;
+&lt;div class="mb-4"&gt;Bottom margin&lt;/div&gt;
+&lt;div class="ml-4"&gt;Left margin&lt;/div&gt;
+&lt;div class="mx-4"&gt;Horizontal margin&lt;/div&gt;
+&lt;div class="my-4"&gt;Vertical margin&lt;/div&gt;
+
+&lt;!-- Auto margin for centering --&gt;
+&lt;div class="mx-auto w-1/2"&gt;Horizontally centered&lt;/div&gt;
+
+&lt;!-- Padding (follows the same pattern) --&gt;
+&lt;div class="p-4"&gt;Padding on all sides&lt;/div&gt;
+&lt;div class="px-4 py-2"&gt;Horizontal and vertical padding&lt;/div&gt;</code></pre>
+
+              <h4>Spacing Scale</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Rem</th>
+                      <th>Pixels</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>m-0</code>, <code>p-0</code></td>
+                      <td>0</td>
+                      <td>0px</td>
+                    </tr>
+                    <tr>
+                      <td><code>m-0.5</code>, <code>p-0.5</code></td>
+                      <td>0.125rem</td>
+                      <td>2px</td>
+                    </tr>
+                    <tr>
+                      <td><code>m-1</code>, <code>p-1</code></td>
+                      <td>0.25rem</td>
+                      <td>4px</td>
+                    </tr>
+                    <tr>
+                      <td><code>m-2</code>, <code>p-2</code></td>
+                      <td>0.5rem</td>
+                      <td>8px</td>
+                    </tr>
+                    <tr>
+                      <td><code>m-4</code>, <code>p-4</code></td>
+                      <td>1rem</td>
+                      <td>16px</td>
+                    </tr>
+                    <tr>
+                      <td><code>m-8</code>, <code>p-8</code></td>
+                      <td>2rem</td>
+                      <td>32px</td>
+                    </tr>
+                    <tr>
+                      <td><code>m-16</code>, <code>p-16</code></td>
+                      <td>4rem</td>
+                      <td>64px</td>
+                    </tr>
+                    <tr>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Width & Height</h4>
+              <pre><code class="language-html">&lt;!-- Fixed widths --&gt;
+&lt;div class="w-4"&gt;4px wide&lt;/div&gt;
+&lt;div class="w-32"&gt;128px wide&lt;/div&gt;
+
+&lt;!-- Percentage widths --&gt;
+&lt;div class="w-1/2"&gt;50% width&lt;/div&gt;
+&lt;div class="w-1/3"&gt;33.333% width&lt;/div&gt;
+&lt;div class="w-2/3"&gt;66.666% width&lt;/div&gt;
+&lt;div class="w-full"&gt;100% width&lt;/div&gt;
+
+&lt;!-- Viewport-relative widths --&gt;
+&lt;div class="w-screen"&gt;100vw width&lt;/div&gt;
+
+&lt;!-- Height follows the same pattern --&gt;
+&lt;div class="h-64"&gt;256px tall&lt;/div&gt;
+&lt;div class="h-full"&gt;100% height&lt;/div&gt;
+&lt;div class="h-screen"&gt;100vh height&lt;/div&gt;</code></pre>
+
+              <h4>Min/Max Width & Height</h4>
+              <pre><code class="language-html">&lt;!-- Min/Max width & height --&gt;
+&lt;div class="min-w-full"&gt;At least 100% width&lt;/div&gt;
+&lt;div class="max-w-md"&gt;Max 28rem (448px) width&lt;/div&gt;
+&lt;div class="min-h-screen"&gt;At least 100vh height&lt;/div&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-3-4">
+              <h2 class="section-heading">Flexbox & Grid</h2>
+              <p>
+                Tailwind provides comprehensive utilities for working with
+                Flexbox and CSS Grid layouts.
+              </p>
+
+              <h4>Flexbox</h4>
+              <pre><code class="language-html">&lt;!-- Basic Flexbox container --&gt;
+&lt;div class="flex"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Direction --&gt;
+&lt;div class="flex flex-row"&gt;Flex row (default)&lt;/div&gt;
+&lt;div class="flex flex-col"&gt;Flex column&lt;/div&gt;
+&lt;div class="flex flex-row-reverse"&gt;Reversed row&lt;/div&gt;
+&lt;div class="flex flex-col-reverse"&gt;Reversed column&lt;/div&gt;
+
+&lt;!-- Wrap --&gt;
+&lt;div class="flex flex-wrap"&gt;Wrapping items&lt;/div&gt;
+&lt;div class="flex flex-nowrap"&gt;No wrapping&lt;/div&gt;
+
+&lt;!-- Justify Content (main axis) --&gt;
+&lt;div class="flex justify-start"&gt;Justify start&lt;/div&gt;
+&lt;div class="flex justify-center"&gt;Justify center&lt;/div&gt;
+&lt;div class="flex justify-end"&gt;Justify end&lt;/div&gt;
+&lt;div class="flex justify-between"&gt;Justify between&lt;/div&gt;
+&lt;div class="flex justify-around"&gt;Justify around&lt;/div&gt;
+&lt;div class="flex justify-evenly"&gt;Justify evenly&lt;/div&gt;
+
+&lt;!-- Align Items (cross axis) --&gt;
+&lt;div class="flex items-start"&gt;Align start&lt;/div&gt;
+&lt;div class="flex items-center"&gt;Align center&lt;/div&gt;
+&lt;div class="flex items-end"&gt;Align end&lt;/div&gt;
+&lt;div class="flex items-stretch"&gt;Align stretch&lt;/div&gt;
+&lt;div class="flex items-baseline"&gt;Align baseline&lt;/div&gt;
+
+&lt;!-- Gap between items --&gt;
+&lt;div class="flex gap-4"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Grid</h4>
+              <pre><code class="language-html">&lt;!-- Basic Grid container --&gt;
+&lt;div class="grid grid-cols-3 gap-4"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+  &lt;div&gt;4&lt;/div&gt;
+  &lt;div&gt;5&lt;/div&gt;
+  &lt;div&gt;6&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Grid template columns --&gt;
+&lt;div class="grid grid-cols-1"&gt;One column&lt;/div&gt;
+&lt;div class="grid grid-cols-4"&gt;Four equal columns&lt;/div&gt;
+&lt;div class="grid grid-cols-[200px_1fr_2fr]"&gt;Custom columns&lt;/div&gt;
+
+&lt;!-- Auto columns --&gt;
+&lt;div class="grid grid-cols-3 auto-cols-max"&gt;
+  &lt;!-- Auto-sized columns will be as wide as their content --&gt;
+&lt;/div&gt;
+
+&lt;!-- Column and row spans --&gt;
+&lt;div class="grid grid-cols-3 gap-4"&gt;
+  &lt;div class="col-span-2"&gt;Spans 2 columns&lt;/div&gt;
+  &lt;div&gt;Regular column&lt;/div&gt;
+  &lt;div class="col-span-3"&gt;Spans all 3 columns&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Auto flowing grid --&gt;
+&lt;div class="grid grid-flow-row auto-rows-max"&gt;
+  &lt;!-- Rows will be created as needed --&gt;
+&lt;/div&gt;</code></pre>
+
+              <div class="callout-block callout-block-success">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-thumbs-up"></i> </span
+                    ><!--//icon-holder-->
+                    Tip
+                  </h4>
+                  <p>
+                    Modern layouts often combine both Flexbox and Grid. Use
+                    Flexbox for one-dimensional layouts (rows OR columns) and
+                    Grid for two-dimensional layouts (rows AND columns).
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+          <article class="docs-article" id="section-4">
+            <header class="docs-header">
+              <h1 class="docs-heading">Responsive Design</h1>
+              <section class="docs-intro">
+                <p>
+                  Tailwind CSS makes responsive design straightforward with its
+                  mobile-first approach and intuitive breakpoint system. This
+                  section explores how to create responsive layouts using
+                  Tailwind's responsive utilities.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-4-1">
+              <h2 class="section-heading">Breakpoints</h2>
+              <p>
+                Tailwind uses a mobile-first approach with responsive
+                breakpoints that allow you to build designs that adapt to
+                different screen sizes.
+              </p>
+
+              <h4>Default Breakpoints</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Breakpoint Prefix</th>
+                      <th>Minimum Width</th>
+                      <th>CSS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>sm</code></td>
+                      <td>640px</td>
+                      <td><code>@media (min-width: 640px) { ... }</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>md</code></td>
+                      <td>768px</td>
+                      <td><code>@media (min-width: 768px) { ... }</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>lg</code></td>
+                      <td>1024px</td>
+                      <td><code>@media (min-width: 1024px) { ... }</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>xl</code></td>
+                      <td>1280px</td>
+                      <td><code>@media (min-width: 1280px) { ... }</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>2xl</code></td>
+                      <td>1536px</td>
+                      <td><code>@media (min-width: 1536px) { ... }</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Customizing Breakpoints</h4>
+              <p>
+                You can customize the default breakpoints in your
+                <code>tailwind.config.js</code> file:
+              </p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        module.exports = {
+          theme: {
+            screens: {
+              'sm': '640px',
+              'md': '768px',
+              'lg': '1024px',
+              'xl': '1280px',
+              '2xl': '1536px',
+              // Custom breakpoints
+              'tablet': '640px',
+              'laptop': '1024px',
+              'desktop': '1280px',
+            }
+          }
+        }</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    By defining custom breakpoints, you'll replace the default
+                    ones unless you use
+                    <code>theme.extend.screens</code> instead.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-4-2">
+              <h2 class="section-heading">Responsive Utilities</h2>
+              <p>
+                Tailwind allows you to apply different styles at different
+                breakpoints using the responsive prefix syntax.
+              </p>
+
+              <h4>Basic Responsive Syntax</h4>
+              <pre><code class="language-html">&lt;!-- Width responsive to screen size --&gt;
+        &lt;div class="w-full md:w-1/2 lg:w-1/3"&gt;
+          &lt;!-- Full width on mobile, half width on medium screens, one-third on large screens --&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Responsive text alignment --&gt;
+        &lt;p class="text-center md:text-left lg:text-right"&gt;
+          &lt;!-- Centered on mobile, left-aligned on medium screens, right-aligned on large screens --&gt;
+        &lt;/p&gt;
+        
+        &lt;!-- Responsive display --&gt;
+        &lt;div class="hidden md:block"&gt;Only visible on md screens and up&lt;/div&gt;
+        &lt;div class="block md:hidden"&gt;Only visible on screens smaller than md&lt;/div&gt;</code></pre>
+
+              <h4>Responsive Flexbox/Grid Layout</h4>
+              <pre><code class="language-html">&lt;!-- Responsive direction --&gt;
+        &lt;div class="flex flex-col md:flex-row"&gt;
+          &lt;!-- Stacked on mobile, side-by-side on medium screens and up --&gt;
+          &lt;div&gt;Item 1&lt;/div&gt;
+          &lt;div&gt;Item 2&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Responsive grid columns --&gt;
+        &lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"&gt;
+          &lt;!-- 1 column on mobile, 2 columns on medium, 3 columns on large --&gt;
+          &lt;div&gt;Item 1&lt;/div&gt;
+          &lt;div&gt;Item 2&lt;/div&gt;
+          &lt;div&gt;Item 3&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+
+              <h4>Responsive Spacing</h4>
+              <pre><code class="language-html">&lt;!-- Responsive padding --&gt;
+        &lt;div class="p-4 md:p-8 lg:p-12"&gt;
+          &lt;!-- Different padding at different screen sizes --&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Responsive margin --&gt;
+        &lt;div class="mt-4 md:mt-8 lg:mt-12"&gt;
+          &lt;!-- Different top margin at different screen sizes --&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Responsive gap --&gt;
+        &lt;div class="grid grid-cols-2 gap-2 md:gap-4 lg:gap-6"&gt;
+          &lt;!-- Different gap at different screen sizes --&gt;
+        &lt;/div&gt;</code></pre>
+
+              <h4>Responsive Typography</h4>
+              <pre><code class="language-html">&lt;!-- Responsive font size --&gt;
+        &lt;h1 class="text-2xl md:text-3xl lg:text-4xl"&gt;
+          Responsive Heading
+        &lt;/h1&gt;
+        
+        &lt;!-- Responsive text styling --&gt;
+        &lt;p class="font-normal md:font-medium text-base md:text-lg"&gt;
+          Text that changes size and weight
+        &lt;/p&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-4-3">
+              <h2 class="section-heading">Mobile-First Approach</h2>
+              <p>
+                Tailwind implements a mobile-first breakpoint system, which
+                means that unprefixed utilities apply to all screen sizes, while
+                prefixed utilities apply only at the specified breakpoint and
+                above.
+              </p>
+
+              <h4>Understanding Mobile-First</h4>
+              <p>With a mobile-first approach, you should:</p>
+              <ol>
+                <li>Design for mobile screens first</li>
+                <li>
+                  Then add responsive prefixes to adapt the design for larger
+                  screens
+                </li>
+              </ol>
+
+              <pre><code class="language-html">&lt;!-- Example of mobile-first thinking --&gt;
+        &lt;div class="
+          w-full          /* Mobile: full width */
+          md:w-1/2        /* Tablet: half width */
+          lg:w-1/3        /* Desktop: one-third width */
+          p-4             /* All sizes: padding of 4 (1rem) */
+          md:p-6          /* Tablet & up: padding of 6 (1.5rem) */
+          text-sm         /* All sizes: small text */
+          md:text-base    /* Tablet & up: base text size */
+          lg:text-lg      /* Desktop & up: large text */
+        "&gt;
+          This element adapts to different screen sizes
+        &lt;/div&gt;</code></pre>
+
+              <h4>Building Complex Responsive Layouts</h4>
+              <pre><code class="language-html">&lt;!-- Complex responsive layout example --&gt;
+        &lt;div class="container mx-auto px-4 py-8"&gt;
+          &lt;!-- Header section --&gt;
+          &lt;header class
+          =
+    "flex flex-col md:flex-row items-center justify-between mb-8 gap-4"
+  &gt;
+    &lt;div class="text-center md:text-left"&gt;
+      &lt;h1 class="text-3xl font-bold md:text-4xl lg:text-5xl"&gt;Site Title&lt;/h1&gt;
+      &lt;p class="text-gray-600 mt-2"&gt;Site description goes here&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;nav&gt;
+      &lt;ul class="flex gap-4 flex-wrap justify-center md:justify-end"&gt;
+        &lt;li&gt;&lt;a href="#" class="text-blue-600 hover:text-blue-800"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="text-blue-600 hover:text-blue-800"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="text-blue-600 hover:text-blue-800"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="text-blue-600 hover:text-blue-800"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;!-- Main content section --&gt;
+  &lt;main class="mt-8"&gt;
+    &lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"&gt;
+      &lt;!-- Repeated cards --&gt;
+      &lt;div class="bg-white rounded-lg shadow-md p-6"&gt;
+        &lt;h2 class="text-xl font-semibold mb-4"&gt;Card Title&lt;/h2&gt;
+        &lt;p class="text-gray-600"&gt;Card content goes here.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;!-- More cards... --&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+
+              <div class="callout-block callout-block-success">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-thumbs-up"></i> </span
+                    ><!--//icon-holder-->
+                    Best Practice
+                  </h4>
+                  <p>
+                    When building responsive layouts, start by designing for
+                    mobile devices first, then progressively enhance for larger
+                    screens. This approach typically results in cleaner and more
+                    maintainable code.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+
+          <article class="docs-article" id="section-5">
+            <header class="docs-header">
+              <h1 class="docs-heading">Building Components</h1>
+              <section class="docs-intro">
+                <p>
+                  Although Tailwind doesn't provide pre-built components like
+                  some other CSS frameworks, it gives you the tools to build
+                  custom components efficiently. This section shows how to
+                  create common UI components using Tailwind CSS.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-5-1">
+              <h2 class="section-heading">Buttons</h2>
+              <p>
+                Buttons are essential UI elements that can be styled in various
+                ways with Tailwind.
+              </p>
+
+              <h4>Basic Button Styles</h4>
+              <pre><code class="language-html">&lt;!-- Primary Button --&gt;
+&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+  Primary Button
+&lt;/button&gt;
+
+&lt;!-- Secondary Button --&gt;
+&lt;button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"&gt;
+  Secondary Button
+&lt;/button&gt;
+
+&lt;!-- Disabled Button --&gt;
+&lt;button class="bg-blue-500 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed"&gt;
+  Disabled Button
+&lt;/button&gt;</code></pre>
+
+              <h4>Button Sizes</h4>
+              <pre><code class="language-html">&lt;!-- Small Button --&gt;
+&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-sm"&gt;
+  Small Button
+&lt;/button&gt;
+
+&lt;!-- Regular Button (as shown above) --&gt;
+
+&lt;!-- Large Button --&gt;
+&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded text-lg"&gt;
+  Large Button
+&lt;/button&gt;</code></pre>
+
+              <h4>Button with Icon</h4>
+              <pre><code class="language-html">&lt;!-- Button with leading icon (using an SVG) --&gt;
+&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"&gt;
+  &lt;svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  &lt;span&gt;Users&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+
+              <h4>Extracting Button Styles</h4>
+              <p>
+                To avoid repeating button styles, you can create custom button
+                components or use the <code>@apply</code> directive in a CSS
+                file:
+              </p>
+              <pre><code class="language-css">/* In your CSS file */
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
+.btn-outline {
+  @apply bg-transparent text-blue-700 border border-blue-500;
+}
+.btn-outline:hover {
+  @apply bg-blue-500 text-white border-transparent;
+}</code></pre>
+
+              <p>Then use these classes in your HTML:</p>
+              <pre><code class="language-html">&lt;button class="btn btn-blue"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn btn-outline"&gt;Secondary Button&lt;/button&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-5-2">
+              <h2 class="section-heading">Cards</h2>
+              <p>
+                Cards are versatile containers that can be used to display
+                various types of content.
+              </p>
+
+              <h4>Basic Card</h4>
+              <pre><code class="language-html">&lt;!-- Simple Card --&gt;
+&lt;div class="bg-white rounded-lg shadow-md p-6"&gt;
+  &lt;h2 class="text-xl font-semibold mb-2"&gt;Card Title&lt;/h2&gt;
+  &lt;p class="text-gray-600"&gt;This is some card content that might explain what this card is about.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Card with Image</h4>
+              <pre><code class="language-html">&lt;!-- Card with Image --&gt;
+&lt;div class="bg-white rounded-lg shadow-md overflow-hidden"&gt;
+  &lt;img class="w-full h-48 object-cover" src="image.jpg" alt="Card image"&gt;
+  &lt;div class="p-6"&gt;
+    &lt;h2 class="text-xl font-semibold mb-2"&gt;Card with Image&lt;/h2&gt;
+    &lt;p class="text-gray-600 mb-4"&gt;This card has an image at the top.&lt;/p&gt;
+    &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+      Read More
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Product Card</h4>
+              <pre><code class="language-html">&lt;!-- Product Card --&gt;
+&lt;div class="bg-white rounded-lg shadow-md overflow-hidden"&gt;
+  &lt;img class="w-full h-56 object-cover" src="product.jpg" alt="Product image"&gt;
+  &lt;div class="p-6"&gt;
+    &lt;h2 class="text-xl font-semibold mb-2"&gt;Product Name&lt;/h2&gt;
+    &lt;p class="text-gray-600 mb-4"&gt;Product description goes here.&lt;/p&gt;
+    &lt;div class="flex justify-between items-center"&gt;
+      &lt;span class="text-xl font-bold text-gray-900"&gt;$29.99&lt;/span&gt;
+      &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+        Add to Cart
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Horizontal Card</h4>
+              <pre><code class="language-html">&lt;!-- Horizontal Card --&gt;
+&lt;div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row"&gt;
+  &lt;img class="w-full md:w-1/3 h-48 md:h-auto object-cover" src="image.jpg" alt="Card image"&gt;
+  &lt;div class="p-6"&gt;
+    &lt;h2 class="text-xl font-semibold mb-2"&gt;Horizontal Card&lt;/h2&gt;
+    &lt;p class="text-gray-600 mb-4"&gt;This card has an image on the side on larger screens.&lt;/p&gt;
+    &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+      Learn More
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-5-3">
+              <h2 class="section-heading">Navigation</h2>
+              <p>
+                Navigation components are essential for user interaction and can
+                be styled in various ways.
+              </p>
+
+              <h4>Simple Navbar</h4>
+              <pre><code class="language-html">&lt;!-- Simple Navigation Bar --&gt;
+&lt;nav class="bg-gray-800 p-4"&gt;
+  &lt;div class="container mx-auto flex justify-between items-center"&gt;
+    &lt;div class="text-white font-bold text-xl"&gt;Brand Logo&lt;/div&gt;
+    &lt;ul class="flex space-x-4"&gt;
+      &lt;li&gt;&lt;a href="#" class="text-white hover:text-gray-300"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#" class="text-white hover:text-gray-300"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#" class="text-white hover:text-gray-300"&gt;Services&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#" class="text-white hover:text-gray-300"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+              <h4>Responsive Mobile Menu</h4>
+              <pre><code class="language-html">&lt;!-- Responsive Navigation (requires JavaScript to toggle) --&gt;
+&lt;nav class="bg-gray-800 p-4"&gt;
+  &lt;div class="container mx-auto flex flex-wrap justify-between items-center"&gt;
+    &lt;div class="text-white font-bold text-xl"&gt;Brand Logo&lt;/div&gt;
+    
+    &lt;!-- Mobile menu button --&gt;
+    &lt;button id="menu-toggle" class="block md:hidden text-white focus:outline-none"&gt;
+      &lt;svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"&gt;
+        &lt;!-- SVG hamburger menu icon --&gt;
+        &lt;path id="menu-icon" class="block" fill-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"&gt;&lt;/path&gt;
+        &lt;!-- SVG close icon (hidden by default) --&gt;
+        &lt;path id="close-icon" class="hidden" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+    
+    &lt;!-- Menu items --&gt;
+    &lt;div id="menu" class="hidden md:flex w-full md:w-auto mt-2 md:mt-0"&gt;
+      &lt;ul class="flex flex-col md:flex-row md:space-x-4"&gt;
+        &lt;li&gt;&lt;a href="#" class="block py-2 md:py-0 text-white hover:text-gray-300"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="block py-2 md:py-0 text-white hover:text-gray-300"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="block py-2 md:py-0 text-white hover:text-gray-300"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="block py-2 md:py-0 text-white hover:text-gray-300"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;!-- JavaScript for toggle functionality --&gt;
+&lt;script&gt;
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+&lt;/script&gt;</code></pre>
+
+              <h4>Dropdown Menu</h4>
+              <pre><code class="language-html">&lt;!-- Dropdown Menu (requires JavaScript) --&gt;
+&lt;div class="relative inline-block text-left"&gt;
+  &lt;button id="dropdown-button" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center"&gt;
+    &lt;span&gt;Options&lt;/span&gt;
+    &lt;svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20"&gt;
+      &lt;path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  
+  &lt;div id="dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-10"&gt;
+    &lt;div class="py-1"&gt;
+      &lt;a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"&gt;Option 1&lt;/a&gt;
+      &lt;a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"&gt;Option 2&lt;/a&gt;
+      &lt;a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"&gt;Option 3&lt;/a&gt;
+      &lt;div class="border-t border-gray-200"&gt;&lt;/div&gt;
+      &lt;a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"&gt;Sign out&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  const dropdownButton = document.getElementById('dropdown-button');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  
+  dropdownButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+  
+  // Close dropdown when clicking outside
+  window.addEventListener('click', (event) => {
+    if (!dropdownButton.contains(event.target)) {
+      dropdownMenu.classList.add('hidden');
+    }
+  });
+&lt;/script&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-5-4">
+              <h2 class="section-heading">Forms</h2>
+              <p>
+                Forms are crucial for user interaction. Tailwind provides
+                utilities to style form elements effectively.
+              </p>
+
+              <h4>Form Inputs</h4>
+              <pre><code class="language-html">&lt;!-- Text Input --&gt;
+&lt;div class="mb-4"&gt;
+  &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="username"&gt;
+    Username
+  &lt;/label&gt;
+  &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+         id="username" type="text" placeholder="Username"&gt;
+&lt;/div&gt;
+
+&lt;!-- Email Input with Error --&gt;
+&lt;div class="mb-4"&gt;
+  &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="email"&gt;
+    Email
+  &lt;/label&gt;
+  &lt;input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline"
+         id="email" type="email" placeholder="Email"&gt;
+  &lt;p class="text-red-500 text-xs italic"&gt;Please enter a valid email address.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Password Input --&gt;
+&lt;div class="mb-6"&gt;
+  &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="password"&gt;
+    Password
+  &lt;/label&gt;
+  &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+         id="password" type="password" placeholder="******************"&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Checkboxes and Radio Buttons</h4>
+              <pre><code class="language-html">&lt;!-- Checkbox --&gt;
+&lt;div class="mb-4"&gt;
+  &lt;label class="flex items-center"&gt;
+    &lt;input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600"&gt;
+    &lt;span class="ml-2 text-gray-700"&gt;Remember me&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Radio Buttons --&gt;
+&lt;div class="mb-4"&gt;
+  &lt;p class="block text-gray-700 text-sm font-bold mb-2"&gt;Subscription Type&lt;/p&gt;
+  &lt;div class="mt-2"&gt;
+    &lt;label class="inline-flex items-center"&gt;
+      &lt;input type="radio" class="form-radio h-5 w-5 text-blue-600" name="subscription" value="free"&gt;
+      &lt;span class="ml-2 text-gray-700"&gt;Free&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class="inline-flex items-center ml-6"&gt;
+      &lt;input type="radio" class="form-radio h-5 w-5 text-blue-600" name="subscription" value="premium"&gt;
+      &lt;span class="ml-2 text-gray-700"&gt;Premium&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Select Dropdown</h4>
+              <pre><code class="language-html">&lt;!-- Select Dropdown --&gt;
+&lt;div class="mb-4"&gt;
+  &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="country"&gt;
+    Country
+  &lt;/label&gt;
+  &lt;div class="relative"&gt;
+    &lt;select class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline"
+            id="country"&gt;
+      &lt;option&gt;United States&lt;/option&gt;
+      &lt;option&gt;Canada&lt;/option&gt;
+      &lt;option&gt;United Kingdom&lt;/option&gt;
+      &lt;option&gt;Germany&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"&gt;
+      &lt;svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"&gt;
+        &lt;path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+              <h4>Complete Form Example</h4>
+              <pre><code class="language-html">&lt;!-- Login Form Example --&gt;
+&lt;div class="w-full max-w-md mx-auto"&gt;
+  &lt;form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"&gt;
+    &lt;h2 class="text-2xl font-bold mb-6 text-center text-gray-800"&gt;Log In&lt;/h2&gt;
+    
+    &lt;div class="mb-4"&gt;
+      &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="email"&gt;
+        Email
+      &lt;/label&gt;
+      &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+             id="email" type="email" placeholder="Email"&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="mb-6"&gt;
+      &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="password"&gt;
+        Password
+      &lt;/label&gt;
+      &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+             id="password" type="password" placeholder="******************"&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="flex items-center justify-between mb-6"&gt;
+      &lt;label class="flex items-center"&gt;
+        &lt;input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600"&gt;
+        &lt;span class="ml-2 text-sm text-gray-700"&gt;Remember me&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#"&gt;
+        Forgot Password?
+      &lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="flex items-center justify-between"&gt;
+      &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="button"&gt;
+        Sign In
+      &lt;/button&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="text-center mt-6"&gt;
+      &lt;p class="text-sm text-gray-600"&gt;
+        Don't have an account? 
+        &lt;a class="font-bold text-blue-500 hover:text-blue-800" href="#"&gt;Sign Up&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    Form elements often need additional styling for proper
+                    appearance across browsers. Consider using form plugins like
+                    @tailwindcss/forms which normalizes form styles.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+          <article class="docs-article" id="section-6">
+            <header class="docs-header">
+              <h1 class="docs-heading">Advanced Styling</h1>
+              <section class="docs-intro">
+                <p>
+                  Tailwind CSS provides several advanced features that allow you
+                  to extend its functionality, create custom utilities, and
+                  implement complex styling requirements. This section explores
+                  these advanced capabilities.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-6-1">
+              <h2 class="section-heading">Custom Utilities</h2>
+              <p>
+                While Tailwind provides a comprehensive set of built-in
+                utilities, you can create your own custom utilities to match
+                your project's specific needs.
+              </p>
+
+              <h4>Using @layer to Add Custom Utilities</h4>
+              <p>
+                The <code>@layer</code> directive allows you to add your own
+                custom styles to Tailwind's utility layers:
+              </p>
+              <pre><code class="language-css">/* In your CSS file */
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+        
+        @layer utilities {
+          .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          }
+          
+          .text-shadow-sm {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          }
+          
+          .text-shadow-lg {
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+          }
+          
+          .text-shadow-none {
+            text-shadow: none;
+          }
+        }</code></pre>
+
+              <h4>Using the Plugin API</h4>
+              <p>
+                For more complex utilities, you can use Tailwind's plugin API:
+              </p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        const plugin = require('tailwindcss/plugin')
+        
+        module.exports = {
+          // ...
+          plugins: [
+            plugin(function({ addUtilities, theme }) {
+              const newUtilities = {
+                '.text-shadow-sm': {
+                  textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+                },
+                '.text-shadow': {
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                },
+                '.text-shadow-lg': {
+                  textShadow: '4px 4px 8px rgba(0, 0, 0, 0.5)',
+                },
+                '.text-shadow-none': {
+                  textShadow: 'none',
+                },
+              }
+        
+              addUtilities(newUtilities, ['responsive', 'hover'])
+            }),
+          ],
+        }</code></pre>
+
+              <p>
+                This approach makes the utilities responsive and adds hover
+                variants.
+              </p>
+
+              <h4>Creating Responsive Variants</h4>
+              <p>Custom utilities can include responsive variants:</p>
+              <pre><code class="language-html">&lt;div class="text-shadow md:text-shadow-lg lg:text-shadow-none"&gt;
+          Text with responsive shadow styles
+        &lt;/div&gt;</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    When adding custom utilities, ensure they follow Tailwind's
+                    naming conventions for consistency. Also, only add utilities
+                    that are used frequently enough to justify their inclusion.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-6-2">
+              <h2 class="section-heading">Extending Tailwind</h2>
+              <p>
+                Tailwind provides various ways to extend its default
+                configuration to match your design requirements.
+              </p>
+
+              <h4>Extending the Theme</h4>
+              <p>
+                You can extend Tailwind's default design tokens in the
+                <code>tailwind.config.js</code> file:
+              </p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        module.exports = {
+          theme: {
+            extend: {
+              // Add new values while preserving defaults
+              colors: {
+                'brand-blue': '#1992d4',
+                'brand-red': '#e53e3e',
+              },
+              spacing: {
+                '72': '18rem',
+                '84': '21rem',
+                '96': '24rem',
+              },
+              fontFamily: {
+                'heading': ['Montserrat', 'sans-serif'],
+                'body': ['Roboto', 'sans-serif'],
+              },
+              borderRadius: {
+                'xl': '1rem',
+                '2xl': '2rem',
+              },
+              boxShadow: {
+                'outline-blue': '0 0 0 3px rgba(66, 153, 225, 0.5)',
+              }
+            }
+          }
+        }</code></pre>
+
+              <h4>Creating Custom Variants</h4>
+              <p>You can create custom variants for specific use cases:</p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        const plugin = require('tailwindcss/plugin')
+        
+        module.exports = {
+          // ...
+          plugins: [
+            plugin(function({ addVariant }) {
+              // Add a `parent-hover` variant
+              addVariant('parent-hover', '&:hover > &')
+              
+              // Add a `group-focus` variant
+              addVariant('group-focus', ':focus .group &')
+              
+              // Add a `disabled` variant
+              addVariant('disabled', '&:disabled')
+            })
+          ],
+        }</code></pre>
+
+              <h4>Custom Components with @apply</h4>
+              <p>
+                The <code>@apply</code> directive allows you to extract common
+                utility patterns into custom CSS classes:
+              </p>
+              <pre><code class="language-css">/* In your CSS file */
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+        
+        @layer components {
+          .btn {
+            @apply py-2 px-4 rounded focus:outline-none focus:shadow-outline font-medium;
+          }
+          
+          .btn-primary {
+            @apply bg-blue-500 text-white hover:bg-blue-600;
+          }
+          
+          .btn-secondary {
+            @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+          }
+          
+          .input-field {
+            @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+          }
+        
+          .card {
+            @apply bg-white rounded-lg shadow-md overflow-hidden;
+          }
+        }</code></pre>
+
+              <p>Then use these component classes in your HTML:</p>
+              <pre><code class="language-html">&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+        &lt;button class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;
+        &lt;input class="input-field" type="text"&gt;
+        &lt;div class="card"&gt;Card content...&lt;/div&gt;</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-6-3">
+              <h2 class="section-heading">Dark Mode</h2>
+              <p>
+                Tailwind CSS provides built-in support for dark mode, allowing
+                you to create designs that adapt to user preferences.
+              </p>
+
+              <h4>Configuring Dark Mode</h4>
+              <p>
+                First, you need to configure the dark mode strategy in your
+                <code>tailwind.config.js</code> file:
+              </p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        module.exports = {
+          darkMode: 'media', // or 'class'
+          // ...
+        }</code></pre>
+
+              <ul>
+                <li>
+                  <code>'media'</code>: Responds to the system preference
+                  (prefers-color-scheme)
+                </li>
+                <li>
+                  <code>'class'</code>: Manually controlled with the 'dark'
+                  class on an ancestor element
+                </li>
+              </ul>
+
+              <h4>Using Dark Mode Variants</h4>
+              <p>
+                Use the <code>dark:</code> prefix to apply styles only in dark
+                mode:
+              </p>
+              <pre><code class="language-html">&lt;div class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white"&gt;
+          &lt;h1 class="text-gray-900 dark:text-white"&gt;This heading adapts to dark mode&lt;/h1&gt;
+          &lt;p class="text-gray-600 dark:text-gray-300"&gt;This text is gray in light mode and light gray in dark mode.&lt;/p&gt;
+          &lt;button class="bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white"&gt;
+            Button
+          &lt;/button&gt;
+        &lt;/div&gt;</code></pre>
+
+              <h4>Manual Dark Mode Toggle</h4>
+              <p>
+                If using <code>'class'</code> strategy, you'll need JavaScript
+                to toggle the dark mode:
+              </p>
+              <pre><code class="language-html">&lt;!-- Toggle Button --&gt;
+        &lt;button id="dark-mode-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"&gt;
+          &lt;svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"&gt;&lt;/path&gt;
+          &lt;/svg&gt;
+          &lt;svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"&gt;&lt;/path&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+        
+        &lt;script&gt;
+          // Check for saved theme preference or use system preference
+          if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+          }
+        
+          // Toggle dark mode on button click
+          document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+              document.documentElement.classList.remove('dark')
+              localStorage.theme = 'light'
+            } else {
+              document.documentElement.classList.add('dark')
+              localStorage.theme = 'dark'
+            }
+          })
+        &lt;/script&gt;</code></pre>
+
+              <h4>Dark Mode Best Practices</h4>
+              <ul>
+                <li>
+                  Don't just invert colors; consider contrast and readability
+                </li>
+                <li>
+                  Reduce brightness and saturation of images and illustrations
+                </li>
+                <li>
+                  Soften whites to reduce eye strain (use gray-50/gray-100
+                  instead of pure white)
+                </li>
+                <li>
+                  Use semantic color variables instead of literal colors when
+                  possible
+                </li>
+              </ul>
+            </section>
+
+            <section class="docs-section" id="item-6-4">
+              <h2 class="section-heading">Plugins</h2>
+              <p>
+                Tailwind plugins allow you to extend the framework with
+                additional functionality, components, or utilities.
+              </p>
+
+              <h4>Using Official Plugins</h4>
+              <p>Tailwind offers several official plugins for common needs:</p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        module.exports = {
+          // ...
+          plugins: [
+            require('@tailwindcss/forms'), // Better form styles
+            require('@tailwindcss/typography'), // Prose styles for content
+            require('@tailwindcss/aspect-ratio'), // Aspect ratio utilities
+            require('@tailwindcss/line-clamp'), // Line clamp utilities
+          ],
+        }</code></pre>
+
+              <h4>Using Third-Party Plugins</h4>
+              <p>
+                Many third-party plugins extend Tailwind with additional
+                features:
+              </p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        module.exports = {
+          // ...
+          plugins: [
+            require('tailwindcss-children'), // Adds children:* variants
+            require('tailwindcss-gradients'), // Additional gradient utilities
+            require('tailwindcss-animate'), // Animation utilities
+          ],
+        }</code></pre>
+
+              <h4>Creating Custom Plugins</h4>
+              <p>Create your own plugins for project-specific functionality:</p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        const plugin = require('tailwindcss/plugin')
+        
+        module.exports = {
+          // ...
+          plugins: [
+            plugin(function({ addComponents, theme }) {
+              const buttons = {
+                '.btn': {
+                  padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
+                  borderRadius: theme('borderRadius.md'),
+                  fontWeight: theme('fontWeight.medium'),
+                  '&:focus': {
+                    outline: 'none',
+                    boxShadow: `0 0 0 3px ${theme('colors.blue.300')}`,
+                  },
+                },
+                '.btn-primary': {
+                  backgroundColor: theme('colors.blue.500'),
+                  color: theme('colors.white'),
+                  '&:hover': {
+                    backgroundColor: theme('colors.blue.600'),
+                  },
+                },
+                '.btn-secondary': {
+                  backgroundColor: theme('colors.gray.200'),
+                  color: theme('colors.gray.800'),
+                  '&:hover': {
+                    backgroundColor: theme('colors.gray.300'),
+                  },
+                },
+              }
+        
+              addComponents(buttons)
+            }),
+          ],
+        }</code></pre>
+
+              <h4>Available Plugin Hooks</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Hook</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>addBase</code></td>
+                      <td>Add base styles (global resets, etc.)</td>
+                    </tr>
+                    <tr>
+                      <td><code>addComponents</code></td>
+                      <td>Add component classes</td>
+                    </tr>
+                    <tr>
+                      <td><code>addUtilities</code></td>
+                      <td>Add utility classes</td>
+                    </tr>
+                    <tr>
+                      <td><code>addVariant</code></td>
+                      <td>Add custom variants</td>
+                    </tr>
+                    <tr>
+                      <td><code>matchUtilities</code></td>
+                      <td>Add utilities that map to values in the theme</td>
+                    </tr>
+                    <tr>
+                      <td><code>matchComponents</code></td>
+                      <td>Add components that map to values in the theme</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="callout-block callout-block-success">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-thumbs-up"></i> </span
+                    ><!--//icon-holder-->
+                    Best Practice
+                  </h4>
+                  <p>
+                    When creating custom plugins, consider publishing them as
+                    separate npm packages if they might be useful to others.
+                    This promotes code reuse and community contribution.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+          <article class="docs-article" id="section-7">
+            <header class="docs-header">
+              <h1 class="docs-heading">Best Practices</h1>
+              <section class="docs-intro">
+                <p>
+                  As with any tool, there are effective ways to use Tailwind
+                  CSS. This section covers best practices for organizing your
+                  code, optimizing performance, and implementing common UI
+                  patterns.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+
+            <section class="docs-section" id="item-7-1">
+              <h2 class="section-heading">Organization</h2>
+              <p>
+                Keeping your Tailwind projects organized is essential for
+                maintainability, especially as projects grow in size.
+              </p>
+
+              <h4>Managing Class Names</h4>
+              <p>
+                Long lists of utility classes can become difficult to read. Here
+                are some strategies to manage them:
+              </p>
+
+              <pre><code class="language-html">&lt;!-- Bad: Hard to read, edit, and maintain --&gt;
+        &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transform hover:scale-105 transition-transform duration-200 ease-in-out shadow-lg"&gt;
+          Click Me
+        &lt;/button&gt;
+        
+        &lt;!-- Better: Classes grouped by purpose with line breaks --&gt;
+        &lt;button class="
+          bg-blue-500 hover:bg-blue-700 
+          text-white font-bold 
+          py-2 px-4 
+          rounded 
+          focus:outline-none focus:shadow-outline 
+          transform hover:scale-105 transition-transform duration-200 ease-in-out 
+          shadow-lg
+        "&gt;
+          Click Me
+        &lt;/button&gt;</code></pre>
+
+              <h4>Extracting Components</h4>
+              <p>
+                For repeated patterns, extract them into components using one of
+                these methods:
+              </p>
+
+              <p>1. Using @apply in CSS:</p>
+              <pre><code class="language-css">/* In your CSS file */
+        @layer components {
+          .btn-primary {
+            @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transform hover:scale-105 transition-transform duration-200 ease-in-out shadow-lg;
+          }
+        }</code></pre>
+
+              <p>2. Using template partials or components in your framework:</p>
+              <pre><code class="language-jsx">// React Component Example
+        function Button({ children, ...props }) {
+          return (
+            &lt;button 
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transform hover:scale-105 transition-transform duration-200 ease-in-out shadow-lg"
+              {...props}
+            &gt;
+              {children}
+            &lt;/button&gt;
+          );
+        }</code></pre>
+
+              <h4>Project Structure</h4>
+              <p>Organize your Tailwind CSS project with a clear structure:</p>
+              <pre><code class="language-text">src/
+          ├── styles/
+          │   ├── main.css           # Main CSS file with Tailwind imports
+          │   ├── base/              # Base styles and overrides
+          │   ├── components/        # Component styles using @apply
+          │   └── utilities/         # Custom utilities
+          ├── components/            # React/Vue/template components
+          ├── layouts/               # Layout templates
+          ├── pages/                 # Page components/templates
+          └── tailwind.config.js     # Tailwind configuration</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Tip
+                  </h4>
+                  <p>
+                    For larger projects, consider using a component-based
+                    approach with a design system that documents your common
+                    components and their usage.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-7-2">
+              <h2 class="section-heading">Performance</h2>
+              <p>
+                Tailwind CSS is designed with performance in mind, but there are
+                additional steps you can take to optimize your project.
+              </p>
+
+              <h4>Purging Unused Styles</h4>
+              <p>
+                Tailwind can generate thousands of utility classes, but most
+                projects only use a small subset. Configure content purging to
+                remove unused styles:
+              </p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        module.exports = {
+          // Content paths to scan for class names
+          content: [
+            './pages/**/*.{js,jsx,ts,tsx}',
+            './components/**/*.{js,jsx,ts,tsx}',
+            './layouts/**/*.{js,jsx,ts,tsx}',
+            './public/**/*.html',
+          ],
+          // ...
+        }</code></pre>
+
+              <h4>Just-in-Time Mode</h4>
+              <p>
+                Tailwind's JIT mode generates styles on-demand, which leads to
+                faster build times and smaller CSS files:
+              </p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        module.exports = {
+          // Just-in-Time mode is now enabled by default in Tailwind CSS v3.0+
+          // No additional configuration needed
+        }</code></pre>
+
+              <h4>Minification</h4>
+              <p>Ensure your production CSS is minified:</p>
+              <pre><code class="language-bash"># Using PostCSS CLI
+        postcss styles/main.css -o dist/styles.css --env production
+        
+        # Or with package.json script
+        "scripts": {
+          "build:css": "NODE_ENV=production tailwindcss -i ./src/styles/main.css -o ./dist/styles.css --minify"
+        }</code></pre>
+
+              <h4>Common Performance Pitfalls</h4>
+              <ul>
+                <li>
+                  <strong>Not configuring the content array properly</strong>:
+                  Missing files means needed classes might be purged
+                </li>
+                <li>
+                  <strong>Dynamic class names</strong>: Class names constructed
+                  using string concatenation may be missed by the purge
+                </li>
+                <li>
+                  <strong>Using arbitrary values excessively</strong>: Each
+                  arbitrary value creates a new CSS rule
+                </li>
+              </ul>
+
+              <h4>Handling Dynamic Classes</h4>
+              <p>
+                When using dynamic class names, safelist the classes that might
+                be missed by the purge:
+              </p>
+              <pre><code class="language-javascript">// tailwind.config.js
+        module.exports = {
+          content: [
+            './src/**/*.{html,js,jsx,ts,tsx}',
+          ],
+          safelist: [
+            'bg-red-500',
+            'bg-green-500',
+            'bg-blue-500',
+            {
+              pattern: /bg-(red|green|blue)-(100|200|300|400|500|600|700|800|900)/,
+            },
+          ],
+          // ...
+        }</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-7-3">
+              <h2 class="section-heading">Common Patterns</h2>
+              <p>
+                Certain design patterns appear frequently in web development.
+                Here are some Tailwind-based approaches to common UI patterns.
+              </p>
+
+              <h4>Sticky Header</h4>
+              <pre><code class="language-html">&lt;!-- Sticky Header --&gt;
+        &lt;header class="sticky top-0 bg-white shadow-md z-10"&gt;
+          &lt;div class="container mx-auto px-4 py-3 flex justify-between items-center"&gt;
+            &lt;div class="font-bold text-xl"&gt;Logo&lt;/div&gt;
+            &lt;nav&gt;
+              &lt;ul class="flex space-x-4"&gt;
+                &lt;li&gt;&lt;a href="#" class="hover:text-blue-500"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="hover:text-blue-500"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="hover:text-blue-500"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/nav&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;</code></pre>
+
+              <h4>Card Grid with Hover Effects</h4>
+              <pre><code class="language-html">&lt;!-- Card Grid --&gt;
+        &lt;div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8"&gt;
+          &lt;!-- Card with hover effect --&gt;
+          &lt;div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-lg"&gt;
+            &lt;img class="w-full h-48 object-cover" src="image1.jpg" alt="Card 1"&gt;
+            &lt;div class="p-6"&gt;
+              &lt;h3 class="font-bold text-xl mb-2"&gt;Card Title&lt;/h3&gt;
+              &lt;p class="text-gray-700"&gt;Card content goes here.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+          &lt;!-- More cards... --&gt;
+        &lt;/div&gt;</code></pre>
+
+              <h4>Responsive Sidebar Layout</h4>
+              <pre><code class="language-html">&lt;!-- Responsive Sidebar Layout --&gt;
+        &lt;div class="flex flex-col md:flex-row min-h-screen"&gt;
+          &lt;!-- Sidebar - Hidden on mobile, shown on md screens and up --&gt;
+          &lt;aside class="hidden md:block w-64 bg-gray-800 text-white p-4"&gt;
+            &lt;nav&gt;
+              &lt;ul class="space-y-2"&gt;
+                &lt;li&gt;&lt;a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"&gt;Analytics&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="block py-2 px-4 rounded hover:bg-gray-700"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/nav&gt;
+          &lt;/aside&gt;
+          
+          &lt;!-- Main content --&gt;
+          &lt;main class="flex-1 bg-gray-100 p-6"&gt;
+            &lt;!-- Mobile menu button - only shown on small screens --&gt;
+            &lt;button class="md:hidden mb-4 p-2 bg-gray-800 text-white rounded"&gt;
+              &lt;!-- Menu icon SVG --&gt;
+              Menu
+            &lt;/button&gt;
+            
+            &lt;!-- Page content --&gt;
+            &lt;div class="bg-white rounded-lg shadow-md p-6"&gt;
+              Main content goes here
+            &lt;/div&gt;
+          &lt;/main&gt;
+        &lt;/div&gt;</code></pre>
+
+              <h4>Multi-Column Form Layout</h4>
+              <pre><code class="language-html">&lt;!-- Multi-Column Form --&gt;
+        &lt;form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"&gt;
+          &lt;h2 class="text-2xl font-bold mb-6"&gt;Registration Form&lt;/h2&gt;
+          
+          &lt;div class="grid grid-cols-1 md:grid-cols-2 gap-6"&gt;
+            &lt;!-- Left column --&gt;
+            &lt;div class="space-y-4"&gt;
+              &lt;div&gt;
+                &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="firstName"&gt;First Name&lt;/label&gt;
+                &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstName" type="text"&gt;
+              &lt;/div&gt;
+              
+              &lt;div&gt;
+                &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="email"&gt;
+                Email&lt;/label&gt;
+        &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email"&gt;
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="password"&gt;Password&lt;/label&gt;
+        &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Right column --&gt;
+    &lt;div class="space-y-4"&gt;
+      &lt;div&gt;
+        &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="lastName"&gt;Last Name&lt;/label&gt;
+        &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastName" type="text"&gt;
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="phone"&gt;Phone&lt;/label&gt;
+        &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel"&gt;
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="confirmPassword"&gt;Confirm Password&lt;/label&gt;
+        &lt;input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="confirmPassword" type="password"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Full width inputs --&gt;
+  &lt;div class="mt-6"&gt;
+    &lt;label class="block text-gray-700 text-sm font-bold mb-2" for="address"&gt;Address&lt;/label&gt;
+    &lt;textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" rows="3"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Submit button --&gt;
+  &lt;div class="mt-6"&gt;
+    &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full md:w-auto" type="button"&gt;
+      Register
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+              <div class="callout-block callout-block-success">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-thumbs-up"></i> </span
+                    ><!--//icon-holder-->
+                    Final Tips
+                  </h4>
+                  <ul class="mb-0">
+                    <li>
+                      Consider extracting frequently used patterns into
+                      components or CSS classes
+                    </li>
+                    <li>
+                      Don't be afraid to create custom utilities for
+                      project-specific needs
+                    </li>
+                    <li>
+                      Document your component patterns for team consistency
+                    </li>
+                    <li>
+                      Optimize CSS for production by properly configuring
+                      content paths
+                    </li>
+                    <li>
+                      Use responsive variants consistently throughout your
+                      project
+                    </li>
+                  </ul>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+
+          <footer class="footer">
+            <div class="container text-center py-5">
+              <ul class="social-list list-unstyled pb-4 mb-0">
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.facebook.com/AmpersandAcademy"
+                    target="_blank"
+                    ><i class="fab fa-facebook-f fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default"
+                    target="_blank"
+                    ><i class="fab fa-google fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.linkedin.com/company/ampersandacademy/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.instagram.com/ampersandacad/"
+                    target="_blank"
+                    ><i class="fab fa-instagram fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w"
+                    target="_blank"
+                    ><i class="fab fa-whatsapp fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://t.me/ampersandacad" target="_blank"
+                    ><i class="fab fa-telegram fa-fw"></i
+                  ></a>
+                </li>
+              </ul>
+              <!--//social-list-->
+              <small class="copyright"
+                ><a href="https://ampersandacademy.com" target="_blank"
+                  >Ampersand Academy</a
+                >
+                | All rights reserved</small
+              >
+            </div>
+          </footer>
+        </div>
+        <!--//container-->
+      </div>
+      <!--//docs-content-->
+    </div>
+    <!--//docs-wrapper-->
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+  </body>
+</html>

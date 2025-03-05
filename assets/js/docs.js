@@ -25,7 +25,7 @@ function responsiveSidebar() {
     let w = window.innerWidth;
 	if(w >= 1200) {
 	    // if larger 
-	    console.log('larger');
+	    // console.log('larger');
 		sidebar.classList.remove('sidebar-hidden');
 		sidebar.classList.add('sidebar-visible');
 		
@@ -93,6 +93,69 @@ var spy = new Gumshoe('#docs-nav a', {
 
 var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */});
 
+
+function setupInteractiveExamples() {
+	// Find all run buttons
+	const runButtons = document.querySelectorAll('.run-code-btn');
+	
+	runButtons.forEach(button => {
+	  button.addEventListener('click', function() {
+		const codeBlock = this.previousElementSibling.querySelector('code');
+		const outputPanel = this.nextElementSibling;
+		const code = codeBlock.textContent;
+		
+		// Clear previous output
+		outputPanel.innerHTML = '';
+		
+		// Capture console.log outputs
+		const originalConsoleLog = console.log;
+		const logs = [];
+		
+		console.log = function(...args) {
+		  logs.push(args.map(arg => 
+			typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' '));
+		  originalConsoleLog.apply(console, args);
+		};
+		
+		try {
+		  // Execute the code
+		  const result = new Function(code)();
+		  
+		  // Display logs
+		  if (logs.length) {
+			logs.forEach(log => {
+			  const logElement = document.createElement('div');
+			  logElement.className = 'console-log';
+			  logElement.textContent = log;
+			  outputPanel.appendChild(logElement);
+			});
+		  }
+		  
+		  // Display return value if any
+		  if (result !== undefined) {
+			const resultElement = document.createElement('div');
+			resultElement.className = 'return-value';
+			resultElement.textContent = `→ ${result}`;
+			outputPanel.appendChild(resultElement);
+		  }
+		} catch (error) {
+		  // Display error
+		  const errorElement = document.createElement('div');
+		  errorElement.className = 'error-message';
+		  errorElement.textContent = `Error: ${error.message}`;
+		  outputPanel.appendChild(errorElement);
+		} finally {
+		  // Restore console.log
+		  console.log = originalConsoleLog;
+		}
+	  });
+	});
+  }
+  
+  // Call this function after the document is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+	setupInteractiveExamples();
+  });
 
 
 

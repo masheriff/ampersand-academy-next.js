@@ -1,0 +1,4299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ampersand Academy - Javascript Notes</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Javascript Guide and Notes" />
+    <meta name="author" content="Ampersand Academy" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/simplelightbox/simple-lightbox.min.css"
+    />
+
+    <!-- Dark Github Gist CSS -->
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="assets/css/darkGist.min.css"
+    />
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+
+  <body class="docs-page">
+    <header class="header fixed-top">
+      <div class="branding docs-branding">
+        <div class="container-fluid position-relative py-2">
+          <div class="docs-logo-wrapper">
+            <button
+              id="docs-sidebar-toggler"
+              class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+              type="button"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="site-logo">
+              <a class="navbar-brand" href="index.html"
+                ><img
+                  class="logo me-2"
+                  src="assets/images/Ampersand_Academy_Logo.svg"
+                  alt="logo"
+                  height="50"
+              /></a>
+            </div>
+          </div>
+          <!--//docs-logo-wrapper-->
+          <div
+            class="docs-top-utilities d-flex justify-content-end align-items-center"
+          >
+            <ul
+              class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex"
+            >
+              <li class="list-inline-item">
+                <a
+                  href="https://www.facebook.com/AmpersandAcademy"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default"
+                  target="_blank"
+                  ><i class="fab fa-google fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.linkedin.com/company/ampersandacademy/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.instagram.com/ampersandacad/"
+                  target="_blank"
+                  ><i class="fab fa-instagram fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w"
+                  target="_blank"
+                  ><i class="fab fa-whatsapp fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://t.me/ampersandacad" target="_blank"
+                  ><i class="fab fa-telegram fa-fw"></i
+                ></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//docs-top-utilities-->
+        </div>
+        <!--//container-->
+      </div>
+      <!--//branding-->
+    </header>
+    <!--//header-->
+    <div class="docs-wrapper">
+      <div id="docs-sidebar" class="docs-sidebar">
+        <div class="top-search-box d-lg-none p-3">
+          <form class="search-form">
+            <input
+              type="text"
+              placeholder="Search the docs..."
+              name="search"
+              class="form-control search-input"
+            />
+            <button type="submit" class="btn search-btn" value="Search">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <nav id="docs-nav" class="docs-nav navbar">
+          <ul class="section-items list-unstyled nav flex-column pb-3">
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-1"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-info-circle"></i></span
+                >Introduction</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-1"
+                >What is JavaScript?</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-2"
+                >Adding JavaScript to HTML</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-3">Output Methods</a>
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-2"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-code"></i></span
+                >JavaScript Fundamentals</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-1">Statements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-2">Variables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-3">Data Types</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-4">Operators</a>
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-3"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-box"></i></span
+                >Functions & Objects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-1">Functions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-2">Creating Objects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-3"
+                >Object Properties</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-4">Object Methods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-5">Object Display</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-6"
+                >Object Constructors</a
+              >
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-4"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-font"></i></span
+                >Strings & Arrays</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-1">Strings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-2">String Methods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-3">String Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-4">Arrays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-5">Array Methods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-6">Array Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-7">Array Sort</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-8">Array Iteration</a>
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-5"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-calendar-alt"></i></span
+                >Date Object</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-1">Date</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-2">Date Get Methods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-5-3">Date Set Methods</a>
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-6"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-random"></i></span
+                >Control Flow</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-1">If Else</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-2">Switch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-3">Loops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-6-4">Break</a>
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-7"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-rocket"></i></span
+                >Modern JavaScript</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-1">Destructuring</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-2">Arrow Functions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-3">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-7-4">JSON</a>
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-8"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-sync-alt"></i></span
+                >Asynchronous JavaScript</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-8-1"
+                >Asynchronous Basics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-8-2">Promises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-8-3">Async/Await</a>
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-9"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-bug"></i></span
+                >Debugging</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-9-1"
+                >Debugging Methods</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!--//docs-nav-->
+      </div>
+      <!--//docs-sidebar-->
+      <div class="docs-content">
+        <div class="container">
+          <article class="docs-article" id="section-1">
+            <header class="docs-header">
+              <h1 class="docs-heading">Introduction to JavaScript</h1>
+              <section class="docs-intro">
+                <p>
+                  JavaScript is a lightweight, interpreted, or just-in-time
+                  compiled programming language with first-class functions.
+                  While it is most well-known as the scripting language for Web
+                  pages, it's used in many non-browser environments as well.
+                  JavaScript is a prototype-based, multi-paradigm,
+                  single-threaded, dynamic language, supporting object-oriented,
+                  imperative, and declarative styles.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+            <section class="docs-section" id="item-1-1">
+              <h2 class="section-heading">What is JavaScript?</h2>
+              <p>
+                JavaScript is a high-level, interpreted programming language
+                that conforms to the ECMAScript specification. It was initially
+                created to make web pages interactive and is now used for
+                server-side website deployments, non-web browser applications,
+                and much more.
+              </p>
+
+              <h4>Key Characteristics</h4>
+              <ul>
+                <li>
+                  <strong>Client-Side Language</strong>: Runs in the browser,
+                  enabling dynamic content updates without page reloads
+                </li>
+                <li>
+                  <strong>Interpreted</strong>: Code is executed line by line,
+                  without a compilation step
+                </li>
+                <li>
+                  <strong>Event-Driven</strong>: Can respond to user actions
+                  like clicks, form submissions, and key presses
+                </li>
+                <li>
+                  <strong>Object-Oriented</strong>: Uses objects to represent
+                  and organize data
+                </li>
+                <li>
+                  <strong>First-Class Functions</strong>: Functions can be
+                  assigned to variables, passed as arguments, and returned from
+                  other functions
+                </li>
+              </ul>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    JavaScript should not be confused with Java. Although the
+                    names are similar, they are very different programming
+                    languages with distinct syntax and capabilities.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-1-2">
+              <h2 class="section-heading">Adding JavaScript to HTML</h2>
+              <p>
+                There are three main ways to add JavaScript to an HTML document:
+              </p>
+
+              <h4>1. Inline JavaScript</h4>
+              <p>
+                Add JavaScript directly to HTML elements using the
+                <code>onclick</code>, <code>onload</code>, and other event
+                attributes:
+              </p>
+              <div class="interactive-code">
+              <pre><code>&lt;button onclick="alert('Hello, World!')"&gt;Click Me&lt;/button&gt;</code></pre>
+              </div>
+
+              <h4>2. Internal JavaScript</h4>
+              <p>
+                Add JavaScript within a <code>&lt;script&gt;</code> tag in the
+                HTML document:
+              </p>
+              <pre><code>&lt;script&gt;
+        function sayHello() {
+          alert('Hello, World!');
+        }
+      &lt;/script&gt;
+      
+      &lt;button onclick="sayHello()"&gt;Click Me&lt;/button&gt;</code></pre>
+
+              <h4>3. External JavaScript</h4>
+              <p>
+                Link to an external JavaScript file using the
+                <code>src</code> attribute of the
+                <code>&lt;script&gt;</code> tag:
+              </p>
+              <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    Best Practice
+                  </h4>
+                  <p>
+                    It's generally recommended to place JavaScript files at the
+                    bottom of the <code>&lt;body&gt;</code> element or use the
+                    <code>defer</code> attribute to ensure the HTML content
+                    loads before the JavaScript executes:
+                    <code
+                      >&lt;script src="script.js" defer&gt;&lt;/script&gt;</code
+                    >
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-1-3">
+              <h2 class="section-heading">Output Methods</h2>
+              <p>JavaScript provides several ways to output data:</p>
+
+              <h4>1. console.log()</h4>
+              <p>
+                Outputs data to the browser's console, primarily used for
+                debugging:
+              </p>
+              <div class="interactive-code">
+                <pre><code>console.log('Hello, World!');</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+
+              <h4>2. alert()</h4>
+              <p>Displays data in a dialog box:</p>
+              <div class="interactive-code">
+                <pre><code>alert('Hello, World!');</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+
+              </div>
+
+              <h4>3. document.write()</h4>
+              <p>Writes directly to the HTML document:</p>
+              <pre><code>document.write('Hello, World!');</code></pre>
+
+              <h4>4. innerHTML</h4>
+              <p>Updates the content of an HTML element:</p>
+              <pre><code>document.getElementById('demo').innerHTML = 'Hello, World!';</code></pre>
+
+              <div class="callout-block callout-block-danger">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Warning
+                  </h4>
+                  <p>
+                    Using <code>document.write()</code> after the HTML document
+                    has fully loaded will overwrite all existing content. It
+                    should only be used for testing.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+
+          <article class="docs-article" id="section-2">
+            <header class="docs-header">
+              <h1 class="docs-heading">JavaScript Fundamentals</h1>
+              <section class="docs-intro">
+                <p>
+                  Understanding the fundamental concepts of JavaScript is
+                  essential for writing effective code. This section covers the
+                  core building blocks of the language.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+            <section class="docs-section" id="item-2-1">
+              <h2 class="section-heading">Statements</h2>
+              <p>
+                JavaScript statements are commands that tell the browser what to
+                do. They are composed of values, operators, expressions,
+                keywords, and comments.
+              </p>
+
+              <h4>Syntax Rules</h4>
+              <ul>
+                <li>Statements are executed in the order they are written</li>
+                <li>Statements typically end with a semicolon (;)</li>
+                <li>JavaScript is case-sensitive</li>
+                <li>Whitespace is generally ignored</li>
+                <li>Code blocks are enclosed in curly braces {}</li>
+              </ul>
+
+              <h4>Example</h4>
+              <div class="interactive-code">
+
+              <pre><code>// This is a comment
+      let x = 5;           // Declare and initialize a variable
+      x = x + 10;          // Update variable value
+      console.log(x);      // Output to console
+      
+      if (x > 10) {        // Code block with conditional statement
+        console.log("x is greater than 10");
+      }</code></pre>
+                  <button class="run-code-btn">Run</button>
+                  <div class="output-panel"></div>
+              </div>
+            </section>
+
+            <section class="docs-section" id="item-2-2">
+              <h2 class="section-heading">Variables</h2>
+              <p>
+                Variables are containers for storing data values. In JavaScript,
+                there are three ways to declare variables:
+              </p>
+
+              <h4>var, let, and const</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Keyword</th>
+                      <th>Scope</th>
+                      <th>Reassignment</th>
+                      <th>Hoisting</th>
+                      <th>Use Case</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>var</code></td>
+                      <td>Function scope</td>
+                      <td>Can be reassigned</td>
+                      <td>Hoisted (initialized with undefined)</td>
+                      <td>Legacy code (avoid in modern JavaScript)</td>
+                    </tr>
+                    <tr>
+                      <td><code>let</code></td>
+                      <td>Block scope</td>
+                      <td>Can be reassigned</td>
+                      <td>Hoisted (not initialized)</td>
+                      <td>Values that will change</td>
+                    </tr>
+                    <tr>
+                      <td><code>const</code></td>
+                      <td>Block scope</td>
+                      <td>Cannot be reassigned</td>
+                      <td>Hoisted (not initialized)</td>
+                      <td>Values that won't change</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <div class="interactive-code">
+              <pre><code>// var (function-scoped)
+      var age = 30;
+      function printAge() {
+        var age = 25;
+        console.log(age); // 25
+      }
+      console.log(age); // 30
+      
+      // let (block-scoped)
+      let count = 10;
+      if (true) {
+        let count = 5;
+        console.log(count); // 5
+      }
+      console.log(count); // 10
+      
+      // const (block-scoped, cannot be reassigned)
+      const PI = 3.14159;
+      // PI = 3.14; // Error: Assignment to constant variable</code></pre>
+      <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Modern Best Practice
+                  </h4>
+                  <p>
+                    Use <code>const</code> by default for variables that won't
+                    change. Use <code>let</code> for variables that will change.
+                    Avoid using <code>var</code> in new code.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-2-3">
+              <h2 class="section-heading">Data Types</h2>
+              <p>JavaScript has eight basic data types:</p>
+
+              <h4>Primitive Data Types</h4>
+              <ul>
+                <li>
+                  <strong>String</strong>: Text, enclosed in single or double
+                  quotes
+                  <code>let name = "John";</code>
+                </li>
+                <li>
+                  <strong>Number</strong>: Integers and floating-point numbers
+                  <code>let age = 30; let price = 19.99;</code>
+                </li>
+                <li>
+                  <strong>Boolean</strong>: true or false
+                  <code>let isActive = true;</code>
+                </li>
+                <li>
+                  <strong>Undefined</strong>: A variable that has been declared
+                  but not assigned a value
+                  <code>let x;</code>
+                </li>
+                <li>
+                  <strong>Null</strong>: Represents "nothing" or "empty"
+                  <code>let empty = null;</code>
+                </li>
+                <li>
+                  <strong>Symbol</strong>: Unique and immutable primitive
+                  <code>let id = Symbol("id");</code>
+                </li>
+                <li>
+                  <strong>BigInt</strong>: Integers with arbitrary precision
+                  <code
+                    >let bigNumber =
+                    1234567890123456789012345678901234567890n;</code
+                  >
+                </li>
+              </ul>
+
+              <h4>Non-Primitive (Reference) Data Type</h4>
+              <ul>
+                <li>
+                  <strong>Object</strong>: Key-value pairs, arrays, functions,
+                  dates, etc.
+                  <pre><code>let person = {name: "John", age: 30};
+      let numbers = [1, 2, 3];
+      let today = new Date();</code></pre>
+                </li>
+              </ul>
+
+              <h4>Checking Data Types</h4>
+              <div class="interactive-code">
+              <pre><code>// Using typeof operator
+      console.log(typeof "John");    // "string"
+      console.log(typeof 30);        // "number"
+      console.log(typeof true);      // "boolean"
+      console.log(typeof undefined); // "undefined"
+      console.log(typeof null);      // "object" (a known JavaScript bug)
+      console.log(typeof {});        // "object"
+      console.log(typeof []);        // "object" (arrays are objects in JavaScript)
+      console.log(typeof function(){}); // "function"</code></pre>
+                  <button class="run-code-btn">Run</button>
+                  <div class="output-panel"></div>
+              </div>
+            </section>
+
+            <section class="docs-section" id="item-2-4">
+              <h2 class="section-heading">Operators</h2>
+              <p>
+                JavaScript provides various types of operators to perform
+                operations on values.
+              </p>
+
+              <h4>Arithmetic Operators</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Operator</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>+</td>
+                      <td>Addition</td>
+                      <td>5 + 2 = 7</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>Subtraction</td>
+                      <td>5 - 2 = 3</td>
+                    </tr>
+                    <tr>
+                      <td>*</td>
+                      <td>Multiplication</td>
+                      <td>5 * 2 = 10</td>
+                    </tr>
+                    <tr>
+                      <td>/</td>
+                      <td>Division</td>
+                      <td>5 / 2 = 2.5</td>
+                    </tr>
+                    <tr>
+                      <td>%</td>
+                      <td>Modulus (remainder)</td>
+                      <td>5 % 2 = 1</td>
+                    </tr>
+                    <tr>
+                      <td>**</td>
+                      <td>Exponentiation (ES2016)</td>
+                      <td>5 ** 2 = 25</td>
+                    </tr>
+                    <tr>
+                      <td>++</td>
+                      <td>Increment</td>
+                      <td>let x = 5; x++; // x = 6</td>
+                    </tr>
+                    <tr>
+                      <td>--</td>
+                      <td>Decrement</td>
+                      <td>let x = 5; x--; // x = 4</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Assignment Operators</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Operator</th>
+                      <th>Example</th>
+                      <th>Equivalent to</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>=</td>
+                      <td>x = 5</td>
+                      <td>x = 5</td>
+                    </tr>
+                    <tr>
+                      <td>+=</td>
+                      <td>x += 5</td>
+                      <td>x = x + 5</td>
+                    </tr>
+                    <tr>
+                      <td>-=</td>
+                      <td>x -= 5</td>
+                      <td>x = x - 5</td>
+                    </tr>
+                    <tr>
+                      <td>*=</td>
+                      <td>x *= 5</td>
+                      <td>x = x * 5</td>
+                    </tr>
+                    <tr>
+                      <td>/=</td>
+                      <td>x /= 5</td>
+                      <td>x = x / 5</td>
+                    </tr>
+                    <tr>
+                      <td>%=</td>
+                      <td>x %= 5</td>
+                      <td>x = x % 5</td>
+                    </tr>
+                    <tr>
+                      <td>**=</td>
+                      <td>x **= 5</td>
+                      <td>x = x ** 5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Comparison Operators</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Operator</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>==</td>
+                      <td>Equal value</td>
+                      <td>5 == "5" returns true</td>
+                    </tr>
+                    <tr>
+                      <td>===</td>
+                      <td>Equal value and type</td>
+                      <td>5 === "5" returns false</td>
+                    </tr>
+                    <tr>
+                      <td>!=</td>
+                      <td>Not equal value</td>
+                      <td>5 != "6" returns true</td>
+                    </tr>
+                    <tr>
+                      <td>!==</td>
+                      <td>Not equal value or type</td>
+                      <td>5 !== "5" returns true</td>
+                    </tr>
+                    <tr>
+                      <td>></td>
+                      <td>Greater than</td>
+                      <td>5 > 3 returns true</td>
+                    </tr>
+                    <tr>
+                      <td><</td>
+                      <td>Less than</td>
+                      <td>5 < 8 returns true</td>
+                    </tr>
+                    <tr>
+                      <td>>=</td>
+                      <td>Greater than or equal</td>
+                      <td>5 >= 5 returns true</td>
+                    </tr>
+                    <tr>
+                      <td><=</td>
+                      <td>Less than or equal</td>
+                      <td>5 <= 5 returns true</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Logical Operators</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Operator</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>&&</td>
+                      <td>Logical AND</td>
+                      <td>true && true returns true</td>
+                    </tr>
+                    <tr>
+                      <td>||</td>
+                      <td>Logical OR</td>
+                      <td>true || false returns true</td>
+                    </tr>
+                    <tr>
+                      <td>!</td>
+                      <td>Logical NOT</td>
+                      <td>!true returns false</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Bitwise Operators</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Operator</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>&</td>
+                      <td>AND</td>
+                      <td>5 & 1 returns 1</td>
+                    </tr>
+                    <tr>
+                      <td>|</td>
+                      <td>OR</td>
+                      <td>5 | 1 returns 5</td>
+                    </tr>
+                    <tr>
+                      <td>^</td>
+                      <td>XOR</td>
+                      <td>5 ^ 1 returns 4</td>
+                    </tr>
+                    <tr>
+                      <td>~</td>
+                      <td>NOT</td>
+                      <td>~5 returns -6</td>
+                    </tr>
+                    <tr>
+                      <td><<</td>
+                      <td>Left shift</td>
+                      <td>5 << 1 returns 10</td>
+                    </tr>
+                    <tr>
+                      <td>>></td>
+                      <td>Right shift</td>
+                      <td>5 >> 1 returns 2</td>
+                    </tr>
+                    <tr>
+                      <td>>>></td>
+                      <td>Unsigned right shift</td>
+                      <td>5 >>> 1 returns 2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </article>
+          <article class="docs-article" id="section-3">
+            <header class="docs-header">
+              <h1 class="docs-heading">Functions & Objects</h1>
+              <section class="docs-intro">
+                <p>
+                  Functions and objects are fundamental building blocks in
+                  JavaScript. Functions allow you to create reusable code, while
+                  objects let you store collections of data and more complex
+                  entities.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+            <section class="docs-section" id="item-3-1">
+              <h2 class="section-heading">Functions</h2>
+              <p>
+                Functions are blocks of code designed to perform a particular
+                task and are executed when called (invoked).
+              </p>
+
+              <h4>Function Declaration</h4>
+              <div class="interactive-code">
+              <pre><code>function greet(name) {
+          return "Hello, " + name + "!";
+        }
+        
+        // Calling the function
+        let message = greet("John");
+        console.log(message); // "Hello, John!"</code></pre>
+        <button class="run-code-btn">Run</button>
+        <div class="output-panel"></div>
+    </div>
+
+              <h4>Function Expression</h4>
+              <div class="interactive-code">
+
+              <pre><code>// Anonymous function assigned to a variable
+        const greet = function(name) {
+          return "Hello, " + name + "!";
+        };
+        
+        // Calling the function
+        console.log(greet("Jane")); // "Hello, Jane!"</code></pre>
+        <button class="run-code-btn">Run</button>
+        <div class="output-panel"></div>
+    </div>
+
+              <h4>Parameters and Arguments</h4>
+              <ul>
+                <li>
+                  <strong>Parameters</strong>: Variables listed in the function
+                  definition
+                </li>
+                <li>
+                  <strong>Arguments</strong>: Values passed to the function when
+                  called
+                </li>
+              </ul>
+              <div class="interactive-code">
+
+              <pre><code>// Function with default parameters (ES6)
+        function greet(name = "Guest") {
+          return "Hello, " + name + "!";
+        }
+        
+        console.log(greet());        // "Hello, Guest!"
+        console.log(greet("Alice")); // "Hello, Alice!"</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+              <h4>Return Value</h4>
+              <p>
+                Functions can return a value using the
+                <code>return</code> statement. If no return statement is used,
+                the function returns <code>undefined</code>.
+              </p>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Hoisting
+                  </h4>
+                  <p>
+                    Function declarations are hoisted to the top of their scope,
+                    meaning they can be called before they are defined. Function
+                    expressions are not hoisted in the same way.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-3-2">
+              <h2 class="section-heading">Creating Objects</h2>
+              <p>
+                JavaScript objects are containers for named values called
+                properties and methods.
+              </p>
+
+              <h4>Object Literals</h4>
+              <div class="interactive-code">
+
+              <pre><code>// Creating an object with object literal syntax
+        const person = {
+          firstName: "John",
+          lastName: "Doe",
+          age: 30,
+          email: "john@example.com",
+          fullName: function() {
+            return this.firstName + " " + this.lastName;
+          }
+        };</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+              <h4>Using the new Object() Constructor</h4>
+              <div class="interactive-code">
+
+              <pre><code>// Creating an object with the new keyword
+        const person = new Object();
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 30;
+        person.email = "john@example.com";
+        person.fullName = function() {
+          return this.firstName + " " + this.lastName;
+        };</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+              <h4>Object Constructor Functions</h4>
+              <div class="interactive-code">
+
+              <pre><code>// Constructor function
+        function Person(firstName, lastName, age, email) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.age = age;
+          this.email = email;
+          this.fullName = function() {
+            return this.firstName + " " + this.lastName;
+          };
+        }
+        
+        // Creating objects from the constructor
+        const john = new Person("John", "Doe", 30, "john@example.com");
+        const jane = new Person("Jane", "Smith", 25, "jane@example.com");</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+            </section>
+
+            <section class="docs-section" id="item-3-3">
+              <h2 class="section-heading">Object Properties</h2>
+              <p>Properties are the values associated with an object.</p>
+
+              <h4>Accessing Properties</h4>
+              <pre><code>const person = {
+          firstName: "John",
+          lastName: "Doe",
+          age: 30
+        };
+        
+        // Dot notation
+        console.log(person.firstName); // "John"
+        
+        // Bracket notation (useful for property names with spaces or special characters)
+        console.log(person["lastName"]); // "Doe"
+        
+        // Using a variable for property name
+        const propertyName = "age";
+        console.log(person[propertyName]); // 30</code></pre>
+
+              <h4>Adding, Modifying, and Deleting Properties</h4>
+              <pre><code>const person = {
+          firstName: "John"
+        };
+        
+        // Adding a property
+        person.lastName = "Doe";
+        person["age"] = 30;
+        
+        // Modifying a property
+        person.firstName = "Jane";
+        
+        // Deleting a property
+        delete person.age;</code></pre>
+
+              <h4>Property Existence</h4>
+              <pre><code>const person = {
+          firstName: "John",
+          lastName: "Doe",
+          age: 30
+        };
+        
+        // Check if a property exists
+        console.log("firstName" in person); // true
+        console.log("middleName" in person); // false
+        
+        // Alternative method
+        console.log(person.hasOwnProperty("firstName")); // true</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-3-4">
+              <h2 class="section-heading">Object Methods</h2>
+              <p>Methods are functions stored as object properties.</p>
+
+              <h4>Defining Methods</h4>
+              <div class="interactive-code">
+
+              <pre><code>const person = {
+          firstName: "John",
+          lastName: "Doe",
+          // Method
+          fullName: function() {
+            return this.firstName + " " + this.lastName;
+          },
+          // Shorthand method (ES6)
+          greet() {
+            return `Hello, my name is ${this.firstName}`;
+          }
+        };
+        
+        console.log(person.fullName()); // "John Doe"
+        console.log(person.greet()); // "Hello, my name is John"</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+
+              <h4>The "this" Keyword</h4>
+              <p>
+                The <code>this</code> keyword refers to the object that the
+                method belongs to. In a method, <code>this</code> refers to the
+                owner object.
+              </p>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    "this" Context
+                  </h4>
+                  <p>
+                    The value of <code>this</code> depends on how a function is
+                    called. In regular functions, it refers to the global object
+                    (or undefined in strict mode). In arrow functions, it
+                    maintains the <code>this</code> value of the enclosing
+                    lexical context.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-3-5">
+              <h2 class="section-heading">Object Display</h2>
+              <p>There are different ways to display JavaScript objects:</p>
+
+              <h4>1. Using Object Properties</h4>
+              <pre><code>const person = {
+          name: "John",
+          age: 30,
+          city: "New York"
+        };
+        
+        // Access individual properties
+        document.getElementById("demo").innerHTML = 
+          person.name + ", " + person.age + ", " + person.city;</code></pre>
+
+              <h4>2. Using Object.values()</h4>
+              <div class="interactive-code">
+
+              <pre><code>const person = {
+          name: "John",
+          age: 30,
+          city: "New York"
+        };
+        
+        // Convert object to array of values
+        const values = Object.values(person);
+        console.log(values); // ["John", 30, "New York"]</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+              <h4>3. Using JSON.stringify()</h4>
+              <div class="interactive-code">
+
+              <pre><code>const person = {
+          name: "John",
+          age: 30,
+          city: "New York"
+        };
+        
+        // Convert object to JSON string
+        const json = JSON.stringify(person);
+        console.log(json); // '{"name":"John","age":30,"city":"New York"}'
+        
+        // Note: JSON.stringify() doesn't work with functions or undefined values</code></pre>
+        <button class="run-code-btn">Run</button>
+        <div class="output-panel"></div>
+    </div>
+              <h4>4. Using for...in Loop</h4>
+              <div class="interactive-code">
+
+              <pre><code>const person = {
+          name: "John",
+          age: 30,
+          city: "New York"
+        };
+        
+        // Loop through properties
+        let text = "";
+        for (let prop in person) {
+          text += person[prop] + " ";
+        }
+        console.log(text); // "John 30 New York "</code></pre>
+        <button class="run-code-btn">Run</button>
+        <div class="output-panel"></div>
+    </div>
+            </section>
+
+            <section class="docs-section" id="item-3-6">
+              <h2 class="section-heading">Object Constructors</h2>
+              <p>
+                Object constructors are functions that create and initialize
+                objects.
+              </p>
+
+              <h4>Creating an Object Constructor</h4>
+              <div class="interactive-code">
+
+              <pre><code>// Constructor function
+        function Car(make, model, year) {
+          this.make = make;
+          this.model = model;
+          this.year = year;
+          this.displayInfo = function() {
+            return this.year + " " + this.make + " " + this.model;
+          };
+        }
+        
+        // Creating objects
+        const car1 = new Car("Toyota", "Corolla", 2020);
+        const car2 = new Car("Honda", "Civic", 2019);
+        
+        console.log(car1.displayInfo()); // "2020 Toyota Corolla"
+        console.log(car2.displayInfo()); // "2019 Honda Civic"</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+              <h4>Prototypes</h4>
+              <p>
+                All JavaScript objects inherit properties and methods from a
+                prototype.
+              </p>
+              <div class="interactive-code">
+
+
+              <pre><code>// Adding a method to the prototype (more efficient for memory)
+        function Car(make, model, year) {
+          this.make = make;
+          this.model = model;
+          this.year = year;
+        }
+        
+        // Add method to prototype (shared across all instances)
+        Car.prototype.displayInfo = function() {
+          return this.year + " " + this.make + " " + this.model;
+        };
+        
+        const car1 = new Car("Toyota", "Corolla", 2020);
+        console.log(car1.displayInfo()); // "2020 Toyota Corolla"</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Modern Alternative
+                  </h4>
+                  <p>
+                    In modern JavaScript, classes (introduced in ES6) provide a
+                    cleaner syntax for creating constructor functions and
+                    working with prototypes.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+
+          <!-- Strings & Arrays -->
+          <article class="docs-article" id="section-4">
+            <header class="docs-header">
+              <h1 class="docs-heading">Strings & Arrays</h1>
+              <section class="docs-intro">
+                <p>
+                  Strings and arrays are fundamental data types in JavaScript.
+                  Strings are used to store and manipulate text, while arrays
+                  are used to store multiple values in a single variable.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+            <section class="docs-section" id="item-4-1">
+              <h2 class="section-heading">Strings</h2>
+              <p>A string is a sequence of characters enclosed in quotes.</p>
+
+              <h4>Creating Strings</h4>
+              <pre><code>// Using single quotes
+        const singleQuotes = 'Hello, World!';
+        
+        // Using double quotes
+        const doubleQuotes = "Hello, World!";
+        
+        // Using backticks (template literals - ES6)
+        const name = "John";
+        const templateLiteral = `Hello, ${name}!`; // "Hello, John!"</code></pre>
+
+              <h4>String Properties</h4>
+              <div class="interactive-code">
+
+              <pre><code>const text = "Hello, World!";
+        
+        // Length property
+        console.log(text.length); // 13</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+
+              <h4>Escape Characters</h4>
+              <pre><code>// Using escape characters
+        const text1 = "I said \"Hello\" to him.";
+        const text2 = 'It\'s a beautiful day.';
+        const path = "C:\\Users\\John\\Documents";</code></pre>
+
+              <h4>String Concatenation</h4>
+              <div class="interactive-code">
+
+              <pre><code>// Using + operator
+        const firstName = "John";
+        const lastName = "Doe";
+        const fullName = firstName + " " + lastName; // "John Doe"
+        
+        // Using concat() method
+        const greeting = "Hello, ".concat(firstName, "!"); // "Hello, John!"
+        
+        // Using template literals (ES6)
+        const message = `${firstName} ${lastName} is ${30} years old.`;
+
+        console.log(fullName);
+        console.log(greeting);
+        console.log(message);</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+            </section>
+
+            <section class="docs-section" id="item-4-2">
+              <h2 class="section-heading">String Methods</h2>
+              <p>
+                JavaScript provides many built-in methods for working with
+                strings.
+              </p>
+
+              <h4>Common String Methods</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>charAt()</code></td>
+                      <td>Returns the character at a specified position</td>
+                      <td><code>"Hello".charAt(1)</code> returns "e"</td>
+                    </tr>
+                    <tr>
+                      <td><code>toLowerCase()</code></td>
+                      <td>Converts to lowercase</td>
+                      <td>
+                        <code>"Hello".toLowerCase()</code> returns "hello"
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>toUpperCase()</code></td>
+                      <td>Converts to uppercase</td>
+                      <td>
+                        <code>"Hello".toUpperCase()</code> returns "HELLO"
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>trim()</code></td>
+                      <td>Removes whitespace from both ends</td>
+                      <td><code>" Hello ".trim()</code> returns "Hello"</td>
+                    </tr>
+                    <tr>
+                      <td><code>slice()</code></td>
+                      <td>Extracts a part of the string</td>
+                      <td><code>"Hello".slice(1, 3)</code> returns "el"</td>
+                    </tr>
+                    <tr>
+                      <td><code>substring()</code></td>
+                      <td>
+                        Similar to slice but cannot accept negative indexes
+                      </td>
+                      <td><code>"Hello".substring(1, 3)</code> returns "el"</td>
+                    </tr>
+                    <tr>
+                      <td><code>substr()</code></td>
+                      <td>Extracts a specified number of characters</td>
+                      <td><code>"Hello".substr(1, 2)</code> returns "el"</td>
+                    </tr>
+                    <tr>
+                      <td><code>replace()</code></td>
+                      <td>Replaces text in a string</td>
+                      <td>
+                        <code>"Hello".replace("H", "J")</code> returns "Jello"
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>split()</code></td>
+                      <td>Splits a string into an array</td>
+                      <td>
+                        <code>"a,b,c".split(",")</code> returns ["a", "b", "c"]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>concat()</code></td>
+                      <td>Joins two or more strings</td>
+                      <td>
+                        <code>"Hello".concat(" ", "World")</code> returns "Hello
+                        World"
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>String Method Examples</h4>
+              <div class="interactive-code">
+              <pre><code>const text = "Hello, World!";
+        
+        // Changing case
+        console.log(text.toLowerCase()); // "hello, world!"
+        console.log(text.toUpperCase()); // "HELLO, WORLD!"
+        
+        // Extracting parts
+        console.log(text.slice(0, 5));   // "Hello"
+        console.log(text.slice(7));      // "World!"
+        console.log(text.slice(-6));     // "World!"
+        
+        // Replacing content
+        console.log(text.replace("World", "JavaScript")); // "Hello, JavaScript!"
+        
+        // Note: replace() only replaces the first occurrence by default
+        const text2 = "Hello World, welcome to the World of JavaScript";
+        console.log(text2.replace(/World/g, "JS")); // "Hello JS, welcome to the JS of JavaScript"
+        
+        // Splitting
+        console.log("a,b,c".split(",")); // ["a", "b", "c"]</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+            </section>
+
+            <section class="docs-section" id="item-4-3">
+              <h2 class="section-heading">String Search</h2>
+              <p>
+                JavaScript provides methods to search for values within strings.
+              </p>
+
+              <h4>String Search Methods</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Description</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>indexOf()</code></td>
+                      <td>Returns the position of the first occurrence</td>
+                      <td><code>"Hello".indexOf("e")</code> returns 1</td>
+                    </tr>
+                    <tr>
+                      <td><code>lastIndexOf()</code></td>
+                      <td>Returns the position of the last occurrence</td>
+                      <td><code>"Hello".lastIndexOf("l")</code> returns 3</td>
+                    </tr>
+                    <tr>
+                      <td><code>search()</code></td>
+                      <td>Searches for a match and returns the position</td>
+                      <td><code>"Hello".search("e")</code> returns 1</td>
+                    </tr>
+                    <tr>
+                      <td><code>includes()</code></td>
+                      <td>Returns true if the string contains a value</td>
+                      <td><code>"Hello".includes("e")</code> returns true</td>
+                    </tr>
+                    <tr>
+                      <td><code>startsWith()</code></td>
+                      <td>Returns true if the string starts with a value</td>
+                      <td><code>"Hello".startsWith("H")</code> returns true</td>
+                    </tr>
+                    <tr>
+                      <td><code>endsWith()</code></td>
+                      <td>Returns true if the string ends with a value</td>
+                      <td><code>"Hello".endsWith("o")</code> returns true</td>
+                    </tr>
+                    <tr>
+                      <td><code>match()</code></td>
+                      <td>Returns an array of matches</td>
+                      <td>
+                        <code>"rain in Spain".match(/ai/g)</code> returns ["ai",
+                        "ai"]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>matchAll()</code></td>
+                      <td>Returns an iterator of all matches</td>
+                      <td>
+                        <code>[...text.matchAll(/ai/g)]</code> returns matches
+                        with details
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Examples</h4>
+              <div class="interactive-code">
+
+              <pre><code>const text = "Please locate where 'locate' occurs!";
+        
+        // Finding positions
+        console.log(text.indexOf("locate"));     // 7
+        console.log(text.lastIndexOf("locate")); // 14
+        console.log(text.indexOf("locate", 10)); // 14 (start searching from position 10)
+        
+        // Checking existence
+        console.log(text.includes("locate"));       // true
+        console.log(text.startsWith("Please"));     // true
+        console.log(text.endsWith("occurs!"));      // true
+        console.log(text.startsWith("locate", 7));  // true (start checking from position 7)
+        
+        // Using regular expressions
+        console.log(text.search(/locate/i));    // 7 (case-insensitive search)
+        console.log(text.match(/locate/g));     // ["locate", "locate"] (all occurrences)</code></pre>
+        <button class="run-code-btn">Run</button>
+    <div class="output-panel"></div>
+</div>
+            </section>
+            <section class="docs-section" id="item-4-4">
+              <h2 class="section-heading">Arrays</h2>
+              <p>Arrays are used to store multiple values in a single variable.</p>
+
+              <h4>Creating Arrays</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Array literal - preferred method
+            const fruits = ["Apple", "Banana", "Orange"];
+
+            // Using the Array constructor
+            const numbers = new Array(1, 2, 3, 4, 5);
+
+            // Empty array
+            const emptyArray = [];
+
+            // Array with mixed data types
+            const mixed = [42, "Hello", true, null, {name: "John"}, [1, 2]];
+
+            console.log(fruits);
+            console.log(numbers);
+            console.log(mixed);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+
+              <h4>Accessing Array Elements</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+            // Accessing by index (zero-based)
+            console.log(fruits[0]); // "Apple"
+            console.log(fruits[2]); // "Orange"
+
+            // Using at() method (ES2022) - supports negative indices
+            console.log(fruits.at(-1)); // "Mango" (last element)
+            console.log(fruits.at(-2)); // "Orange" (second to last)
+
+            // Length property
+            console.log(fruits.length); // 4
+
+            // Accessing an element beyond the array length
+            console.log(fruits[10]); // undefined</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+
+              <h4>Changing Array Elements</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const fruits = ["Apple", "Banana", "Orange"];
+
+            // Change an element
+            fruits[1] = "Pear";
+            console.log(fruits); // ["Apple", "Pear", "Orange"]
+
+            // Add a new element
+            fruits[3] = "Mango";
+            console.log(fruits); // ["Apple", "Pear", "Orange", "Mango"]
+
+            // Arrays are objects, so you can add properties (not recommended)
+            fruits.type = "fruit";
+            console.log(fruits.type); // "fruit"
+            console.log(fruits.length); // Still 4 (properties don't count)</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    Array Length
+                  </h4>
+                  <p>
+                    Be careful when adding elements to an array using indexes. If you add an element beyond the current length, "empty slots" will be created in between, which can cause unexpected behavior.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="docs-section" id="item-4-5">
+              <h2 class="section-heading">Array Methods</h2>
+              <p>JavaScript provides many built-in methods for working with arrays.</p>
+            
+              <h4>Adding and Removing Elements</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const fruits = ["Apple", "Banana", "Orange"];
+            
+            // push() - add to the end
+            fruits.push("Mango");
+            console.log(fruits); // ["Apple", "Banana", "Orange", "Mango"]
+            
+            // pop() - remove from the end
+            const lastFruit = fruits.pop();
+            console.log(lastFruit); // "Mango"
+            console.log(fruits); // ["Apple", "Banana", "Orange"]
+            
+            // unshift() - add to the beginning
+            fruits.unshift("Strawberry");
+            console.log(fruits); // ["Strawberry", "Apple", "Banana", "Orange"]
+            
+            // shift() - remove from the beginning
+            const firstFruit = fruits.shift();
+            console.log(firstFruit); // "Strawberry"
+            console.log(fruits); // ["Apple", "Banana", "Orange"]</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            
+              <h4>Splicing and Slicing</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const fruits = ["Apple", "Banana", "Orange", "Mango", "Kiwi"];
+            
+            // splice() - add/remove elements from anywhere
+            // syntax: array.splice(start, deleteCount, item1, item2, ...)
+            
+            // Remove elements
+            const removed = fruits.splice(2, 2); // Remove 2 elements starting at index 2
+            console.log(removed); // ["Orange", "Mango"]
+            console.log(fruits); // ["Apple", "Banana", "Kiwi"]
+            
+            // Add elements
+            fruits.splice(1, 0, "Peach", "Lemon"); // Add at index 1, remove 0 elements
+            console.log(fruits); // ["Apple", "Peach", "Lemon", "Banana", "Kiwi"]
+            
+            // Replace elements
+            fruits.splice(0, 2, "Pineapple"); // Remove 2 elements starting at index 0, add "Pineapple"
+            console.log(fruits); // ["Pineapple", "Lemon", "Banana", "Kiwi"]
+            
+            // slice() - copy portion of an array (doesn't modify original)
+            const citrus = fruits.slice(1, 3); // Elements from index 1 up to (but not including) 3
+            console.log(citrus); // ["Lemon", "Banana"]
+            console.log(fruits); // Original unchanged: ["Pineapple", "Lemon", "Banana", "Kiwi"]</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            
+              <h4>Other Common Array Methods</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// concat() - merge arrays
+            const array1 = [1, 2, 3];
+            const array2 = [4, 5, 6];
+            const merged = array1.concat(array2);
+            console.log(merged); // [1, 2, 3, 4, 5, 6]
+            
+            // join() - convert array to string
+            const elements = ["Fire", "Air", "Water"];
+            console.log(elements.join()); // "Fire,Air,Water"
+            console.log(elements.join(" | ")); // "Fire | Air | Water"
+            
+            // flat() - flatten nested arrays
+            const nested = [1, 2, [3, 4, [5, 6]]];
+            console.log(nested.flat()); // [1, 2, 3, 4, [5, 6]]
+            console.log(nested.flat(2)); // [1, 2, 3, 4, 5, 6]
+            
+            // toString() - convert array to string
+            const numbers = [1, 2, 3, 4];
+            console.log(numbers.toString()); // "1,2,3,4"</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            </section>
+            <section class="docs-section" id="item-4-6">
+              <h2 class="section-heading">Array Search</h2>
+              <p>JavaScript provides methods to search for values within arrays.</p>
+            
+              <h4>Finding Elements</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const fruits = ["Apple", "Banana", "Orange", "Mango", "Apple"];
+            
+            // indexOf() - returns the first index of an element
+            console.log(fruits.indexOf("Apple")); // 0
+            console.log(fruits.indexOf("Apple", 1)); // 4 (start from index 1)
+            console.log(fruits.indexOf("Cherry")); // -1 (not found)
+            
+            // lastIndexOf() - returns the last index of an element
+            console.log(fruits.lastIndexOf("Apple")); // 4
+            
+            // includes() - returns true if array contains the element
+            console.log(fruits.includes("Mango")); // true
+            console.log(fruits.includes("Grape")); // false</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            
+              <h4>Finding Objects in Arrays</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const people = [
+              {name: "John", age: 30},
+              {name: "Jane", age: 25},
+              {name: "Jack", age: 40},
+              {name: "Jill", age: 35}
+            ];
+            
+            // find() - returns the first element that satisfies the condition
+            const person = people.find(person => person.age > 30);
+            console.log(person); // {name: "Jack", age: 40}
+            
+            // findIndex() - returns the index of the first matching element
+            const index = people.findIndex(person => person.name === "Jane");
+            console.log(index); // 1
+            
+            // findLast() and findLastIndex() - search from the end (ES2022)
+            const lastPerson = people.findLast(person => person.age > 30);
+            console.log(lastPerson); // {name: "Jill", age: 35}
+            
+            // some() - returns true if at least one element matches
+            const hasYoungPerson = people.some(person => person.age < 30);
+            console.log(hasYoungPerson); // true
+            
+            // every() - returns true if all elements match
+            const allAdults = people.every(person => person.age >= 18);
+            console.log(allAdults); // true</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-4-7">
+              <h2 class="section-heading">Array Sort</h2>
+              <p>JavaScript provides methods to sort arrays in various ways.</p>
+            
+              <h4>Basic Sorting</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Sorting strings (alphabetically)
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.sort();
+            console.log(fruits); // ["Apple", "Banana", "Mango", "Orange"]
+            
+            // Reversing an array
+            fruits.reverse();
+            console.log(fruits); // ["Orange", "Mango", "Banana", "Apple"]
+            
+            // Warning: sort() converts elements to strings by default
+            const numbers = [1, 5, 10, 2, 100];
+            numbers.sort();
+            console.log(numbers); // [1, 10, 100, 2, 5] (incorrect numeric order)</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            
+              <h4>Custom Sorting</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Numeric sort with compare function
+            const numbers = [1, 5, 10, 2, 100];
+            
+            // Ascending order
+            numbers.sort((a, b) => a - b);
+            console.log(numbers); // [1, 2, 5, 10, 100]
+            
+            // Descending order
+            numbers.sort((a, b) => b - a);
+            console.log(numbers); // [100, 10, 5, 2, 1]
+            
+            // Sorting objects
+            const people = [
+              {name: "John", age: 30},
+              {name: "Jane", age: 25},
+              {name: "Jack", age: 40}
+            ];
+            
+            // Sort by age
+            people.sort((a, b) => a.age - b.age);
+            console.log(people); // Sorted by age
+            
+            // Sort by name
+            people.sort((a, b) => {
+              if (a.name < b.name) return -1;
+              if (a.name > b.name) return 1;
+              return 0;
+            });
+            console.log(people); // Sorted by name</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    Sort Mutation
+                  </h4>
+                  <p>
+                    The <code>sort()</code> method modifies the original array. If you need to keep the original array intact, make a copy before sorting:
+                    <code>const sortedArray = [...originalArray].sort();</code>
+                  </p>
+                </div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-4-8">
+              <h2 class="section-heading">Array Iteration</h2>
+              <p>JavaScript provides several methods to iterate over arrays.</p>
+            
+              <h4>Basic Loops</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const fruits = ["Apple", "Banana", "Orange", "Mango"];
+            
+            // for loop
+            console.log("Using for loop:");
+            for (let i = 0; i < fruits.length; i++) {
+              console.log(fruits[i]);
+            }
+            
+            // for...of loop (ES6)
+            console.log("Using for...of loop:");
+            for (const fruit of fruits) {
+              console.log(fruit);
+            }
+            
+            // forEach method
+            console.log("Using forEach:");
+            fruits.forEach(fruit => {
+              console.log(fruit);
+            });</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            
+              <h4>Array Transformation Methods</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const numbers = [1, 2, 3, 4, 5];
+            
+            // map() - creates a new array by transforming each element
+            const doubled = numbers.map(num => num * 2);
+            console.log(doubled); // [2, 4, 6, 8, 10]
+            
+            // filter() - creates a new array with elements that pass a test
+            const evenNumbers = numbers.filter(num => num % 2 === 0);
+            console.log(evenNumbers); // [2, 4]
+            
+            // reduce() - reduces array to a single value
+            const sum = numbers.reduce((total, num) => total + num, 0);
+            console.log(sum); // 15
+            
+            // flatMap() - map and then flatten the result
+            const pairs = numbers.flatMap(num => [num, num * 2]);
+            console.log(pairs); // [1, 2, 2, 4, 3, 6, 4, 8, 5, 10]</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            
+              <h4>Advanced Array Iteration</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const products = [
+              {name: "Laptop", price: 1200, category: "Electronics"},
+              {name: "Chair", price: 150, category: "Furniture"},
+              {name: "Book", price: 25, category: "Books"},
+              {name: "Phone", price: 800, category: "Electronics"},
+              {name: "Desk", price: 300, category: "Furniture"}
+            ];
+            
+            // Filtering and mapping in sequence
+            const expensiveProductNames = products
+              .filter(product => product.price > 100)
+              .map(product => product.name);
+            console.log(expensiveProductNames);
+            
+            // Grouping items by category (using reduce)
+            const groupedByCategory = products.reduce((groups, product) => {
+              const category = product.category;
+              if (!groups[category]) {
+                groups[category] = [];
+              }
+              groups[category].push(product);
+              return groups;
+            }, {});
+            console.log(groupedByCategory);
+            
+            // Finding the total price of electronics
+            const electronicsTotal = products
+              .filter(product => product.category === "Electronics")
+              .reduce((total, product) => total + product.price, 0);
+            console.log(`Total for electronics: $${electronicsTotal}`);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            </section>
+          </article>
+          <article class="docs-article" id="section-5">
+            <header class="docs-header">
+              <h1 class="docs-heading">Date Object</h1>
+              <section class="docs-intro">
+                <p>
+                  The Date object in JavaScript is used to work with dates and times. It provides methods for creating, formatting, and manipulating dates.
+                </p>
+              </section>
+            </header>
+            
+            <section class="docs-section" id="item-5-1">
+              <h2 class="section-heading">Date</h2>
+              <p>
+                The Date object represents a single moment in time. It provides methods for date/time manipulation.
+              </p>
+          
+              <h4>Creating Date Objects</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Current date and time
+          const now = new Date();
+          console.log(now);
+          
+          // Specific date and time (year, month, day, hours, minutes, seconds, ms)
+          // Note: months are 0-indexed (0 = January, 11 = December)
+          const specificDate = new Date(2023, 0, 15, 10, 30, 0, 0);
+          console.log(specificDate); // Jan 15, 2023, 10:30:00
+          
+          // From date string
+          const dateFromString = new Date("2023-02-20T14:25:30");
+          console.log(dateFromString);
+          
+          // From timestamp (milliseconds since January 1, 1970)
+          const dateFromTimestamp = new Date(1674235531000);
+          console.log(dateFromTimestamp);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Date Formats</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const date = new Date("2023-03-25T14:30:00");
+          
+          // ISO Date Format (ISO 8601)
+          console.log(date.toISOString()); // "2023-03-25T14:30:00.000Z"
+          
+          // Date String
+          console.log(date.toString()); // Full date and time with timezone
+          
+          // UTC String
+          console.log(date.toUTCString()); // Date converted to UTC
+          
+          // Locale String
+          console.log(date.toLocaleDateString()); // Date formatted according to locale
+          console.log(date.toLocaleTimeString()); // Time formatted according to locale
+          console.log(date.toLocaleString()); // Date and time formatted according to locale
+          
+          // Custom locale formatting
+          console.log(date.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })); // "Saturday, March 25, 2023"</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i>
+                    </span>
+                    UTC vs Local Time
+                  </h4>
+                  <p>
+                    JavaScript Date objects internally store time in UTC (Coordinated Universal Time), but many methods return values in the local time zone. Be aware of this distinction when working with dates across time zones.
+                  </p>
+                </div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-5-2">
+              <h2 class="section-heading">Date Get Methods</h2>
+              <p>Date objects have several methods to get components of a date.</p>
+          
+              <h4>Getting Date Components (Local Time)</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const date = new Date("2023-05-18T15:42:30");
+          
+          // Get Year, Month, and Day
+          console.log(`Year: ${date.getFullYear()}`); // 2023
+          console.log(`Month: ${date.getMonth()}`); // 4 (May, 0-indexed)
+          console.log(`Date: ${date.getDate()}`); // 18
+          console.log(`Day of week: ${date.getDay()}`); // 0-6 (0 = Sunday)
+          
+          // Get Time Components
+          console.log(`Hours: ${date.getHours()}`); // 0-23
+          console.log(`Minutes: ${date.getMinutes()}`); // 0-59
+          console.log(`Seconds: ${date.getSeconds()}`); // 0-59
+          console.log(`Milliseconds: ${date.getMilliseconds()}`); // 0-999
+          
+          // Get Timestamp (milliseconds since Jan 1, 1970)
+          console.log(`Timestamp: ${date.getTime()}`);
+          
+          // Get timezone offset in minutes
+          console.log(`Timezone offset: ${date.getTimezoneOffset()}`); // Minutes</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Getting Date Components (UTC Time)</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const date = new Date("2023-05-18T15:42:30");
+          
+          // UTC versions of get methods
+          console.log(`UTC Year: ${date.getUTCFullYear()}`);
+          console.log(`UTC Month: ${date.getUTCMonth()}`);
+          console.log(`UTC Date: ${date.getUTCDate()}`);
+          console.log(`UTC Day: ${date.getUTCDay()}`);
+          console.log(`UTC Hours: ${date.getUTCHours()}`);
+          console.log(`UTC Minutes: ${date.getUTCMinutes()}`);
+          console.log(`UTC Seconds: ${date.getUTCSeconds()}`);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-5-3">
+              <h2 class="section-heading">Date Set Methods</h2>
+              <p>Date objects have methods to modify components of a date.</p>
+          
+              <h4>Setting Date Components (Local Time)</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const date = new Date();
+          console.log("Original date:", date);
+          
+          // Set Year, Month, and Day
+          date.setFullYear(2025);
+          date.setMonth(11); // December (0-indexed)
+          date.setDate(25);
+          console.log("After setting YMD:", date);
+          
+          // Set Time Components
+          date.setHours(10);
+          date.setMinutes(30);
+          date.setSeconds(0);
+          date.setMilliseconds(0);
+          console.log("After setting time:", date);
+          
+          // Set Timestamp (milliseconds since Jan 1, 1970)
+          const newDate = new Date();
+          newDate.setTime(date.getTime() + 86400000); // Add one day (86400000ms = 24h)
+          console.log("One day later:", newDate);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Setting Date Components (UTC Time)</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">const date = new Date();
+          console.log("Original date:", date);
+          
+          // UTC versions of set methods
+          date.setUTCFullYear(2025);
+          date.setUTCMonth(11);
+          date.setUTCDate(25);
+          date.setUTCHours(10);
+          date.setUTCMinutes(30);
+          date.setUTCSeconds(0);
+          console.log("After setting UTC components:", date);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Date Calculations</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Calculate elapsed time
+          const start = new Date();
+          // Simulate some task
+          for (let i = 0; i < 1000000; i++) {
+            // Just creating some work
+          }
+          const end = new Date();
+          const elapsed = end - start; // Difference in milliseconds
+          console.log(`Operation took ${elapsed} ms`);
+          
+          // Add days to a date
+          function addDays(date, days) {
+            const result = new Date(date);
+            result.setDate(result.getDate() + days);
+            return result;
+          }
+          
+          const today = new Date();
+          const nextWeek = addDays(today, 7);
+          console.log("Today:", today);
+          console.log("Next week:", nextWeek);
+          
+          // Find difference between dates in days
+          function daysDifference(date1, date2) {
+            const diffTime = Math.abs(date2 - date1);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            return diffDays;
+          }
+          
+          const christmas = new Date(today.getFullYear(), 11, 25);
+          if (today > christmas) {
+            christmas.setFullYear(christmas.getFullYear() + 1);
+          }
+          const daysToChristmas = daysDifference(today, christmas);
+          console.log(`Days until Christmas: ${daysToChristmas}`);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    Modern Alternatives
+                  </h4>
+                  <p>
+                    For advanced date manipulation, consider using libraries like Date-fns, Luxon, or Day.js. These provide more functionality and handle edge cases better than the native Date object.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </article>
+          <article class="docs-article" id="section-6">
+            <header class="docs-header">
+              <h1 class="docs-heading">Control Flow</h1>
+              <section class="docs-intro">
+                <p>
+                  Control flow is the order in which statements are executed in a program. JavaScript provides various control structures to determine the flow of execution based on conditions and for repetitive tasks.
+                </p>
+              </section>
+            </header>
+            
+            <section class="docs-section" id="item-6-1">
+              <h2 class="section-heading">If Else</h2>
+              <p>
+                Conditional statements are used to perform different actions based on different conditions.
+              </p>
+          
+              <h4>The if Statement</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Basic if statement
+          const hour = new Date().getHours();
+          
+          if (hour < 12) {
+            console.log("Good morning!");
+          }
+          
+          // The code inside the if block only runs if the condition is true
+          let temperature = 25;
+          
+          if (temperature > 30) {
+            console.log("It's hot outside!"); // This won't be executed
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>The if...else Statement</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// if...else statement
+          const hour = new Date().getHours();
+          
+          if (hour < 12) {
+            console.log("Good morning!");
+          } else {
+            console.log("Good day!");
+          }
+          
+          // Example with a variable
+          let isLoggedIn = false;
+          
+          if (isLoggedIn) {
+            console.log("Welcome back!");
+          } else {
+            console.log("Please log in to continue.");
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>The if...else if...else Statement</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// if...else if...else statement for multiple conditions
+          const hour = new Date().getHours();
+          
+          if (hour < 12) {
+            console.log("Good morning!");
+          } else if (hour < 18) {
+            console.log("Good afternoon!");
+          } else {
+            console.log("Good evening!");
+          }
+          
+          // Grading example
+          let score = 85;
+          let grade;
+          
+          if (score >= 90) {
+            grade = "A";
+          } else if (score >= 80) {
+            grade = "B";
+          } else if (score >= 70) {
+            grade = "C";
+          } else if (score >= 60) {
+            grade = "D";
+          } else {
+            grade = "F";
+          }
+          
+          console.log(`Score: ${score}, Grade: ${grade}`);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Ternary Operator</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Ternary operator is a shorthand for if...else
+          // syntax: condition ? valueIfTrue : valueIfFalse
+          
+          const age = 20;
+          const canVote = age >= 18 ? "Yes" : "No";
+          console.log(`Can vote: ${canVote}`);
+          
+          // Can be used to assign values
+          let message;
+          const hour = new Date().getHours();
+          message = hour < 12 ? "Good morning!" : "Good day!";
+          console.log(message);
+          
+          // Nesting ternary operators (be careful with readability)
+          const score = 85;
+          const grade = score >= 90 ? "A" : score >= 80 ? "B" : score >= 70 ? "C" : score >= 60 ? "D" : "F";
+          console.log(`Score: ${score}, Grade: ${grade}`);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i>
+                    </span>
+                    Truthy and Falsy Values
+                  </h4>
+                  <p>
+                    In JavaScript, values that evaluate to true in conditionals are called "truthy," while values that evaluate to false are called "falsy."<br><br>
+                    Falsy values: <code>false</code>, <code>0</code>, <code>""</code> (empty string), <code>null</code>, <code>undefined</code>, <code>NaN</code><br>
+                    All other values are truthy, including <code>"0"</code> (string with zero), <code>"false"</code> (string with the text "false"), <code>[]</code> (empty array), <code>{}</code> (empty object), etc.
+                  </p>
+                </div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-6-2">
+              <h2 class="section-heading">Switch</h2>
+              <p>
+                The switch statement evaluates an expression and executes code blocks based on matching cases.
+              </p>
+          
+              <h4>Basic Switch Statement</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Switch statement evaluates an expression against multiple cases
+          const day = new Date().getDay(); // 0-6 representing Sunday-Saturday
+          
+          switch (day) {
+            case 0:
+              console.log("It's Sunday!");
+              break;
+            case 1:
+              console.log("It's Monday!");
+              break;
+            case 2:
+              console.log("It's Tuesday!");
+              break;
+            case 3:
+              console.log("It's Wednesday!");
+              break;
+            case 4:
+              console.log("It's Thursday!");
+              break;
+            case 5:
+              console.log("It's Friday!");
+              break;
+            case 6:
+              console.log("It's Saturday!");
+              break;
+            default:
+              console.log("Invalid day!");
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Grouping Cases</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Multiple cases can share the same code block
+          const day = new Date().getDay();
+          let dayType;
+          
+          switch (day) {
+            case 0:
+            case 6:
+              dayType = "It's the weekend!";
+              break;
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+              dayType = "It's a weekday!";
+              break;
+            default:
+              dayType = "Invalid day!";
+          }
+          
+          console.log(dayType);
+          
+          // Example with expressions
+          const grade = "B";
+          let feedback;
+          
+          switch (grade) {
+            case "A":
+              feedback = "Excellent job!";
+              break;
+            case "B":
+              feedback = "Good work!";
+              break;
+            case "C":
+              feedback = "Satisfactory.";
+              break;
+            case "D":
+            case "F":
+              feedback = "You need to improve.";
+              break;
+            default:
+              feedback = "Invalid grade.";
+          }
+          
+          console.log(feedback);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <div class="callout-block callout-block-danger">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                    Break Statement Importance
+                  </h4>
+                  <p>
+                    If you omit the <code>break</code> statement in a switch case, execution will "fall through" to the next case even if the condition doesn't match. This can lead to unexpected behavior unless it's intentional.
+                  </p>
+                </div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-6-3">
+              <h2 class="section-heading">Loops</h2>
+              <p>
+                Loops are used to execute a block of code repeatedly.
+              </p>
+          
+              <h4>for Loop</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Basic for loop
+          // for (initialization; condition; increment/decrement)
+          for (let i = 0; i < 5; i++) {
+            console.log(`Iteration ${i}`);
+          }
+          
+          // Looping through an array
+          const fruits = ["Apple", "Banana", "Orange", "Mango"];
+          for (let i = 0; i < fruits.length; i++) {
+            console.log(`Fruit ${i + 1}: ${fruits[i]}`);
+          }
+          
+          // Nested for loops
+          console.log("Multiplication table for 1-3:");
+          for (let i = 1; i <= 3; i++) {
+            for (let j = 1; j <= 3; j++) {
+              console.log(`${i} × ${j} = ${i * j}`);
+            }
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>while Loop</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// while loop executes as long as the condition is true
+          let i = 0;
+          while (i < 5) {
+            console.log(`Iteration ${i}`);
+            i++;
+          }
+          
+          // Example: Generate a random number until we get one > 0.8
+          let randomNumber;
+          let attempts = 0;
+          
+          while (true) {
+            randomNumber = Math.random();
+            attempts++;
+            console.log(`Attempt ${attempts}: ${randomNumber}`);
+            
+            if (randomNumber > 0.8) {
+              console.log(`Found a number > 0.8 after ${attempts} attempts!`);
+              break; // Exit the loop
+            }
+            
+            // Safety check to prevent infinite loop in demo
+            if (attempts >= 10) {
+              console.log("Reached maximum attempts!");
+              break;
+            }
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>do...while Loop</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// do...while loop executes at least once before checking the condition
+          let i = 0;
+          do {
+            console.log(`Iteration ${i}`);
+            i++;
+          } while (i < 5);
+          
+          // Example when the condition is initially false
+          let j = 10;
+          do {
+            console.log(`This runs once even though j (${j}) > 5`);
+            j++;
+          } while (j < 5);</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>for...in Loop</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// for...in loop iterates over the properties of an object
+          const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            email: "john@example.com"
+          };
+          
+          console.log("Person's properties:");
+          for (let property in person) {
+            console.log(`${property}: ${person[property]}`);
+          }
+          
+          // Warning: for...in can also enumerate inherited properties
+          console.log("\nUsing for...in with an array (not recommended):");
+          const numbers = [10, 20, 30];
+          for (let index in numbers) {
+            console.log(`Index ${index}: ${numbers[index]}`);
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>for...of Loop</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// for...of loop iterates over the values in an iterable (ES6)
+          const fruits = ["Apple", "Banana", "Orange", "Mango"];
+          
+          console.log("Using for...of with an array:");
+          for (let fruit of fruits) {
+            console.log(fruit);
+          }
+          
+          // Works with other iterables too
+          console.log("\nUsing for...of with a string:");
+          const text = "Hello";
+          for (let char of text) {
+            console.log(char);
+          }
+          
+          // Using with Map
+          console.log("\nUsing for...of with a Map:");
+          const map = new Map([
+            ["key1", "value1"],
+            ["key2", "value2"]
+          ]);
+          
+          for (let [key, value] of map) {
+            console.log(`${key}: ${value}`);
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i>
+                    </span>
+                    Loop Selection Guide
+                  </h4>
+                  <p>
+                    • Use <code>for</code> when you know the number of iterations in advance<br>
+                    • Use <code>while</code> when the number of iterations is uncertain<br>
+                    • Use <code>for...in</code> to iterate over object properties<br>
+                    • Use <code>for...of</code> to iterate over array elements or other iterables<br>
+                    • Use <code>forEach()</code> or other array methods for cleaner, more functional code with arrays
+                  </p>
+                </div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-6-4">
+              <h2 class="section-heading">Break</h2>
+              <p>
+                The break and continue statements provide additional control within loops.
+              </p>
+          
+              <h4>break Statement</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// break exits a loop or switch statement completely
+          for (let i = 0; i < 10; i++) {
+            if (i === 5) {
+              console.log("Breaking at i = 5");
+              break;
+            }
+            console.log(`Iteration ${i}`);
+          }
+          console.log("Loop is done");
+          
+          // Finding an element in an array
+          const fruits = ["Apple", "Banana", "Orange", "Mango", "Grape"];
+          const searchFor = "Orange";
+          let index = -1;
+          
+          for (let i = 0; i < fruits.length; i++) {
+            if (fruits[i] === searchFor) {
+              index = i;
+              break; // Stop searching once found
+            }
+          }
+          
+          if (index !== -1) {
+            console.log(`Found ${searchFor} at index ${index}`);
+          } else {
+            console.log(`${searchFor} not found in the array`);
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>continue Statement</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// continue skips the current iteration and moves to the next one
+          for (let i = 0; i < 10; i++) {
+            if (i % 2 === 0) {
+              continue; // Skip even numbers
+            }
+            console.log(`Odd number: ${i}`);
+          }
+          
+          // Processing only specific items in an array
+          const mixedData = [1, "text", null, 5, undefined, "hello", 10];
+          console.log("Processing only numbers:");
+          
+          for (let i = 0; i < mixedData.length; i++) {
+            // Skip non-number values
+            if (typeof mixedData[i] !== "number" || mixedData[i] === null) {
+              continue;
+            }
+            
+            // Process numbers (double them in this example)
+            const doubled = mixedData[i] * 2;
+            console.log(`${mixedData[i]} doubled is ${doubled}`);
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Labels with break and continue</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Labels can be used with break and continue
+          // to control nested loops
+          
+          // Breaking out of nested loops
+          outerLoop: for (let i = 0; i < 3; i++) {
+            console.log(`Outer loop: ${i}`);
+            
+            for (let j = 0; j < 3; j++) {
+              if (i === 1 && j === 1) {
+                console.log("Breaking out of both loops");
+                break outerLoop;
+              }
+              console.log(`  Inner loop: ${j}`);
+            }
+          }
+          
+          console.log("Both loops are done");
+          
+          // Using continue with labels
+          console.log("\nUsing continue with labels:");
+          outerLoop: for (let i = 0; i < 3; i++) {
+            console.log(`Outer loop: ${i}`);
+            
+            for (let j = 0; j < 3; j++) {
+              if (j === 1) {
+                console.log("  Skipping to next iteration of outer loop");
+                continue outerLoop;
+              }
+              console.log(`  Inner loop: ${j}`);
+            }
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    Use with Caution
+                  </h4>
+                  <p>
+                    While <code>break</code> and <code>continue</code> are powerful control flow tools, excessive use can make code harder to read and maintain. Modern JavaScript often favors functional approaches with array methods like <code>filter()</code>, <code>map()</code>, and <code>find()</code> instead of complex loop control structures.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </article>
+          <article class="docs-article" id="section-7">
+            <header class="docs-header">
+              <h1 class="docs-heading">Modern JavaScript</h1>
+              <section class="docs-intro">
+                <p>
+                  Modern JavaScript (ES6 and beyond) introduced many powerful features that make code more concise, expressive, and maintainable. This section covers some of the most important modern JavaScript features.
+                </p>
+              </section>
+            </header>
+            
+            <section class="docs-section" id="item-7-1">
+              <h2 class="section-heading">Destructuring</h2>
+              <p>
+                Destructuring allows you to extract values from arrays or properties from objects into distinct variables.
+              </p>
+          
+              <h4>Array Destructuring</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Basic array destructuring
+          const numbers = [1, 2, 3, 4, 5];
+          
+          // Extract values into variables
+          const [first, second, third] = numbers;
+          console.log(first, second, third); // 1 2 3
+          
+          // Skip elements using commas
+          const [a, , c] = numbers;
+          console.log(a, c); // 1 3
+          
+          // Using rest parameter (...) to get remaining elements
+          const [head, ...tail] = numbers;
+          console.log(head); // 1
+          console.log(tail); // [2, 3, 4, 5]
+          
+          // Default values if array is shorter
+          const [x = 0, y = 0, z = 0] = [1, 2];
+          console.log(x, y, z); // 1 2 0
+          
+          // Swapping variables without a temporary variable
+          let m = 5, n = 10;
+          [m, n] = [n, m];
+          console.log(`m = ${m}, n = ${n}`); // m = 10, n = 5</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Object Destructuring</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Basic object destructuring
+          const person = {
+            name: "John Doe",
+            age: 30,
+            city: "New York",
+            country: "USA",
+            hobbies: ["reading", "coding", "hiking"]
+          };
+          
+          // Extract properties into variables with the same name
+          const { name, age, city } = person;
+          console.log(name, age, city); // "John Doe" 30 "New York"
+          
+          // Assign to different variable names
+          const { name: fullName, age: years, hobbies: interests } = person;
+          console.log(fullName); // "John Doe"
+          console.log(years); // 30
+          console.log(interests); // ["reading", "coding", "hiking"]
+          
+          // Default values if property doesn't exist
+          const { state = "NY", country } = person;
+          console.log(state, country); // "NY" "USA"
+          
+          // Using rest parameter with objects
+          const { name: userName, ...details } = person;
+          console.log(userName); // "John Doe"
+          console.log(details); // { age: 30, city: "New York", country: "USA", hobbies: [...] }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Nested Destructuring</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Destructuring nested objects and arrays
+          const user = {
+            id: 1,
+            name: "John Doe",
+            contact: {
+              email: "john@example.com",
+              phone: "555-1234",
+              address: {
+                street: "123 Main St",
+                city: "New York",
+                zipCode: "10001"
+              }
+            },
+            skills: ["JavaScript", "HTML", "CSS", "React"]
+          };
+          
+          // Extract nested properties
+          const { 
+            name,
+            contact: { 
+              email, 
+              address: { city: userCity, zipCode } 
+            },
+            skills: [primarySkill, ...otherSkills]
+          } = user;
+          
+          console.log(name); // "John Doe"
+          console.log(email); // "john@example.com"
+          console.log(userCity); // "New York"
+          console.log(zipCode); // "10001"
+          console.log(primarySkill); // "JavaScript"
+          console.log(otherSkills); // ["HTML", "CSS", "React"]</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Practical Applications</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Function parameter destructuring
+          function displayUser({ name, age, city = "Unknown" }) {
+            console.log(`Name: ${name}, Age: ${age}, City: ${city}`);
+          }
+          
+          displayUser({ name: "John", age: 30 });
+          displayUser({ name: "Jane", age: 25, city: "London" });
+          
+          // Returning multiple values from a function
+          function getMinMax(numbers) {
+            return {
+              min: Math.min(...numbers),
+              max: Math.max(...numbers)
+            };
+          }
+          
+          const { min, max } = getMinMax([3, 1, 5, 7, 2]);
+          console.log(`Min: ${min}, Max: ${max}`); // Min: 1, Max: 7
+          
+          // Destructuring in a loop
+          const students = [
+            { id: 1, name: "Alice", grade: "A" },
+            { id: 2, name: "Bob", grade: "B" },
+            { id: 3, name: "Charlie", grade: "A" }
+          ];
+          
+          for (const { id, name, grade } of students) {
+            console.log(`Student ${id}: ${name} got grade ${grade}`);
+          }</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-7-2">
+              <h2 class="section-heading">Arrow Functions</h2>
+              <p>
+                Arrow functions provide a concise syntax for writing function expressions and have some special behavior with <code>this</code> binding.
+              </p>
+          
+              <h4>Basic Syntax</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Traditional function expression
+          const greet1 = function(name) {
+            return `Hello, ${name}!`;
+          };
+          
+          // Arrow function with body and explicit return
+          const greet2 = (name) => {
+            return `Hello, ${name}!`;
+          };
+          
+          // Arrow function with implicit return (one expression)
+          const greet3 = (name) => `Hello, ${name}!`;
+          
+          // If there's only one parameter, parentheses are optional
+          const greet4 = name => `Hello, ${name}!`;
+          
+          // No parameters requires parentheses
+          const sayHello = () => "Hello, world!";
+          
+          console.log(greet1("John")); // "Hello, John!"
+          console.log(greet2("Jane")); // "Hello, Jane!"
+          console.log(greet3("Bob"));  // "Hello, Bob!"
+          console.log(greet4("Alice")); // "Hello, Alice!"
+          console.log(sayHello()); // "Hello, world!"</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Returning Objects</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Returning an object literal requires parentheses
+          const createPerson = (name, age) => ({ name, age });
+          
+          const john = createPerson("John", 30);
+          console.log(john); // { name: "John", age: 30 }
+          
+          // Without parentheses, it would be interpreted as a function body
+          // This would cause an error:
+          // const createPerson = (name, age) => { name, age };</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Arrow Functions and this</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Arrow functions don't have their own 'this'
+          // They inherit 'this' from the surrounding scope
+          
+          // Traditional function and this
+          const person1 = {
+            name: "John",
+            hobbies: ["reading", "coding", "hiking"],
+            showHobbies: function() {
+              // 'this' here refers to person1
+              this.hobbies.forEach(function(hobby) {
+                // 'this' here is undefined (in strict mode) or global object
+                console.log(`${this?.name || 'Unknown'} enjoys ${hobby}`);
+              });
+            }
+          };
+          
+          // Using arrow function to preserve 'this'
+          const person2 = {
+            name: "Jane",
+            hobbies: ["painting", "swimming", "cooking"],
+            showHobbies: function() {
+              // 'this' here refers to person2
+              this.hobbies.forEach(hobby => {
+                // 'this' here still refers to person2
+                console.log(`${this.name} enjoys ${hobby}`);
+              });
+            }
+          };
+          
+          console.log("Person1 (traditional function):");
+          person1.showHobbies();
+          
+          console.log("\nPerson2 (arrow function):");
+          person2.showHobbies();</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i>
+                    </span>
+                    Arrow Function Limitations
+                  </h4>
+                  <p>
+                    Arrow functions are not suitable for all situations:
+                    <ul>
+                      <li>They can't be used as constructors (with <code>new</code>)</li>
+                      <li>They don't have their own <code>arguments</code> object</li>
+                      <li>They shouldn't be used for object methods that need to access <code>this</code> from the object</li>
+                      <li>They can't be used with <code>yield</code> in generator functions</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </section>
+            
+            <section class="docs-section" id="item-7-3">
+              <h2 class="section-heading">Classes</h2>
+              <p>
+                ES6 introduced class syntax to JavaScript, providing a clearer way to create objects and handle inheritance.
+              </p>
+          
+              <h4>Class Declaration</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">// Class declaration
+          class Person {
+            // Constructor method
+            constructor(name, age) {
+              this.name = name;
+              this.age = age;
+            }
+            
+            // Instance method
+            greet() {
+              return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+            }
+            
+            // Static method (called on the class, not instances)
+            static createAnonymous() {
+              return new Person("Anonymous", 0);
+            }
+          }
+          
+          // Creating instances
+          const john = new Person("John", 30);
+          const jane = new Person("Jane", 25);
+          
+          console.log(john.greet()); // "Hello, my name is John and I am 30 years old."
+          console.log(jane.greet()); // "Hello, my name is Jane and I am 25 years old."
+          
+          // Using static method
+          const anonymous = Person.createAnonymous();
+          console.log(anonymous.greet()); // "Hello, my name is Anonymous and I am 0 years old."</code></pre>
+                <button class="run-code-btn">Run</button>
+                <div class="output-panel"></div>
+              </div>
+          
+              <h4>Getters and Setters</h4>
+              <div class="interactive-code">
+                <pre><code class="javascript">class Person {
+            constructor(firstName, lastName, birthYear) {
+              this.firstName = firstName;
+              this.lastName = lastName;
+              this._birthYear = birthYear; // Convention for "private" property
+            }
+            
+            // Getter for full name
+            get fullName() {
+              return `${this.firstName} ${this.lastName}`;
+            }
+            
+            // Getter for age
+            get age() {
+              const currentYear = new Date().getFullYear();
+              return currentYear - this._birthYear;
+            }
+            
+            // Setter for birth year with validation
+            set birthYear(year) {
+              if (year > new Date().getFullYear()) {
+                console.error("Birth year cannot be in the future");
+                return;
+              }
+              this._birthYear = year;
+            }
+            // Method to introduce the person
+  introduce() {
+    return `Hello, I'm ${this.fullName} and I'm ${this.age} years old.`;
+  }
+}
+
+const john = new Person("John", "Doe", 1990);
+console.log(john.fullName); // "John Doe"
+console.log(john.age); // Current year - 1990
+
+// Using the setter
+john.birthYear = 1985;
+console.log(john.age); // Current year - 1985
+
+// Setter validation
+john.birthYear = 2050; // Error message
+console.log(john.introduce());</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Inheritance</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Base class
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  describe() {
+    return `${this.name} is ${this.age} years old.`;
+  }
+}
+
+// Derived class
+class Employee extends Person {
+  constructor(name, age, company, position) {
+    // Call parent constructor
+    super(name, age);
+    
+    // Additional properties
+    this.company = company;
+    this.position = position;
+  }
+  
+  // Override parent method
+  describe() {
+    // Call parent method
+    const description = super.describe();
+    return `${description} Works at ${this.company} as a ${this.position}.`;
+  }
+  
+  // New method
+  work() {
+    return `${this.name} is working at ${this.company}.`;
+  }
+}
+
+const person = new Person("John", 30);
+console.log(person.describe()); 
+
+const employee = new Employee("Jane", 28, "Acme Inc.", "Developer");
+console.log(employee.describe());
+console.log(employee.work());</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <div class="callout-block callout-block-info">
+      <div class="content">
+        <h4 class="callout-title">
+          <span class="callout-icon-holder me-1">
+            <i class="fas fa-info-circle"></i>
+          </span>
+          Classes Under the Hood
+        </h4>
+        <p>
+          JavaScript classes are primarily syntactic sugar over JavaScript's existing prototype-based inheritance. They provide a cleaner syntax but don't introduce a new object-oriented inheritance model. Behind the scenes, they still use prototypes.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="docs-section" id="item-7-4">
+    <h2 class="section-heading">JSON</h2>
+    <p>
+      JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate.
+    </p>
+
+    <h4>JSON Syntax</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// JSON syntax
+const jsonString = `{
+  "name": "John Doe",
+  "age": 30,
+  "isEmployed": true,
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "zipCode": "10001"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212-555-1234"
+    },
+    {
+      "type": "work",
+      "number": "646-555-5678"
+    }
+  ],
+  "children": null
+}`;
+
+console.log(typeof jsonString); // "string"
+
+// Note the differences between JSON and JavaScript objects:
+// - Property names must be in double quotes
+// - Strings must use double quotes
+// - No functions, undefined, or comments allowed</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>JSON.parse()</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Convert JSON string to JavaScript object
+const jsonString = '{"name":"John","age":30,"city":"New York"}';
+
+const person = JSON.parse(jsonString);
+console.log(person); // { name: "John", age: 30, city: "New York" }
+console.log(person.name); // "John"
+console.log(person.age); // 30
+
+// Handling errors
+try {
+  const invalidJson = '{"name":"John", age:30}'; // Missing quotes around 'age'
+  const result = JSON.parse(invalidJson);
+  console.log(result);
+} catch (error) {
+  console.error("JSON parsing error:", error.message);
+}
+
+// JSON.parse with reviver function
+const dateJSON = '{"name":"John","birthDate":"2000-01-15T00:00:00.000Z"}';
+
+const personWithDate = JSON.parse(dateJSON, (key, value) => {
+  // Convert ISO date strings to Date objects
+  if (key === "birthDate" && value) {
+    return new Date(value);
+  }
+  return value;
+});
+
+console.log(personWithDate);
+console.log(typeof personWithDate.birthDate);
+console.log(`Birth year: ${personWithDate.birthDate.getFullYear()}`);</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>JSON.stringify()</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Convert JavaScript object to JSON string
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+  date: new Date(),
+  greet: function() { return `Hello, ${this.name}!`; }
+};
+
+const jsonString = JSON.stringify(person);
+console.log(jsonString);
+// Note that the function is omitted in JSON
+
+// Formatting with indentation (pretty print)
+const prettyJson = JSON.stringify(person, null, 2);
+console.log(prettyJson);
+
+// Using replacer function to customize conversion
+const customJson = JSON.stringify(person, (key, value) => {
+  if (key === "age") {
+    return undefined; // Skip the age property
+  }
+  if (key === "date") {
+    return value.toISOString().split("T")[0]; // Format date as YYYY-MM-DD
+  }
+  return value;
+}, 2);
+
+console.log(customJson);
+
+// Using a replacer array to filter properties
+const filteredJson = JSON.stringify(person, ["name", "city"], 2);
+console.log(filteredJson);</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>JSON Use Cases</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Common use cases for JSON
+
+// 1. Data storage (LocalStorage)
+const userData = {
+  name: "John",
+  preferences: {
+    theme: "dark",
+    fontSize: "medium"
+  },
+  lastLogin: new Date().toISOString()
+};
+
+// Save to localStorage
+localStorage.setItem("userData", JSON.stringify(userData));
+
+// Retrieve from localStorage
+const storedData = localStorage.getItem("userData");
+const parsedData = storedData ? JSON.parse(storedData) : null;
+console.log("Data from storage:", parsedData);
+
+// 2. Deep copying objects
+function deepCopy(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
+const original = { name: "John", scores: [90, 85, 92] };
+const copy = deepCopy(original);
+
+copy.name = "Jane";
+copy.scores[0] = 95;
+
+console.log("Original:", original);
+console.log("Copy:", copy);
+
+// Note: This method has limitations:
+// - Functions, undefined, and circular references are not preserved
+// - Date objects become strings</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+  </section>
+</article>
+
+<article class="docs-article" id="section-8">
+  <header class="docs-header">
+    <h1 class="docs-heading">Asynchronous JavaScript</h1>
+    <section class="docs-intro">
+      <p>
+        JavaScript is single-threaded, but it can handle asynchronous operations through callbacks, promises, and async/await. This allows code to execute without blocking while waiting for operations like API calls or timers to complete.
+      </p>
+    </section>
+  </header>
+  
+  <section class="docs-section" id="item-8-1">
+    <h2 class="section-heading">Asynchronous Basics</h2>
+    <p>
+      Understanding the fundamentals of asynchronous JavaScript is crucial for writing efficient code.
+    </p>
+
+    <h4>Synchronous vs. Asynchronous</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Synchronous code executes line by line
+console.log("First");
+console.log("Second");
+console.log("Third");
+
+// Asynchronous code can "skip ahead" while waiting
+console.log("Start");
+
+setTimeout(() => {
+  console.log("This runs after 2 seconds");
+}, 2000);
+
+console.log("End");
+// Output order: "Start", "End", "This runs after 2 seconds"</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>setTimeout and setInterval</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// setTimeout - Execute once after a delay
+const timeoutId = setTimeout(() => {
+  console.log("This message is delayed by 1 second");
+}, 1000);
+
+// Clear a timeout if needed
+// clearTimeout(timeoutId);
+
+// setInterval - Execute repeatedly with a fixed delay
+let counter = 0;
+const intervalId = setInterval(() => {
+  counter++;
+  console.log(`Counter: ${counter}`);
+  
+  if (counter >= 3) {
+    clearInterval(intervalId); // Stop after 3 iterations
+    console.log("Interval cleared");
+  }
+}, 1000);
+
+// Note: In the browser, very short timeouts (< 4ms) may be clamped</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Callbacks</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Callbacks are functions passed to other functions
+// to be executed later
+
+// Simple callback example
+function greet(name, callback) {
+  console.log(`Hello, ${name}!`);
+  callback();
+}
+
+greet("John", function() {
+  console.log("Callback executed");
+});
+
+// Asynchronous callback example
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = { id: 1, name: "Product" };
+    callback(null, data); // Pass null as error (success case)
+  }, 1000);
+}
+
+console.log("Fetching data...");
+
+fetchData((error, data) => {
+  if (error) {
+    console.error("Error:", error);
+  } else {
+    console.log("Data received:", data);
+  }
+});
+
+console.log("Fetch request initiated");</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Callback Hell</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Nested callbacks can lead to "callback hell"
+function getUserData(userId, callback) {
+  console.log(`Fetching user data for user ${userId}...`);
+  setTimeout(() => {
+    const user = { id: userId, name: "John Doe" };
+    callback(null, user);
+  }, 1000);
+}
+
+function getUserPosts(userId, callback) {
+  console.log(`Fetching posts for user ${userId}...`);
+  setTimeout(() => {
+    const posts = [
+      { id: 1, title: "Post 1" },
+      { id: 2, title: "Post 2" }
+    ];
+    callback(null, posts);
+  }, 1000);
+}
+
+function getPostComments(postId, callback) {
+  console.log(`Fetching comments for post ${postId}...`);
+  setTimeout(() => {
+    const comments = [
+      { id: 1, text: "Great post!" },
+      { id: 2, text: "I enjoyed reading this" }
+    ];
+    callback(null, comments);
+  }, 1000);
+}
+
+// Example of callback hell - deeply nested callbacks
+getUserData(1, (error, user) => {
+  if (error) {
+    console.error("Error fetching user:", error);
+    return;
+  }
+  
+  console.log("User data:", user);
+  
+  getUserPosts(user.id, (error, posts) => {
+    if (error) {
+      console.error("Error fetching posts:", error);
+      return;
+    }
+    
+    console.log("User posts:", posts);
+    
+    getPostComments(posts[0].id, (error, comments) => {
+      if (error) {
+        console.error("Error fetching comments:", error);
+        return;
+      }
+      
+      console.log("Post comments:", comments);
+      // Could continue nesting more callbacks...
+    });
+  });
+});</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+  </section>
+  
+  <section class="docs-section" id="item-8-2">
+    <h2 class="section-heading">Promises</h2>
+    <p>
+      Promises provide a more elegant solution to handle asynchronous operations and avoid callback hell.
+    </p>
+
+    <h4>Promise Basics</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Creating a Promise
+const myPromise = new Promise((resolve, reject) => {
+  // Asynchronous operation
+  const success = true;
+  
+  setTimeout(() => {
+    if (success) {
+      resolve("Operation completed successfully!");
+    } else {
+      reject("Operation failed!");
+    }
+  }, 1000);
+});
+
+// Using a Promise
+console.log("Promise is pending...");
+
+myPromise
+  .then((result) => {
+    console.log("Success:", result);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  })
+  .finally(() => {
+    console.log("Promise settled (fulfilled or rejected)");
+  });
+
+console.log("This code runs before the promise is settled");</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Promise States</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Promises have three states:
+// 1. Pending: Initial state, neither fulfilled nor rejected
+// 2. Fulfilled: Operation completed successfully
+// 3. Rejected: Operation failed
+
+// A resolved promise
+const resolvedPromise = Promise.resolve("Already resolved");
+resolvedPromise.then(value => console.log(value));
+
+// A rejected promise
+const rejectedPromise = Promise.reject("Already rejected");
+rejectedPromise
+  .catch(reason => console.log("Caught:", reason))
+  .then(() => console.log("This still runs after catch"));
+
+// A pending promise that never resolves (not very useful)
+const pendingPromise = new Promise(() => {
+  // Never calls resolve or reject
+});</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Chaining Promises</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Promise chaining allows sequential async operations
+function getUserData(userId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (userId > 0) {
+        resolve({ id: userId, name: "John Doe" });
+      } else {
+        reject("Invalid user ID");
+      }
+    }, 1000);
+  });
+}
+
+function getUserPosts(user) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve([
+        { id: 1, userId: user.id, title: "Post 1" },
+        { id: 2, userId: user.id, title: "Post 2" }
+      ]);
+    }, 1000);
+  });
+}
+
+function getPostComments(post) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve([
+        { id: 1, postId: post.id, text: "Great post!" },
+        { id: 2, postId: post.id, text: "I enjoyed reading this" }
+      ]);
+    }, 1000);
+  });
+}
+
+// Chain promises for sequential execution
+console.log("Starting promise chain...");
+
+getUserData(1)
+  .then(user => {
+    console.log("User:", user);
+    return getUserPosts(user);
+  })
+  .then(posts => {
+    console.log("Posts:", posts);
+    return getPostComments(posts[0]);
+  })
+  .then(comments => {
+    console.log("Comments:", comments);
+  })
+  .catch(error => {
+    console.error("Error in chain:", error);
+  })
+  .finally(() => {
+    console.log("Chain completed");
+  });</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Promise Combinators</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Promise.all - Wait for all promises to resolve
+const promise1 = Promise.resolve("One");
+const promise2 = new Promise((resolve) => setTimeout(() => resolve("Two"), 1000));
+const promise3 = new Promise((resolve) => setTimeout(() => resolve("Three"), 500));
+
+Promise.all([promise1, promise2, promise3])
+  .then(values => {
+    console.log("Promise.all results:", values);
+    // ["One", "Two", "Three"]
+  })
+  .catch(error => {
+    console.error("At least one promise was rejected:", error);
+  });
+
+// Promise.race - Resolves or rejects as soon as one promise settles
+Promise.race([
+  new Promise(resolve => setTimeout(() => resolve("Fast"), 500)),
+  new Promise(resolve => setTimeout(() => resolve("Slow"), 1000))
+])
+  .then(value => console.log("Promise.race winner:", value))
+  .catch(error => console.error("Race error:", error));
+
+// Promise.allSettled - Wait for all promises to settle (ES2020)
+Promise.allSettled([
+  Promise.resolve("Success"),
+  Promise.reject("Failure"),
+  new Promise(resolve => setTimeout(() => resolve("Delayed"), 1000))
+])
+  .then(results => {
+    console.log("Promise.allSettled results:");
+    results.forEach((result, index) => {
+      console.log(`Promise ${index + 1}:`, result);
+    });
+  });
+
+// Promise.any - Resolves as soon as one promise fulfills (ES2021)
+Promise.any([
+  new Promise((resolve, reject) => setTimeout(() => reject("Rejected 1"), 1000)),
+  new Promise((resolve) => setTimeout(() => resolve("Resolved 1"), 2000)),
+  new Promise((resolve) => setTimeout(() => resolve("Resolved 2"), 1500))
+])
+  .then(value => console.log("Promise.any result:", value))
+  .catch(error => console.error("All promises were rejected:", error));</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+  </section>
+  
+  <section class="docs-section" id="item-8-3">
+    <h2 class="section-heading">Async/Await</h2>
+    <p>
+      Async/await is syntactic sugar built on top of promises, making asynchronous code look and behave more like synchronous code.
+    </p>
+
+    <h4>Basic Syntax</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// async functions always return a promise
+async function greet() {
+  return "Hello, world!";
+}
+
+// This is equivalent to:
+function greetWithPromise() {
+  return Promise.resolve("Hello, world!");
+}
+
+// Using an async function
+greet().then(message => console.log(message));
+
+// await keyword can only be used inside async functions
+async function fetchData() {
+  console.log("Fetching data...");
+  
+  // await pauses execution until the promise settles
+  const data = await new Promise(resolve => {
+    setTimeout(() => resolve("Data received"), 1000);
+  });
+  
+  console.log(data);
+  return "Operation complete";
+}
+
+fetchData().then(result => console.log(result));</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Error Handling</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Using try/catch with async/await
+async function fetchWithErrorHandling() {
+  try {
+    console.log("Starting operation...");
+    
+    const result = await new Promise((resolve, reject) => {
+      const success = false; // Change to true to see success path
+      
+      setTimeout(() => {
+        if (success) {
+          resolve("Operation successful");
+        } else {
+          reject(new Error("Something went wrong"));
+        }
+      }, 1000);
+    });
+    
+    console.log("Result:", result);
+    return result;
+  } catch (error) {
+    console.error("Caught an error:", error.message);
+    return "Recovered from error";
+  } finally {
+    console.log("Operation complete (success or failure)");
+  }
+}
+
+fetchWithErrorHandling().then(finalResult => {
+  console.log("Final result:", finalResult);
+});</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Sequential vs. Parallel Execution</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Simulated API calls
+function fetchUserData(userId) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({ id: userId, name: "User " + userId });
+    }, 1000);
+  });
+}
+
+function fetchUserPosts(userId) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve([
+        { id: 1, title: `Post 1 by User ${userId}` },
+        { id: 2, title: `Post 2 by User ${userId}` }
+      ]);
+    }, 1000);
+  });
+}
+
+// Sequential execution - one after another
+async function fetchUserDataSequentially() {
+  console.time("Sequential");
+  
+  const user1 = await fetchUserData(1);
+  console.log("User 1:", user1);
+  
+  const user2 = await fetchUserData(2);
+  console.log("User 2:", user2);
+  
+  const posts1 = await fetchUserPosts(1);
+  console.log("Posts for User 1:", posts1);
+  
+  const posts2 = await fetchUserPosts(2);
+  console.log("Posts for User 2:", posts2);
+  
+  console.timeEnd("Sequential");
+  return "Sequential operation complete";
+}
+
+// Parallel execution - all at once
+async function fetchUserDataInParallel() {
+  console.time("Parallel");
+  
+  // Start all fetches immediately (don't await yet)
+  const user1Promise = fetchUserData(1);
+  const user2Promise = fetchUserData(2);
+  const posts1Promise = fetchUserPosts(1);
+  const posts2Promise = fetchUserPosts(2);
+  
+  // Now await all results
+  const user1 = await user1Promise;
+  console.log("User 1:", user1);
+  
+  const user2 = await user2Promise;
+  console.log("User 2:", user2);
+  
+  const posts1 = await posts1Promise;
+  console.log("Posts for User 1:", posts1);
+  
+  const posts2 = await posts2Promise;
+  console.log("Posts for User 2:", posts2);
+  
+  console.timeEnd("Parallel");
+  return "Parallel operation complete";
+}
+
+// Using Promise.all for parallel execution
+async function fetchUserDataWithPromiseAll() {
+  console.time("Promise.all");
+  
+  // Fetch all data in parallel
+  const [user1, user2, posts1, posts2] = await Promise.all([
+    fetchUserData(1),
+    fetchUserData(2),
+    fetchUserPosts(1),
+    fetchUserPosts(2)
+  ]);
+  
+  console.log("User 1:", user1);
+  console.log("User 2:", user2);
+  console.log("Posts for User 1:", posts1);
+  console.log("Posts for User 2:", posts2);
+  
+  console.timeEnd("Promise.all");
+  return "Promise.all operation complete";
+}
+
+// Run the performance comparison
+async function comparePerformance() {
+  console.log("Starting performance comparison...");
+  
+  await fetchUserDataSequentially();
+  await fetchUserDataInParallel();
+  await fetchUserDataWithPromiseAll();
+  
+  console.log("Performance comparison complete");
+}
+
+comparePerformance();</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <div class="callout-block callout-block-info">
+      <div class="content">
+        <h4 class="callout-title">
+          <span class="callout-icon-holder me-1">
+            <i class="fas fa-info-circle"></i>
+          </span>
+          Top-level await
+        </h4>
+        <p>
+          Modern JavaScript (ES2022+) supports top-level await in modules, allowing you to use await outside of async functions in module contexts. This is particularly useful for initialization code that depends on asynchronous operations.
+        </p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<article class="docs-article" id="section-9">
+  <header class="docs-header">
+    <h1 class="docs-heading">Debugging</h1>
+    <section class="docs-intro">
+      <p>
+        Debugging is an essential skill for JavaScript development. Various tools and techniques can help identify and fix issues in your code.
+      </p>
+    </section>
+  </header>
+  
+  <section class="docs-section" id="item-9-1">
+    <h2 class="section-heading">Debugging Methods</h2>
+    <p>
+      JavaScript offers several ways to debug your code, from simple console methods to advanced browser tools.
+    </p>
+
+    <h4>Console Methods</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Basic logging
+console.log("Regular log message");
+console.info("Informational message");
+console.warn("Warning message");
+console.error("Error message");
+
+// Styling console output
+console.log("%cStyled message", "color: blue; font-size: 20px;");
+
+// Logging multiple values
+const x = 5, y = 10;
+console.log("Values:", x, y, x + y);
+
+// Console tables for arrays and objects
+const users = [
+  { id: 1, name: "John", age: 30 },
+  { id: 2, name: "Jane", age: 25 },
+  { id: 3, name: "Bob", age: 40 }
+];
+console.table(users);
+
+// Grouping related messages
+console.group("User Details");
+console.log("Name: John Doe");
+console.log("Role: Administrator");
+console.groupEnd();
+
+// Timing operations
+console.time("Array initialization");
+const arr = new Array(1000).fill(0).map((_, i) => i);
+console.timeEnd("Array initialization");
+
+// Count occurrences
+for (let i = 0; i < 5; i++) {
+  console.count("Loop counter");
+}
+console.countReset("Loop counter");
+
+// Stack trace
+console.trace("Trace message");</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Debugger Statement</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// The debugger statement creates a breakpoint
+function calculateTotal(items) {
+  let total = 0;
+  
+  for (let i = 0; i < items.length; i++) {
+    // debugger; // Uncomment to pause execution here in browser dev tools
+    total += items[i].price * items[i].quantity;
+  }
+  
+  return total;
+}
+
+const cart = [
+  { id: 1, name: "Product 1", price: 10, quantity: 2 },
+  { id: 2, name: "Product 2", price: 15, quantity: 1 },
+  { id: 3, name: "Product 3", price: 5, quantity: 3 }
+];
+
+const total = calculateTotal(cart);
+console.log("Total:", total);</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Try/Catch for Error Handling</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// Using try/catch to handle errors
+function parseJSON(jsonString) {
+  try {
+    const data = JSON.parse(jsonString);
+    return data;
+  } catch (error) {
+    console.error("Error parsing JSON:", error.message);
+    return null;
+  }
+}
+
+// Valid JSON
+const validJSON = '{"name":"John","age":30}';
+const result1 = parseJSON(validJSON);
+console.log("Valid JSON result:", result1);
+
+// Invalid JSON
+const invalidJSON = '{"name":"John", age:30}'; // Missing quotes around age
+const result2 = parseJSON(invalidJSON);
+console.log("Invalid JSON result:", result2);
+
+// Custom error handling
+function divide(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new TypeError("Both arguments must be numbers");
+  }
+  
+  if (b === 0) {
+    throw new Error("Division by zero");
+  }
+  
+  return a / b;
+}
+
+try {
+  console.log(divide(10, 2));
+  console.log(divide(10, 0)); // This will throw an error
+} catch (error) {
+  console.error(`Error: ${error.message}`);
+  console.error("Stack trace:", error.stack);
+} finally {
+  console.log("Division operation attempted");</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <h4>Browser DevTools</h4>
+    <div class="callout-block callout-block-info">
+      <div class="content">
+        <h4 class="callout-title">
+          <span class="callout-icon-holder me-1"><i class="fas fa-info-circle"></i>
+          </span>
+          Browser Developer Tools
+        </h4>
+        <p>
+          Modern browsers provide powerful developer tools for debugging JavaScript:
+          <ul>
+            <li><strong>Console panel</strong>: View logged messages, run JavaScript</li>
+            <li><strong>Sources/Debugger panel</strong>: Set breakpoints, step through code, inspect variables</li>
+            <li><strong>Network panel</strong>: Monitor network requests, API calls</li>
+            <li><strong>Performance panel</strong>: Analyze execution time and performance bottlenecks</li>
+            <li><strong>Memory panel</strong>: Identify memory leaks and analyze memory usage</li>
+          </ul>
+          To open DevTools: 
+          <ul>
+            <li>Chrome/Edge: F12 or Ctrl+Shift+I (Cmd+Option+I on Mac)</li>
+            <li>Firefox: F12 or Ctrl+Shift+I</li>
+            <li>Safari: Cmd+Option+I (requires enabling developer menu)</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <h4>Common Debugging Techniques</h4>
+    <div class="interactive-code">
+      <pre><code class="javascript">// 1. Rubber Duck Debugging
+// Explain your code line by line to an object (like a rubber duck)
+// Often helps identify issues through verbalization
+
+// 2. Divide and Conquer
+function complexFunction(input) {
+  // Break down complex functions into smaller parts
+  const step1Result = doStep1(input);
+  console.log("Step 1 result:", step1Result);
+  
+  const step2Result = doStep2(step1Result);
+  console.log("Step 2 result:", step2Result);
+  
+  const step3Result = doStep3(step2Result);
+  console.log("Step 3 result:", step3Result);
+  
+  return step3Result;
+}
+
+function doStep1(input) { return input + 5; }
+function doStep2(input) { return input * 2; }
+function doStep3(input) { return input - 3; }
+
+console.log(complexFunction(10));
+
+// 3. Comment Out Code
+function buggyFunction() {
+  let result = 10;
+  
+  // Comment out suspicious code sections
+  // result = result / 0;  // This would cause an error
+  
+  return result;
+}
+
+// 4. Use meaningful variable names and comments
+function calculateTotalPrice(items, taxRate, discountCode) {
+  // Base price before tax and discounts
+  const subtotal = items.reduce((sum, item) => sum + item.price, 0);
+  console.log("Subtotal:", subtotal);
+  
+  // Apply discount if valid
+  let discountAmount = 0;
+  if (discountCode === "SAVE20") {
+    discountAmount = subtotal * 0.2;
+  }
+  console.log("Discount amount:", discountAmount);
+  
+  // Calculate tax on the discounted amount
+  const taxableAmount = subtotal - discountAmount;
+  const taxAmount = taxableAmount * taxRate;
+  console.log("Tax amount:", taxAmount);
+  
+  // Final total
+  const totalPrice = taxableAmount + taxAmount;
+  return totalPrice;
+}
+
+const items = [
+  { name: "Product 1", price: 50 },
+  { name: "Product 2", price: 30 }
+];
+
+console.log("Total price:", calculateTotalPrice(items, 0.08, "SAVE20"));</code></pre>
+      <button class="run-code-btn">Run</button>
+      <div class="output-panel"></div>
+    </div>
+
+    <div class="callout-block callout-block-warning">
+      <div class="content">
+        <h4 class="callout-title">
+          <span class="callout-icon-holder me-1">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+          Debugging Best Practices
+        </h4>
+        <p>
+          <ul>
+            <li>Remove or disable debugging code before production deployment</li>
+            <li>Use linters and code quality tools (ESLint, Prettier) to catch issues early</li>
+            <li>Add meaningful error messages that help identify the source of problems</li>
+            <li>Write automated tests to verify code behavior</li>
+            <li>Use source maps in production to map minified code back to original source</li>
+            <li>Keep your browser's developer tools and debugging knowledge up to date</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </section>
+</article>
+
+          <footer class="footer">
+            <div class="container text-center py-5">
+              <ul class="social-list list-unstyled pb-4 mb-0">
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.facebook.com/AmpersandAcademy"
+                    target="_blank"
+                    ><i class="fab fa-facebook-f fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default"
+                    target="_blank"
+                    ><i class="fab fa-google fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.linkedin.com/company/ampersandacademy/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.instagram.com/ampersandacad/"
+                    target="_blank"
+                    ><i class="fab fa-instagram fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w"
+                    target="_blank"
+                    ><i class="fab fa-whatsapp fa-fw"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://t.me/ampersandacad" target="_blank"
+                    ><i class="fab fa-telegram fa-fw"></i
+                  ></a>
+                </li>
+              </ul>
+              <!--//social-list-->
+              <small class="copyright"
+                ><a href="https://ampersandacademy.com" target="_blank"
+                  >Ampersand Academy</a
+                >
+                | All rights reserved</small
+              >
+            </div>
+          </footer>
+        </div>
+        <!--//container-->
+      </div>
+      <!--//docs-content-->
+    </div>
+    <!--//docs-wrapper-->
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find all run buttons
+        const runButtons = document.querySelectorAll('.run-code-btn');
+        
+        runButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const codeBlock = this.previousElementSibling.querySelector('code');
+            const outputPanel = this.nextElementSibling;
+            const code = codeBlock.textContent;
+            
+            // Show the output panel
+            outputPanel.style.display = 'block';
+            
+            // Clear previous output
+            outputPanel.innerHTML = '';
+            
+            // Capture console.log outputs
+            const originalConsoleLog = console.log;
+            const originalConsoleWarn = console.warn;
+            const originalConsoleError = console.error;
+            const logs = [];
+            
+            console.log = function(...args) {
+              logs.push({type: 'log', content: args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)).join(' ')});
+              originalConsoleLog.apply(console, args);
+            };
+            
+            console.warn = function(...args) {
+              logs.push({type: 'warn', content: args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)).join(' ')});
+              originalConsoleWarn.apply(console, args);
+            };
+            
+            console.error = function(...args) {
+              logs.push({type: 'error', content: args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)).join(' ')});
+              originalConsoleError.apply(console, args);
+            };
+            
+            try {
+              // Execute the code
+              const result = new Function(code)();
+              
+              // Display logs
+              if (logs.length) {
+                logs.forEach(log => {
+                  const logElement = document.createElement('div');
+                  logElement.className = `console-${log.type}`;
+                  logElement.textContent = log.content;
+                  outputPanel.appendChild(logElement);
+                });
+              }
+              
+              // Display return value if any
+              if (result !== undefined) {
+                const resultElement = document.createElement('div');
+                resultElement.className = 'return-value';
+                resultElement.textContent = `→ ${typeof result === 'object' ? JSON.stringify(result, null, 2) : result}`;
+                outputPanel.appendChild(resultElement);
+              }
+            } catch (error) {
+              // Display error
+              const errorElement = document.createElement('div');
+              errorElement.className = 'error-message';
+              errorElement.textContent = `Error: ${error.message}`;
+              outputPanel.appendChild(errorElement);
+            } finally {
+              // Restore console.log
+              console.log = originalConsoleLog;
+              console.warn = originalConsoleWarn;
+              console.error = originalConsoleError;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ampersand Academy - TypeScript Notes</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="TypeScript Guide and Notes" />
+    <meta name="author" content="Ampersand Academy" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/simplelightbox/simple-lightbox.min.css"
+    />
+
+    <!-- Dark Github Gist CSS -->
+    <link
+      id="theme-style"
+      rel="stylesheet"
+      href="assets/css/darkGist.min.css"
+    />
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+
+  <body class="docs-page">
+    <header class="header fixed-top">
+      <div class="branding docs-branding">
+        <div class="container-fluid position-relative py-2">
+          <div class="docs-logo-wrapper">
+            <button
+              id="docs-sidebar-toggler"
+              class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+              type="button"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="site-logo">
+              <a class="navbar-brand" href="index.html"
+                ><img
+                  class="logo me-2"
+                  src="assets/images/Ampersand_Academy_Logo.svg"
+                  alt="logo"
+                  height="50"
+              /></a>
+            </div>
+          </div>
+          <!--//docs-logo-wrapper-->
+          <div
+            class="docs-top-utilities d-flex justify-content-end align-items-center"
+          >
+            <ul
+              class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex"
+            >
+              <li class="list-inline-item">
+                <a
+                  href="https://www.facebook.com/AmpersandAcademy"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default"
+                  target="_blank"
+                  ><i class="fab fa-google fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.linkedin.com/company/ampersandacademy/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.instagram.com/ampersandacad/"
+                  target="_blank"
+                  ><i class="fab fa-instagram fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w"
+                  target="_blank"
+                  ><i class="fab fa-whatsapp fa-fw"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://t.me/ampersandacad" target="_blank"
+                  ><i class="fab fa-telegram fa-fw"></i
+                ></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//docs-top-utilities-->
+        </div>
+        <!--//container-->
+      </div>
+      <!--//branding-->
+    </header>
+    <!--//header-->
+    <div class="docs-wrapper">
+      <div id="docs-sidebar" class="docs-sidebar">
+        <div class="top-search-box d-lg-none p-3">
+          <form class="search-form">
+            <input
+              type="text"
+              placeholder="Search the docs..."
+              name="search"
+              class="form-control search-input"
+            />
+            <button type="submit" class="btn search-btn" value="Search">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <nav id="docs-nav" class="docs-nav navbar">
+          <ul class="section-items list-unstyled nav flex-column pb-3">
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-1"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-info-circle"></i></span
+                >Introduction</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-1"
+                >What is TypeScript?</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-2"
+                >TypeScript vs JavaScript</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-1-3"
+                >Setting Up TypeScript</a
+              >
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-2"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-cube"></i></span
+                >Basic Types</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-1">Simple Types</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-2">Special Types</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-3">Arrays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-4">Tuples</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-2-5">Object Types</a>
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-3"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-book"></i></span
+                >Advanced Types</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-1">Enums</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-2"
+                >Type Aliases</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-3"
+                >Interfaces</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-4">Union Types</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-3-5"
+                >Intersection Types</a
+              >
+            </li>
+            <li class="nav-item section-title mt-3">
+              <a class="nav-link scrollto" href="#section-4"
+                ><span class="theme-icon-holder me-2"
+                  ><i class="fas fa-cogs"></i></span
+                >Functions</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-1">Function Types</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-2">Optional Parameters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-3">Default Parameters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-4">Rest Parameters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="#item-4-5">Function Overloads</a>
+            </li>
+          </ul>
+        </nav>
+        <!--//docs-nav-->
+      </div>
+      <!--//docs-sidebar-->
+      <div class="docs-content">
+        <div class="container">
+          <article class="docs-article" id="section-1">
+            <header class="docs-header">
+              <h1 class="docs-heading">Introduction to TypeScript</h1>
+              <section class="docs-intro">
+                <p>
+                  TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. It adds static types to JavaScript, helping catch errors early and make JavaScript development more efficient.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+            <section class="docs-section" id="item-1-1">
+              <h2 class="section-heading">What is TypeScript?</h2>
+              <p>
+                TypeScript is a free and open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript that adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
+              </p>
+
+              <h4>Key Characteristics</h4>
+              <ul>
+                <li>
+                  <strong>Static Typing</strong>: Provides type checking at compile time, catching errors before runtime
+                </li>
+                <li>
+                  <strong>Superset of JavaScript</strong>: Any valid JavaScript code is also valid TypeScript code
+                </li>
+                <li>
+                  <strong>Object-Oriented Features</strong>: Classes, interfaces, and modules
+                </li>
+                <li>
+                  <strong>IDE Support</strong>: Better autocompletion, navigation, and refactoring in editors
+                </li>
+                <li>
+                  <strong>Transpilation</strong>: Compiles down to plain JavaScript that can run in any browser
+                </li>
+              </ul>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Note
+                  </h4>
+                  <p>
+                    TypeScript does not change the runtime behavior of JavaScript. It's a development tool that helps catch errors during development rather than at runtime.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-1-2">
+              <h2 class="section-heading">TypeScript vs JavaScript</h2>
+              <p>
+                Let's look at the key differences between TypeScript and JavaScript to understand when and why you might choose TypeScript for your projects.
+              </p>
+
+              <h4>Comparison</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>JavaScript</th>
+                      <th>TypeScript</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Type System</td>
+                      <td>Dynamically typed</td>
+                      <td>Statically typed with type inference</td>
+                    </tr>
+                    <tr>
+                      <td>Error Detection</td>
+                      <td>Runtime errors</td>
+                      <td>Compile-time errors</td>
+                    </tr>
+                    <tr>
+                      <td>Browser Compatibility</td>
+                      <td>Runs directly in browsers</td>
+                      <td>Needs to be transpiled to JavaScript</td>
+                    </tr>
+                    <tr>
+                      <td>IDE Support</td>
+                      <td>Limited autocompletion</td>
+                      <td>Advanced autocompletion and IntelliSense</td>
+                    </tr>
+                    <tr>
+                      <td>Learning Curve</td>
+                      <td>Lower</td>
+                      <td>Higher (requires understanding types)</td>
+                    </tr>
+                    <tr>
+                      <td>Project Scale</td>
+                      <td>Good for small projects</td>
+                      <td>Better for large-scale applications</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Example Comparison</h4>
+              <p>Here's a simple example showing JavaScript vs TypeScript:</p>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <strong>JavaScript</strong>
+                  <pre><code class="javascript">// JavaScript
+function add(a, b) {
+  return a + b;
+}
+
+// This works fine
+console.log(add(5, 3));  // 8
+
+// But this also works and might cause unexpected results
+console.log(add("5", 3));  // "53"</code></pre>
+                </div>
+                <div class="col-md-6">
+                  <strong>TypeScript</strong>
+                  <pre><code class="typescript">// TypeScript
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+// This works fine
+console.log(add(5, 3));  // 8
+
+// This would cause a compile-time error
+// console.log(add("5", 3));  // Error: Argument of type 'string' is not 
+                            // assignable to parameter of type 'number'</code></pre>
+                </div>
+              </div>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-exclamation-triangle"></i> </span
+                    ><!--//icon-holder-->
+                    When to Use TypeScript
+                  </h4>
+                  <p>
+                    TypeScript is particularly valuable for:
+                    <ul>
+                      <li>Large-scale applications with multiple developers</li>
+                      <li>Projects that will be maintained over a long period</li>
+                      <li>Applications where type safety is important</li>
+                      <li>Teams transitioning from strongly typed languages</li>
+                    </ul>
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-1-3">
+              <h2 class="section-heading">Setting Up TypeScript</h2>
+              <p>
+                Getting started with TypeScript is straightforward. You'll need to install it and set up a basic configuration for your project.
+              </p>
+
+              <h4>Installation</h4>
+              <p>
+                TypeScript can be installed globally using npm (Node Package Manager):
+              </p>
+              <pre><code class="bash">npm install -g typescript</code></pre>
+
+              <p>Or locally in your project:</p>
+              <pre><code class="bash">npm install typescript --save-dev</code></pre>
+
+              <h4>Creating a TypeScript Configuration File</h4>
+              <p>
+                Create a <code>tsconfig.json</code> file in your project root to configure the TypeScript compiler options:
+              </p>
+              <pre><code class="json">{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}</code></pre>
+
+              <h4>Compiling TypeScript</h4>
+              <p>
+                To compile TypeScript to JavaScript, run the TypeScript compiler:
+              </p>
+              <pre><code class="bash"># Compile a single file
+tsc filename.ts
+
+# Or compile the entire project according to tsconfig.json
+tsc</code></pre>
+
+              <h4>Using TypeScript with Modern Frameworks</h4>
+              <p>
+                Many modern frameworks have built-in TypeScript support:
+              </p>
+              <ul>
+                <li>
+                  <strong>React</strong>: Use <code>create-react-app</code> with TypeScript template
+                  <pre><code class="bash">npx create-react-app my-app --template typescript</code></pre>
+                </li>
+                <li>
+                  <strong>Vue.js</strong>: Use Vue CLI with TypeScript option
+                  <pre><code class="bash">vue create my-app
+# Select "Manually select features" and choose TypeScript</code></pre>
+                </li>
+                <li>
+                  <strong>Angular</strong>: Uses TypeScript by default
+                  <pre><code class="bash">ng new my-angular-app</code></pre>
+                </li>
+                <li>
+                  <strong>Next.js</strong>: Create a TypeScript project
+                  <pre><code class="bash">npx create-next-app@latest --ts</code></pre>
+                </li>
+              </ul>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Development Environment
+                  </h4>
+                  <p>
+                    For the best TypeScript development experience, use an editor with good TypeScript support such as Visual Studio Code, WebStorm, or Atom with TypeScript plugins.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+          </article>
+          <article class="docs-article" id="section-2">
+            <header class="docs-header">
+              <h1 class="docs-heading">Basic Types</h1>
+              <section class="docs-intro">
+                <p>
+                  TypeScript extends JavaScript by adding types to the language. Understanding these basic types is essential for writing effective TypeScript code.
+                </p>
+              </section>
+              <!--//docs-intro-->
+            </header>
+            <section class="docs-section" id="item-2-1">
+              <h2 class="section-heading">Simple Types</h2>
+              <p>
+                TypeScript includes several basic primitive types that are available in JavaScript, with the addition of explicit type annotations.
+              </p>
+
+              <h4>Boolean</h4>
+              <div class="interactive-code">
+              <pre><code class="typescript">// Boolean type
+let isDone: boolean = false;
+let isActive: boolean = true;
+
+// Type inference - TypeScript can infer the type
+let isCompleted = false; // TypeScript infers this as boolean</code></pre>
+              </div>
+
+              <h4>Number</h4>
+              <div class="interactive-code">
+              <pre><code class="typescript">// Number type (includes integers and floating point values)
+let decimal: number = 6;
+let hex: number = 0xf00d;       // Hexadecimal
+let binary: number = 0b1010;    // Binary
+let octal: number = 0o744;      // Octal
+let big: bigint = 100n;         // BigInt (ES2020)</code></pre>
+              </div>
+
+              <h4>String</h4>
+              <div class="interactive-code">
+              <pre><code class="typescript">// String type
+let color: string = "blue";
+let fullName: string = 'John Doe';
+
+// Template strings (with embedded expressions)
+let age: number = 30;
+let sentence: string = `Hello, my name is ${fullName}.
+I'll be ${age + 1} years old next month.`;</code></pre>
+              </div>
+
+              <h4>Type Annotations vs. Type Inference</h4>
+              <p>
+                TypeScript allows both explicit type annotations and automatic type inference:
+              </p>
+              <div class="interactive-code">
+              <pre><code class="typescript">// Explicit type annotation
+let message: string = "Hello, TypeScript!";
+
+// Type inference (TypeScript determines the type)
+let inferredMessage = "Hello, TypeScript!"; // Type is inferred as string</code></pre>
+              </div>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i> </span
+                    ><!--//icon-holder-->
+                    Best Practice
+                  </h4>
+                  <p>
+                    When TypeScript can infer the type correctly, it's often better to omit the type annotation to make the code more concise. Add explicit types when the inference isn't clear or when you want to enforce a specific type.
+                  </p>
+                </div>
+                <!--//content-->
+              </div>
+              <!--//callout-block-->
+            </section>
+
+            <section class="docs-section" id="item-2-2">
+              <h2 class="section-heading">Special Types</h2>
+              <p>
+                TypeScript includes several special types that handle specific use cases beyond the basic primitive types.
+              </p>
+
+              <h4>any</h4>
+              <p>
+                The <code>any</code> type allows a variable to be of any type. Use this when you don't want type checking.
+              </p>
+              <div class="interactive-code">
+              <pre><code class="typescript">// any type - opt out of type checking
+let notSure: any = 4;
+notSure = "maybe a string";
+notSure = false; // OK, boolean
+
+// any can be useful when working with external libraries
+// or migrating from JavaScript to TypeScript
+let legacy: any = getDataFromLegacyAPI();</code></pre>
+              </div>
+
+              <h4>unknown</h4>
+              <p>
+                The <code>unknown</code> type is a safer alternative to <code>any</code>. Variables of type <code>unknown</code> can hold any value, but you must perform type checking before using them.
+              </p>
+              <div class="interactive-code">
+              <pre><code class="typescript">// unknown type - safer than any
+let userInput: unknown;
+userInput = 5;
+userInput = "hello";
+
+// You need to check the type before using unknown values
+if (typeof userInput === "string") {
+  let strLength: number = userInput.length; // OK
+}
+
+// This would cause an error
+// let myLength: number = userInput.length; // Error: Object is of type 'unknown'</code></pre>
+              </div>
+
+              <h4>void</h4>
+              <p>
+                The <code>void</code> type represents the absence of a value, often used as the return type of functions that don't return a value.
+              </p>
+              <div class="interactive-code">
+              <pre><code class="typescript">// void type - absence of any type
+function logMessage(message: string): void {
+  console.log(message);
+  // No return statement
+}
+
+// Variables of type void can only be assigned undefined or null
+let unusable: void = undefined;</code></pre>
+              </div>
+
+              <h4>null and undefined</h4>
+              <p>
+                <code>null</code> and <code>undefined</code> are both types and values in TypeScript.
+              </p>
+              <div class="interactive-code">
+              <pre><code class="typescript">// null and undefined types
+let u: undefined = undefined;
+let n: null = null;
+
+// By default, null and undefined are subtypes of all other types
+// With strictNullChecks enabled, they can only be assigned to unknown, any,
+// or their respective types
+let name: string;
+// name = null; // Error with strictNullChecks</code></pre>
+              </div>
+
+              <h4>never</h4>
+              <p>
+                The <code>never</code> type represents values that never occur. It's used for functions that never return (always throw an error or have an infinite loop).
+              </p>
+              <div class="interactive-code">
+              <pre><code class="typescript">// never type - values that never occur
+function error(message: string): never {
+  throw new Error(message);
+}
+
+function infiniteLoop(): never {
+  while (true) {}
+}
+
+// never is a subtype of every type
+// No type is a subtype of never (except never itself)</code></pre>
+              </div>
+
+              <div class="callout-block callout-block-warning">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                        <i class="fas fa-exclamation-triangle"></i> </span
+                      ><!--//icon-holder-->
+                      Use with Caution
+                    </h4>
+                    <p>
+                      While <code>any</code> gives you flexibility, it defeats the purpose of using TypeScript's type system. Use it sparingly, only when absolutely necessary. The <code>unknown</code> type is safer because it forces you to perform type checking before use.
+                    </p>
+                  </div>
+                  <!--//content-->
+                </div>
+                <!--//callout-block-->
+              </section>
+  
+              <section class="docs-section" id="item-2-3">
+                <h2 class="section-heading">Arrays</h2>
+                <p>
+                  TypeScript provides special types for working with arrays, allowing you to specify the type of elements an array can contain.
+                </p>
+  
+                <h4>Array Type Syntax</h4>
+                <p>
+                  There are two ways to declare array types in TypeScript:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Using the type followed by []
+  let numbers: number[] = [1, 2, 3, 4, 5];
+  
+  // Using generic array type Array<elemType>
+  let strings: Array<string> = ["hello", "world"];
+  
+  // Mixed type arrays using union types (covered later)
+  let mixed: (string | number)[] = ["hello", 42, "world"];
+  
+  // Array of any type
+  let anything: any[] = [1, "hello", true, {}];</code></pre>
+                </div>
+  
+                <h4>Array Methods and Properties</h4>
+                <p>
+                  TypeScript provides type checking for array methods:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">let fruits: string[] = ["apple", "banana", "orange"];
+  
+  // Array methods are type checked
+  fruits.push("mango"); // OK
+  // fruits.push(42); // Error: Argument of type 'number' is not assignable to parameter of type 'string'
+  
+  // TypeScript understands return types of methods
+  let firstFruit: string = fruits[0];
+  let fruitCount: number = fruits.length;
+  
+  // Map, filter, and other higher-order methods preserve types
+  let uppercaseFruits: string[] = fruits.map(fruit => fruit.toUpperCase());
+  
+  // Filter returns an array of the same type as the original
+  let longFruits: string[] = fruits.filter(fruit => fruit.length > 5);</code></pre>
+                </div>
+  
+                <h4>Readonly Arrays</h4>
+                <p>
+                  TypeScript provides a <code>ReadonlyArray</code> type that makes an array immutable:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// ReadonlyArray type
+  let readonlyNumbers: ReadonlyArray<number> = [1, 2, 3, 4];
+  
+  // Cannot modify a readonly array
+  // readonlyNumbers.push(5); // Error
+  // readonlyNumbers[0] = 10; // Error
+  
+  // Alternative syntax
+  let moreReadonly: readonly number[] = [1, 2, 3, 4];</code></pre>
+                </div>
+  
+                <div class="callout-block callout-block-info">
+                  <div class="content">
+                    <h4 class="callout-title">
+                      <span class="callout-icon-holder me-1">
+                        <i class="fas fa-info-circle"></i> </span
+                      ><!--//icon-holder-->
+                      Type Inference with Arrays
+                    </h4>
+                    <p>
+                      TypeScript can infer array types based on initialization:
+                      <code>let nums = [1, 2, 3];</code> // Inferred as number[]<br>
+                      <code>let mixed = [1, "two", 3];</code> // Inferred as (string | number)[]
+                    </p>
+                  </div>
+                  <!--//content-->
+                </div>
+                <!--//callout-block-->
+              </section>
+  
+              <section class="docs-section" id="item-2-4">
+                <h2 class="section-heading">Tuples</h2>
+                <p>
+                  Tuples are a special type in TypeScript that allow you to express an array with a fixed number of elements, where each element can have a different type.
+                </p>
+  
+                <h4>Declaring Tuples</h4>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Tuple type
+  let person: [string, number] = ["John", 30]; // OK
+  
+  // Order matters in tuples
+  // let wrongPerson: [string, number] = [30, "John"]; // Error
+  
+  // Accessing tuple elements
+  let name: string = person[0];
+  let age: number = person[1];
+  
+  // Destructuring tuples
+  let [personName, personAge] = person;</code></pre>
+                </div>
+  
+                <h4>Optional Tuple Elements</h4>
+                <p>
+                  You can make tuple elements optional by adding a question mark:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Tuple with optional elements
+  let optionalTuple: [string, number, boolean?] = ["hello", 42]; // Third element is optional
+  optionalTuple = ["world", 100, true]; // All three elements
+  
+  // Optional elements must come last in the tuple type definition</code></pre>
+                </div>
+  
+                <h4>Readonly Tuples</h4>
+                <p>
+                  Like arrays, tuples can be made readonly:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Readonly tuple
+  let readonlyPerson: readonly [string, number] = ["Jane", 28];
+  
+  // Cannot modify
+  // readonlyPerson[0] = "Janet"; // Error
+  // readonlyPerson.push("test"); // Error</code></pre>
+                </div>
+  
+                <h4>Tuple Type Inference</h4>
+                <p>
+                  TypeScript doesn't infer tuple types automatically - it infers arrays:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// TypeScript infers this as (string | number)[], not a tuple
+  let inferredArray = ["John", 30];
+  
+  // Use an explicit type annotation for tuples
+  let explicitTuple: [string, number] = ["John", 30];</code></pre>
+                </div>
+  
+                <h4>Common Use Cases for Tuples</h4>
+                <p>
+                  Tuples are useful when you know exactly how many elements an array will have and what type each element should be.
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Key-value pairs
+  let entry: [string, string] = ["username", "johndoe"];
+  
+  // Coordinates (x, y)
+  let point: [number, number] = [10, 20];
+  
+  // RGB color values
+  let color: [number, number, number] = [255, 0, 0]; // red
+  
+  // Return multiple values from a function
+  function getUser(): [string, number, boolean] {
+    return ["John", 30, true]; // name, age, isActive
+  }
+  
+  let [userName, userAge, isActive] = getUser();</code></pre>
+                </div>
+  
+                <div class="callout-block callout-block-warning">
+                  <div class="content">
+                    <h4 class="callout-title">
+                      <span class="callout-icon-holder me-1">
+                        <i class="fas fa-exclamation-triangle"></i> </span
+                      ><!--//icon-holder-->
+                      Limitation
+                    </h4>
+                    <p>
+                      TypeScript's tuple types can ensure correct types at specific positions, but they don't prevent adding more elements with array methods like <code>push()</code> unless you make the tuple readonly.
+                    </p>
+                  </div>
+                  <!--//content-->
+                </div>
+                <!--//callout-block-->
+              </section>
+  
+              <section class="docs-section" id="item-2-5">
+                <h2 class="section-heading">Object Types</h2>
+                <p>
+                  TypeScript allows you to define the structure of objects using object type annotations.
+                </p>
+  
+                <h4>Object Type Literals</h4>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Object type annotation
+  let user: { name: string; age: number } = {
+    name: "John",
+    age: 30
+  };
+  
+  // Accessing properties
+  console.log(user.name); // OK
+  // console.log(user.email); // Error: Property 'email' does not exist
+  
+  // Nested object types
+  let employee: {
+    name: string;
+    age: number;
+    address: {
+      street: string;
+      city: string;
+      postalCode: string;
+    }
+  } = {
+    name: "Jane",
+    age: 28,
+    address: {
+      street: "123 Main St",
+      city: "Boston",
+      postalCode: "02108"
+    }
+  };</code></pre>
+                </div>
+  
+                <h4>Optional Properties</h4>
+                <p>
+                  You can mark properties as optional using the <code>?</code> modifier:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Object with optional properties
+  let product: {
+    id: number;
+    name: string;
+    price: number;
+    description?: string; // Optional property
+    tags?: string[];      // Optional property
+  } = {
+    id: 1,
+    name: "Laptop",
+    price: 999.99
+    // description and tags are optional
+  };
+  
+  // Later add the optional property
+  product.description = "High-performance laptop";</code></pre>
+                </div>
+  
+                <h4>Readonly Properties</h4>
+                <p>
+                  You can make properties readonly using the <code>readonly</code> modifier:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Object with readonly properties
+  let config: {
+    readonly apiKey: string;
+    readonly maxRetries: number;
+    timeout: number; // Not readonly
+  } = {
+    apiKey: "abc123",
+    maxRetries: 3,
+    timeout: 5000
+  };
+  
+  // Cannot modify readonly properties
+  // config.apiKey = "xyz456"; // Error
+  config.timeout = 10000; // OK, not readonly</code></pre>
+                </div>
+  
+                <h4>Index Signatures</h4>
+                <p>
+                  When you don't know all property names ahead of time, you can use index signatures:
+                </p>
+                <div class="interactive-code">
+                <pre><code class="typescript">// Object with an index signature
+  let dictionary: { [key: string]: string } = {};
+  
+  // Can add any string keys
+  dictionary.en = "English";
+  dictionary.es = "Spanish";
+  dictionary.fr = "French";
+  
+  // Index signature for mixed types
+  let mixed: { [key: string]: string | number | boolean } = {
+    name: "Product",
+    price: 29.99,
+    inStock: true
+  };</code></pre>
+                </div>
+  
+                <div class="callout-block callout-block-info">
+                  <div class="content">
+                    <h4 class="callout-title">
+                      <span class="callout-icon-holder me-1">
+                        <i class="fas fa-info-circle"></i> </span
+                      ><!--//icon-holder-->
+                      Type Aliases and Interfaces
+                    </h4>
+                    <p>
+                      For more complex objects or reusable object types, TypeScript offers type aliases and interfaces, which we'll cover in the next section.
+                    </p>
+                  </div>
+                  <!--//content-->
+                </div>
+                <!--//callout-block-->
+              </section>
+            </article>
+            <article class="docs-article" id="section-3">
+                <header class="docs-header">
+                  <h1 class="docs-heading">Advanced Types</h1>
+                  <section class="docs-intro">
+                    <p>
+                      TypeScript provides several advanced type features that help model complex data structures and relationships. These include enums, type aliases, interfaces, and union types.
+                    </p>
+                  </section>
+                  <!--//docs-intro-->
+                </header>
+                <section class="docs-section" id="item-3-1">
+                  <h2 class="section-heading">Enums</h2>
+                  <p>
+                    Enums allow you to define a set of named constants, making it easier to document intent or create a set of distinct cases.
+                  </p>
+    
+                  <h4>Numeric Enums</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Numeric enum
+    enum Direction {
+      North, // 0
+      East,  // 1
+      South, // 2
+      West   // 3
+    }
+    
+    let dir: Direction = Direction.North;
+    console.log(dir); // 0
+    
+    // You can also specify the numeric values
+    enum HttpStatus {
+      OK = 200,
+      Created = 201,
+      BadRequest = 400,
+      Unauthorized = 401,
+      NotFound = 404,
+      ServerError = 500
+    }
+    
+    // Usage
+    function respondToRequest(status: HttpStatus) {
+      console.log(`Responding with status: ${status}`);
+    }
+    
+    respondToRequest(HttpStatus.OK);</code></pre>
+                  </div>
+    
+                  <h4>String Enums</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// String enum
+    enum Color {
+      Red = "RED",
+      Green = "GREEN",
+      Blue = "BLUE"
+    }
+    
+    let color: Color = Color.Green;
+    console.log(color); // "GREEN"
+    
+    // String enums provide better debugging and readability
+    // in runtime environments</code></pre>
+                  </div>
+    
+                  <h4>Heterogeneous Enums</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Heterogeneous enum (mixing number and string values)
+    enum Status {
+      Success = 200,
+      Error = "ERROR",
+      Pending = 0,
+      Completed = "DONE"
+    }</code></pre>
+                  </div>
+    
+                  <h4>Constant Enums</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Const enum (more efficient, inlined at compile time)
+    const enum Planet {
+      Mercury = 1,
+      Venus,
+      Earth,
+      Mars
+    }
+    
+    let myPlanet = Planet.Earth; // Compiles to just: let myPlanet = 3;</code></pre>
+                  </div>
+    
+                  <h4>Reverse Mappings</h4>
+                  <p>Numeric enums have automatic reverse mappings (name to value and value to name):</p>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">enum Direction {
+      North,
+      East,
+      South,
+      West
+    }
+    
+    let dirName = Direction[0]; // "North"
+    console.log(dirName); // "North"
+    
+    // String enums don't have reverse mappings</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-warning">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-exclamation-triangle"></i> </span
+                        ><!--//icon-holder-->
+                        Enum Runtime Implications
+                      </h4>
+                      <p>
+                        Regular enums generate runtime objects that can increase bundle size. If you're concerned about bundle size, consider using const enums or union types of literals instead.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+    
+                <section class="docs-section" id="item-3-2">
+                  <h2 class="section-heading">Type Aliases</h2>
+                  <p>
+                    Type aliases create a new name for a type. They can name primitives, unions, tuples, or any other types including complex object types.
+                  </p>
+    
+                  <h4>Basic Type Aliases</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Type alias for a primitive type
+    type ID = string;
+    
+    // Using the type alias
+    let userId: ID = "user123";
+    
+    // Type alias for a union type
+    type Status = "pending" | "approved" | "rejected";
+    
+    // Type alias for a tuple
+    type Point = [number, number];
+    
+    // Type alias for an array
+    type StringArray = string[];
+    
+    // Using the aliases
+    let status: Status = "approved";
+    let coordinates: Point = [10, 20];
+    let names: StringArray = ["Alice", "Bob", "Charlie"];</code></pre>
+                  </div>
+    
+                  <h4>Object Type Aliases</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Type alias for an object type
+    type User = {
+      id: ID;  // Using the ID type alias from above
+      name: string;
+      email: string;
+      age: number;
+      isActive: boolean;
+      roles: string[];
+    };
+    
+    // Using the object type alias
+    const user: User = {
+      id: "user456",
+      name: "Jane Smith",
+      email: "jane@example.com",
+      age: 28,
+      isActive: true,
+      roles: ["admin", "editor"]
+    };
+    
+    // Type alias with optional properties
+    type Product = {
+      id: number;
+      name: string;
+      price: number;
+      description?: string;
+      categories?: string[];
+    };</code></pre>
+                  </div>
+    
+                  <h4>Type Aliases with Generics</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Generic type alias
+    type Container<T> = { value: T };
+    
+    // Using generic type alias with different types
+    let numberContainer: Container<number> = { value: 42 };
+    let stringContainer: Container<string> = { value: "hello" };
+    
+    // More complex generic type alias
+    type Result<T, E = Error> = {
+      success: true;
+      value: T;
+    } | {
+      success: false;
+      error: E;
+    };
+    
+    // Using the Result type
+    function divide(a: number, b: number): Result<number> {
+      if (b === 0) {
+        return { success: false, error: new Error("Division by zero") };
+      }
+      return { success: true, value: a / b };
+    }</code></pre>
+                  </div>
+    
+                  <h4>Extending Type Aliases</h4>
+                  <p>
+                    You can combine type aliases using intersection types:
+                  </p>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Base type
+    type Person = {
+      name: string;
+      age: number;
+    };
+    
+    // Extended type using intersection
+    type Employee = Person & {
+      employeeId: string;
+      department: string;
+    };
+    
+    // Usage
+    const employee: Employee = {
+      name: "John Doe",
+      age: 30,
+      employeeId: "E123",
+      department: "Engineering"
+    };</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-info">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-info-circle"></i> </span
+                        ><!--//icon-holder-->
+                        Type Aliases vs. Interfaces
+                      </h4>
+                      <p>
+                        Type aliases and interfaces are very similar, but interfaces are generally preferred when you need to define object shapes, especially if they can be extended later. Type aliases are more versatile and can represent any type including primitives, unions, and tuples.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+    
+                <section class="docs-section" id="item-3-3">
+                  <h2 class="section-heading">Interfaces</h2>
+                  <p>
+                    Interfaces define contracts in your code and provide explicit names for object types. They are a powerful way to define the structure of objects.
+                  </p>
+    
+                  <h4>Basic Interface</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Interface declaration
+    interface User {
+      id: string;
+      name: string;
+      email: string;
+      age: number;
+    }
+    
+    // Using an interface
+    const user: User = {
+      id: "user789",
+      name: "John Doe",
+      email: "john@example.com",
+      age: 30
+    };
+    
+    // Interface with optional properties
+    interface Product {
+      id: number;
+      name: string;
+      price: number;
+      description?: string; // Optional
+    }</code></pre>
+                  </div>
+    
+                  <h4>Readonly Properties</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Interface with readonly properties
+    interface Point {
+      readonly x: number;
+      readonly y: number;
+    }
+    
+    let point: Point = { x: 10, y: 20 };
+    // point.x = 5; // Error: Cannot assign to 'x' because it is a read-only property</code></pre>
+                  </div>
+    
+                  <h4>Function Types</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Interface describing a function type
+    interface SearchFunction {
+      (source: string, subString: string): boolean;
+    }
+    
+    // Using the function interface
+    const searchStr: SearchFunction = function(src, sub) {
+      return src.includes(sub);
+    };
+    
+    console.log(searchStr("Hello, world", "world")); // true</code></pre>
+                  </div>
+    
+                  <h4>Extending Interfaces</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Base interface
+    interface Person {
+      name: string;
+      age: number;
+    }
+    
+    // Extended interface
+    interface Employee extends Person {
+      employeeId: string;
+      department: string;
+    }
+    
+    // Multiple extension
+    interface Manager extends Employee {
+      managerLevel: number;
+      directReports: Employee[];
+    }
+    
+    // Using extended interfaces
+    const manager: Manager = {
+      name: "Jane Smith",
+      age: 35,
+      employeeId: "E456",
+      department: "Marketing",
+      managerLevel: 2,
+      directReports: []
+    };</code></pre>
+                  </div>
+    
+                  <h4>Implementing Interfaces in Classes</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Interface for a shape
+    interface Shape {
+      calculateArea(): number;
+    }
+    
+    // Classes implementing the interface
+    class Circle implements Shape {
+      constructor(private radius: number) {}
+    
+      calculateArea(): number {
+        return Math.PI * this.radius * this.radius;
+      }
+    }
+    
+    class Rectangle implements Shape {
+      constructor(private width: number, private height: number) {}
+    
+      calculateArea(): number {
+        return this.width * this.height;
+      }
+    }
+    
+    // Using the classes
+    const circle = new Circle(5);
+    console.log(circle.calculateArea()); // 78.54...
+    
+    const rectangle = new Rectangle(4, 6);
+    console.log(rectangle.calculateArea()); // 24</code></pre>
+                  </div>
+    
+                  <h4>Interface Merging</h4>
+                  <p>
+                    Unlike type aliases, interfaces can be defined multiple times and will be merged:
+                  </p>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Interface declaration
+    interface User {
+      name: string;
+    }
+    
+    // Second declaration adds to the first
+    interface User {
+      age: number;
+    }
+    
+    // Results in User having both properties
+    const user: User = {
+      name: "John",
+      age: 30
+    };</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-info">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-info-circle"></i> </span
+                        ><!--//icon-holder-->
+                        When to Use Interfaces
+                      </h4>
+                      <p>
+                        Use interfaces when:
+                        <ul>
+                          <li>You need to define object shapes or class contracts</li>
+                          <li>You want the ability to extend the interface later</li>
+                          <li>You're working in an object-oriented style</li>
+                          <li>You're defining a public API where interface merging might be useful</li>
+                        </ul>
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+    
+                <section class="docs-section" id="item-3-4">
+                  <h2 class="section-heading">Union Types</h2>
+                  <p>
+                    Union types allow a value to be one of several types. This is useful when a value isn't predictably just one type.
+                  </p>
+    
+                  <h4>Basic Union Types</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Union type with primitive types
+    let id: string | number;
+    
+    id = "abc123"; // OK
+    id = 456;      // OK
+    // id = true;  // Error: Type 'boolean' is not assignable to type 'string | number'
+    
+    // Function accepting a union type
+    function printId(id: string | number) {
+      console.log(`ID: ${id}`);
+    }
+    
+    printId("user123"); // OK
+    printId(456);       // OK</code></pre>
+                  </div>
+    
+                  <h4>Type Guards with Union Types</h4>
+                  <p>
+                    When working with union types, you need to use type guards to access type-specific properties:
+                  </p>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Type guard with typeof
+    function formatId(id: string | number) {
+      if (typeof id === "string") {
+        // In this branch, TypeScript knows id is a string
+        return id.toUpperCase();
+      } else {
+        // In this branch, TypeScript knows id is a number
+        return `ID-${id.toFixed(0)}`;
+      }
+    }
+    
+    formatId("abc"); // "ABC"
+    formatId(123);   // "ID-123"
+    
+    // Working with union of more complex types
+    interface Car {
+      make: string;
+      model: string;
+      year: number;
+    }
+    
+    interface Motorcycle {
+      make: string;
+      model: string;
+      year: number;
+      type: "sport" | "cruiser" | "touring";
+    }
+    
+    // Union type of objects
+    type Vehicle = Car | Motorcycle;
+    
+    // Type guard using property check
+    function isCar(vehicle: Vehicle): vehicle is Car {
+      return (vehicle as Motorcycle).type === undefined;
+    }
+    
+    function displayVehicleInfo(vehicle: Vehicle) {
+      console.log(`${vehicle.make} ${vehicle.model} (${vehicle.year})`);
+      
+      if (isCar(vehicle)) {
+        console.log("This is a car");
+      } else {
+        console.log(`This is a ${vehicle.type} motorcycle`);
+      }
+    }</code></pre>
+                  </div>
+    
+                  <h4>Discriminated Unions</h4>
+                  <p>
+                    A common pattern in TypeScript is to use a discriminated (or tagged) union, which includes a common property that can differentiate the union members:
+                  </p>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Discriminated union pattern
+    interface Circle {
+      kind: "circle";
+      radius: number;
+    }
+    
+    interface Square {
+      kind: "square";
+      sideLength: number;
+    }
+    
+    interface Rectangle {
+      kind: "rectangle";
+      width: number;
+      height: number;
+    }
+    
+    // Union type with discriminator
+    type Shape = Circle | Square | Rectangle;
+    
+    // Using the discriminated union
+    function calculateArea(shape: Shape): number {
+      switch (shape.kind) {
+        case "circle":
+          return Math.PI * shape.radius ** 2;
+        case "square":
+          return shape.sideLength ** 2;
+        case "rectangle":
+          return shape.width * shape.height;
+      }
+    }
+    
+    const circle: Circle = { kind: "circle", radius: 5 };
+    console.log(calculateArea(circle)); // 78.54...</code></pre>
+                  </div>
+    
+                  <h4>String Literal Unions</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Union of string literals
+    type Direction = "north" | "east" | "south" | "west";
+    
+    function move(direction: Direction) {
+      console.log(`Moving ${direction}`);
+    }
+    
+    move("north"); // OK
+    // move("up"); // Error: Argument of type '"up"' is not assignable to parameter of type 'Direction'
+    
+    // Common use cases for string literal unions
+    type HttpMethod = "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
+    type Status = "idle" | "loading" | "success" | "error";
+    type Color = "red" | "green" | "blue" | "yellow" | "black" | "white";</code></pre>
+                  </div>
+                </section>
+    
+                <section class="docs-section" id="item-3-5">
+                  <h2 class="section-heading">Intersection Types</h2>
+                  <p>
+                    Intersection types combine multiple types into one. This allows you to add together existing types to get a type with all the features you need.
+                  </p>
+    
+                  <h4>Basic Intersection Types</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Define separate types
+    interface Name {
+      name: string;
+    }
+    
+    interface Age {
+      age: number;
+    }
+    
+    // Create an intersection type
+    type Person = Name & Age;
+    
+    // Use the intersection type
+    const person: Person = {
+      name: "John",
+      age: 30
+      // Must include properties from both Name and Age
+    };</code></pre>
+                  </div>
+    
+                  <h4>Combining Complex Types</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// More complex example
+    interface Address {
+      street: string;
+      city: string;
+      zipCode: string;
+    }
+    
+    interface Contact {
+      email: string;
+      phone: string;
+    }
+    
+    interface BasicEmployeeInfo {
+      id: string;
+      name: string;
+      department: string;
+    }
+    
+    // Combining multiple interfaces
+    type Employee = BasicEmployeeInfo & Address & Contact;
+    
+    // Using the combined type
+    const employee: Employee = {
+      id: "E789",
+      name: "Alice Johnson",
+      department: "Finance",
+      street: "123 Main St",
+      city: "Boston",
+      zipCode: "02108",
+      email: "alice@example.com",
+      phone: "555-123-4567"
+    };</code></pre>
+                  </div>
+    
+                  <h4>Intersection with Primitive Types</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Intersections with primitive types
+    type StringNumber = string & number;
+    
+    // This creates a type that cannot exist (never)
+    // because a value cannot be both a string and a number
+    // let impossible: StringNumber = ???; // No value possible
+    
+    // More useful with object types
+    type SerializableFunction = Function & { toJSON(): string };</code></pre>
+                  </div>
+    
+                  <h4>Combined Union and Intersection Types</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Combining unions and intersections
+    interface ErrorHandling {
+      success: boolean;
+      error?: string;
+    }
+    
+    interface DataWithId {
+      id: number;
+      data: string;
+    }
+    
+    interface DataWithTitle {
+      title: string;
+      data: string;
+    }
+    
+    // Union of two intersection types
+    type Result = (DataWithId | DataWithTitle) & ErrorHandling;
+    
+    // Valid Results:
+    const result1: Result = {
+      success: true,
+      id: 1,
+      data: "Some data"
+    };
+    
+    const result2: Result = {
+      success: false,
+      error: "Failed to fetch",
+      title: "Error Report",
+      data: "Error details"
+    };</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-info">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-info-circle"></i> </span
+                        ><!--//icon-holder-->
+                        Use Case Comparison
+                      </h4>
+                      <p>
+                        <strong>Union types</strong> (A | B) are useful when a value can be one of several types.<br>
+                        <strong>Intersection types</strong> (A & B) are useful when you want to combine multiple types into one.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+              </article>
+    
+              <article class="docs-article" id="section-4">
+                <header class="docs-header">
+                  <h1 class="docs-heading">Functions</h1>
+                  <section class="docs-intro">
+                    <p>
+                      Functions are a fundamental part of any JavaScript application, and TypeScript adds the ability to specify the types of function parameters and return values.
+                    </p>
+                  </section>
+                  <!--//docs-intro-->
+                </header>
+                <section class="docs-section" id="item-4-1">
+                  <h2 class="section-heading">Function Types</h2>
+                  <p>
+                    TypeScript allows you to specify the types of both the input parameters and the return value of functions.
+                  </p>
+    
+                  <h4>Basic Function Types</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with typed parameters and return type
+    function add(a: number, b: number): number {
+      return a + b;
+    }
+    
+    // Arrow function with types
+    const multiply = (a: number, b: number): number => a * b;
+    
+    // Type inference for return types
+    function subtract(a: number, b: number) {
+      return a - b; // Return type inferred as number
+    }</code></pre>
+                  </div>
+    
+                  <h4>Function Type Expressions</h4>
+                  <p>
+                    You can define a function type using a type alias or interface:
+                  </p>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function type expression
+    type MathOperation = (a: number, b: number) => number;
+    
+    // Using a function type
+    const add: MathOperation = (a, b) => a + b;
+    const subtract: MathOperation = (a, b) => a - b;
+    const multiply: MathOperation = (a, b) => a * b;
+    
+    // Function type with interface
+    interface Calculator {
+      (x: number, y: number): number;
+    }
+    
+    const divide: Calculator = (a, b) => a / b;</code></pre>
+                  </div>
+    
+                  <h4>Function with Object Parameters</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with object parameter
+    function printPerson(person: { name: string; age: number }): void {
+      console.log(`${person.name} is ${person.age} years old`);
+    }
+    
+    // Better with interface
+    interface Person {
+      name: string;
+      age: number;
+    }
+    
+    function greetPerson(person: Person): string {
+      return `Hello, ${person.name}!`;
+    }</code></pre>
+                  </div>
+    
+                  <h4>Callback Types</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with callback parameter
+    function fetchData(
+      url: string,
+      success: (response: any) => void,
+      error: (err: Error) => void
+    ): void {
+      // Simulated fetch
+      try {
+        // Imagine this is an API call
+        const data = { id: 1, name: "Sample Data" };
+        success(data);
+      } catch (err) {
+        error(err as Error);
+      }
+    }
+    
+    // Using the function with callbacks
+    fetchData(
+      "https://api.example.com/data",
+      (response) => console.log("Success:", response),
+      (err) => console.error("Error:", err.message)
+    );</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-info">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-info-circle"></i> </span
+                        ><!--//icon-holder-->
+                        Contextual Typing
+                      </h4>
+                      <p>
+                        TypeScript can often infer parameter types based on context:
+                        <pre><code class="typescript">// Type inferred from the context
+    const names = ["Alice", "Bob", "Charlie"];
+    names.forEach(name => {
+      // TypeScript knows 'name' is a string
+      console.log(name.toUpperCase());
+    });</code></pre>
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+    
+                <section class="docs-section" id="item-4-2">
+                  <h2 class="section-heading">Optional Parameters</h2>
+                  <p>
+                    TypeScript allows you to mark function parameters as optional by adding a question mark after the parameter name.
+                  </p>
+    
+                  <h4>Basic Optional Parameters</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with optional parameter
+    function greet(name: string, greeting?: string): string {
+      if (greeting) {
+        return `${greeting}, ${name}!`;
+      }
+      return `Hello, ${name}!`;
+    }
+    
+    // Call with both parameters
+    console.log(greet("John", "Hi")); // "Hi, John!"
+    
+    // Call with only required parameter
+    console.log(greet("Jane")); // "Hello, Jane!"</code></pre>
+                  </div>
+    
+                  <h4>Default Parameters</h4>
+                  <p>
+                    You can also provide default values for parameters:
+                  </p>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with default parameter
+    function createUser(
+      id: number,
+      name: string,
+      role: string = "user",
+      active: boolean = true
+    ): object {
+      return { id, name, role, active };
+    }
+    
+    // Call with all parameters
+    console.log(createUser(1, "John", "admin", false));
+    // { id: 1, name: "John", role: "admin", active: false }
+    
+    // Call with default parameters
+    console.log(createUser(2, "Jane"));
+    // { id: 2, name: "Jane", role: "user", active: true }</code></pre>
+                  </div>
+    
+                  <h4>Optional Parameters in Callbacks</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with optional callback parameter
+    function processValue(
+      value: number,
+      callback?: (result: number) => void
+    ): number {
+      const result = value * 2;
+      
+      // Only call the callback if it's provided
+      if (callback) {
+        callback(result);
+      }
+      
+      return result;
+    }
+    
+    // Call with callback
+    processValue(5, result => console.log(`Result: ${result}`));
+    
+    // Call without callback
+    const value = processValue(10);
+    console.log(`Got value: ${value}`);</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-warning">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-exclamation-triangle"></i> </span
+                        ><!--//icon-holder-->
+                        Optional Parameter Order
+                      </h4>
+                      <p>
+                        Optional parameters must come after required parameters in the function declaration. If you need to make an earlier parameter optional, consider using default parameters or function overloads instead.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+    
+                <section class="docs-section" id="item-4-3">
+                  <h2 class="section-heading">Default Parameters</h2>
+                  <p>
+                    TypeScript supports default parameter values, which provide values for parameters when no argument is provided or when <code>undefined</code> is passed.
+                  </p>
+    
+                  <h4>Basic Default Parameters</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with default parameters
+    function createGreeting(name: string, greeting: string = "Hello"): string {
+      return `${greeting}, ${name}!`;
+    }
+    
+    // Call with both parameters
+    console.log(createGreeting("John", "Hi")); // "Hi, John!"
+    
+    // Call with only the required parameter
+    console.log(createGreeting("Jane")); // "Hello, Jane!"
+    
+    // Explicitly passing undefined uses the default
+    console.log(createGreeting("Bob", undefined)); // "Hello, Bob!"</code></pre>
+                  </div>
+    
+                  <h4>Default Parameters and Optional Parameters</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with both default and optional parameters
+    function buildURL(
+      protocol: string = "https",
+      domain: string,
+      path: string = "/",
+      queryParams?: Record<string, string>
+    ): string {
+      let url = `${protocol}://${domain}${path}`;
+      
+      if (queryParams) {
+        const queryString = Object.entries(queryParams)
+          .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+          .join("&");
+          
+        url += `?${queryString}`;
+      }
+      
+      return url;
+    }
+    
+    // Using the function
+    console.log(buildURL("https", "example.com"));
+    // "https://example.com/"
+    
+    console.log(buildURL(undefined, "example.com", "/products"));
+    // "https://example.com/products"
+    
+    console.log(buildURL("http", "example.com", "/search", { q: "typescript", limit: "10" }));
+    // "http://example.com/search?q=typescript&limit=10"</code></pre>
+                  </div>
+    
+                  <h4>Default Parameters and Type Inference</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// TypeScript can infer the parameter type from the default value
+    function createCounter(
+      initialValue = 0,  // Type inferred as number
+      step = 1           // Type inferred as number
+    ) {
+      let count = initialValue;
+      
+      return {
+        increment() {
+          count += step;
+          return count;
+        },
+        decrement() {
+          count -= step;
+          return count;
+        },
+        getValue() {
+          return count;
+        }
+      };
+    }
+    
+    // Using the counter
+    const counter = createCounter(10, 2);
+    console.log(counter.getValue());  // 10
+    console.log(counter.increment()); // 12
+    console.log(counter.increment()); // 14
+    console.log(counter.decrement()); // 12</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-info">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-info-circle"></i> </span
+                        ><!--//icon-holder-->
+                        Default Parameters vs. Optional Parameters
+                      </h4>
+                      <p>
+                        <strong>Default parameters</strong> provide a fallback value when no argument is provided.<br>
+                        <strong>Optional parameters</strong> (with <code>?</code>) indicate that the parameter can be omitted but don't provide a default value.<br><br>
+                        If a parameter has a default value, you don't need to mark it as optional with <code>?</code> since it effectively becomes optional.
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+    
+                <section class="docs-section" id="item-4-4">
+                  <h2 class="section-heading">Rest Parameters</h2>
+                  <p>
+                    Rest parameters allow you to accept an indefinite number of arguments as an array. In TypeScript, you can type these rest parameters.
+                  </p>
+    
+                  <h4>Basic Rest Parameters</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with rest parameter
+    function sum(...numbers: number[]): number {
+      return numbers.reduce((total, n) => total + n, 0);
+    }
+    
+    // Call with any number of arguments
+    console.log(sum(1, 2));          // 3
+    console.log(sum(1, 2, 3, 4, 5)); // 15
+    console.log(sum());              // 0</code></pre>
+                  </div>
+    
+                  <h4>Rest Parameters with Other Parameters</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function with required and rest parameters
+    function formatCommand(command: string, ...args: string[]): string {
+      return `${command} ${args.join(" ")}`;
+    }
+    
+    // Call with required parameter and variable number of rest parameters
+    console.log(formatCommand("git", "commit", "-m", "Initial commit"));
+    // "git commit -m Initial commit"
+    
+    console.log(formatCommand("ls", "-la"));
+    // "ls -la"</code></pre>
+                  </div>
+    
+                  <h4>Typed Rest Parameters</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Rest parameters with tuple types
+    function createPerson(name: string, age: number, ...addresses: [string, string, string?][]) {
+      return {
+        name,
+        age,
+        addresses: addresses.map(([street, city, state]) => ({
+          street,
+          city,
+          state: state || 'Unknown'
+        }))
+      };
+    }
+    
+    // Call with tuple rest parameters
+    const person = createPerson(
+      "John Doe",
+      30,
+      ["123 Main St", "Boston", "MA"],
+      ["456 Work Blvd", "Boston"]
+    );
+    
+    console.log(person);
+    /*
+    {
+      name: "John Doe",
+      age: 30,
+      addresses: [
+        { street: "123 Main St", city: "Boston", state: "MA" },
+        { street: "456 Work Blvd", city: "Boston", state: "Unknown" }
+      ]
+    }
+    */</code></pre>
+                  </div>
+    
+                  <h4>Function Types with Rest Parameters</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function type with rest parameter
+    type Logger = (message: string, ...details: any[]) => void;
+    
+    // Implementation of the function type
+    const consoleLogger: Logger = (message, ...details) => {
+      console.log(`[LOG] ${message}`);
+      if (details.length > 0) {
+        console.log("Details:", details);
+      }
+    };
+    
+    // Usage
+    consoleLogger("User logged in");
+    consoleLogger("API Error", { code: 500, endpoint: "/api/data" });</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-info">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-info-circle"></i> </span
+                        ><!--//icon-holder-->
+                        Rest Parameter Rules
+                      </h4>
+                      <p>
+                        Remember these rules when using rest parameters:
+                        <ul>
+                          <li>A function can have only one rest parameter</li>
+                          <li>The rest parameter must be the last parameter in the function definition</li>
+                          <li>The arguments you pass for the rest parameter are stored in an array</li>
+                        </ul>
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+    
+                <section class="docs-section" id="item-4-5">
+                  <h2 class="section-heading">Function Overloads</h2>
+                  <p>
+                    Function overloads allow you to define multiple function types for the same function, providing different parameter types and return types.
+                  </p>
+    
+                  <h4>Basic Function Overloads</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Function overload signatures
+    function convertValue(value: string): number;
+    function convertValue(value: number): string;
+    function convertValue(value: boolean): string;
+    
+    // Implementation signature (must be compatible with all overloads)
+    function convertValue(value: string | number | boolean): string | number {
+      if (typeof value === "string") {
+        return parseFloat(value) || 0;
+      } else if (typeof value === "number") {
+        return value.toString();
+      } else {
+        return value ? "true" : "false";
+      }
+    }
+    
+    // Using the overloaded function
+    const numberResult: number = convertValue("42");      // Returns number 42
+    const stringResult: string = convertValue(42);        // Returns string "42"
+    const boolResult: string = convertValue(true);        // Returns string "true"</code></pre>
+                  </div>
+    
+                  <h4>Overloads with Different Parameter Counts</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Overloads with different numbers of parameters
+    function createDate(timestamp: number): Date;
+    function createDate(year: number, month: number, day: number): Date;
+    function createDate(yearOrTimestamp: number, month?: number, day?: number): Date {
+      if (month !== undefined && day !== undefined) {
+        return new Date(yearOrTimestamp, month - 1, day);
+      } else {
+        return new Date(yearOrTimestamp);
+      }
+    }
+    
+    // Usage
+    const dateFromTimestamp = createDate(1678900000000);
+    const dateFromComponents = createDate(2023, 3, 15); // March 15, 2023</code></pre>
+                  </div>
+    
+                  <h4>Method Overloads in Classes</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Class with overloaded methods
+    class Calculator {
+      // Method overloads
+      add(a: number, b: number): number;
+      add(a: string, b: string): string;
+      
+      // Implementation
+      add(a: number | string, b: number | string): number | string {
+        if (typeof a === "number" && typeof b === "number") {
+          return a + b;
+        } else if (typeof a === "string" && typeof b === "string") {
+          return a.concat(b);
+        }
+        throw new Error("Parameters must be both numbers or both strings");
+      }
+      
+      // Another overloaded method
+      format(value: number): string;
+      format(value: number, currency: string): string;
+      format(value: number, currency?: string): string {
+        if (currency) {
+          return `${currency}${value.toFixed(2)}`;
+        }
+        return value.toFixed(2);
+      }
+    }
+    
+    // Using the class
+    const calc = new Calculator();
+    console.log(calc.add(5, 10));             // 15
+    console.log(calc.add("Hello, ", "World")); // "Hello, World"
+    console.log(calc.format(29.99));          // "29.99"
+    console.log(calc.format(29.99, "$"));     // "$29.99"</code></pre>
+                  </div>
+    
+                  <h4>Generic Function Overloads</h4>
+                  <div class="interactive-code">
+                  <pre><code class="typescript">// Generic function overloads
+    function getProperty<T, K extends keyof T>(obj: T, key: K): T[K];
+    function getProperty<T>(obj: T, key: string): any;
+    
+    // Implementation
+    function getProperty<T>(obj: T, key: any): any {
+      return (obj as any)[key];
+    }
+    
+    // Usage with typed object
+    interface User {
+      id: number;
+      name: string;
+      age: number;
+    }
+    
+    const user: User = { id: 1, name: "John", age: 30 };
+    
+    // With the first overload, TypeScript knows the return type
+    const name: string = getProperty(user, "name");
+    const age: number = getProperty(user, "age");
+    
+    // With the second overload, TypeScript doesn't know the return type
+    const something = getProperty(user, "nonExistentProp"); // Type is 'any'</code></pre>
+                  </div>
+    
+                  <div class="callout-block callout-block-warning">
+                    <div class="content">
+                      <h4 class="callout-title">
+                        <span class="callout-icon-holder me-1">
+                          <i class="fas fa-exclamation-triangle"></i> </span
+                        ><!--//icon-holder-->
+                        Implementation Compatibility
+                      </h4>
+                      <p>
+                        When using function overloads, remember:
+                        <ul>
+                          <li>The implementation signature is not visible to callers</li>
+                          <li>The implementation signature must be compatible with all overload signatures</li>
+                          <li>The implementation typically uses union types to handle all overload cases</li>
+                          <li>TypeScript will check each call against the overload signatures in order</li>
+                        </ul>
+                      </p>
+                    </div>
+                    <!--//content-->
+                  </div>
+                  <!--//callout-block-->
+                </section>
+              </article>
+    
+              <footer class="footer">
+                <div class="container text-center py-5">
+                  <ul class="social-list list-unstyled pb-4 mb-0">
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.facebook.com/AmpersandAcademy"
+                        target="_blank"
+                        ><i class="fab fa-facebook-f fa-fw"></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3a5267c7e2f583e1:0x2571d69e5709aacd?source=g.page.default"
+                        target="_blank"
+                        ><i class="fab fa-google fa-fw"></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.linkedin.com/company/ampersandacademy/"
+                        target="_blank"
+                        ><i class="fab fa-linkedin fa-fw"></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.instagram.com/ampersandacad/"
+                        target="_blank"
+                        ><i class="fab fa-instagram fa-fw"></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a
+                        href="https://whatsapp.com/channel/0029Va9uvHh4Ui2ZTI70bH2w"
+                        target="_blank"
+                        ><i class="fab fa-whatsapp fa-fw"></i
+                      ></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="https://t.me/ampersandacad" target="_blank"
+                        ><i class="fab fa-telegram fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                  <small class="copyright"
+                    ><a href="https://ampersandacademy.com" target="_blank"
+                      >Ampersand Academy</a
+                    >
+                    | All rights reserved</small
+                  >
+                </div>
+              </footer>
+            </div>
+            <!--//container-->
+          </div>
+          <!--//docs-content-->
+        </div>
+        <!--//docs-wrapper-->
+        <!-- Javascript -->
+        <script src="assets/plugins/popper.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    
+        <!-- Page Specific JS -->
+        <script src="assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="assets/js/highlight-custom.js"></script>
+        <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+        <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+        <script src="assets/js/docs.js"></script>
+      </body>
+    </html>

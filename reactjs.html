@@ -400,7 +400,9 @@
               <a class="nav-link scrollto" href="#item-13-1">React.memo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link scrollto" href="#item-13-2">useMemo & useCallback</a>
+              <a class="nav-link scrollto" href="#item-13-2"
+                >useMemo & useCallback</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link scrollto" href="#item-13-3">Code Splitting</a>
@@ -416,10 +418,14 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link scrollto" href="#item-14-1">React Testing Library</a>
+              <a class="nav-link scrollto" href="#item-14-1"
+                >React Testing Library</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link scrollto" href="#item-14-2">Component Testing</a>
+              <a class="nav-link scrollto" href="#item-14-2"
+                >Component Testing</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link scrollto" href="#item-14-3">Mocking</a>
@@ -435,16 +441,20 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link scrollto" href="#item-15-1">Component Design</a>
+              <a class="nav-link scrollto" href="#item-15-1"
+                >Component Design</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link scrollto" href="#item-15-2">Code Organization</a>
+              <a class="nav-link scrollto" href="#item-15-2"
+                >Code Organization</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link scrollto" href="#item-15-3">Error Boundaries</a>
+              <a class="nav-link scrollto" href="#item-15-3"
+                >Error Boundaries</a
+              >
             </li>
-
-
           </ul>
         </nav>
         <!--//docs-nav-->
@@ -6068,7 +6078,10 @@ function TailwindCard({
               <h1 class="docs-heading">Performance</h1>
               <section class="docs-intro">
                 <p>
-                  React provides several tools and techniques to optimize your application's performance. Understanding when and how to use these optimizations is crucial for building fast, responsive applications.
+                  React provides several tools and techniques to optimize your
+                  application's performance. Understanding when and how to use
+                  these optimizations is crucial for building fast, responsive
+                  applications.
                 </p>
               </section>
             </header>
@@ -6076,7 +6089,9 @@ function TailwindCard({
             <section class="docs-section" id="item-13-1">
               <h2 class="section-heading">React.memo</h2>
               <p>
-                React.memo is a higher-order component that memoizes the result of a component. It only re-renders if its props have changed, which can prevent unnecessary re-renders.
+                React.memo is a higher-order component that memoizes the result
+                of a component. It only re-renders if its props have changed,
+                which can prevent unnecessary re-renders.
               </p>
 
               <h4>Basic React.memo Usage</h4>
@@ -6224,7 +6239,8 @@ const TodoItem = memo(({
             <section class="docs-section" id="item-13-2">
               <h2 class="section-heading">useMemo & useCallback</h2>
               <p>
-                useMemo and useCallback are hooks that help optimize performance by memoizing expensive calculations and function references.
+                useMemo and useCallback are hooks that help optimize performance
+                by memoizing expensive calculations and function references.
               </p>
 
               <h4>useMemo for Expensive Calculations</h4>
@@ -6463,7 +6479,9 @@ const TodoList = memo(({
             <section class="docs-section" id="item-13-3">
               <h2 class="section-heading">Code Splitting</h2>
               <p>
-                Code splitting allows you to split your bundle into smaller chunks that can be loaded on demand, reducing the initial bundle size and improving load times.
+                Code splitting allows you to split your bundle into smaller
+                chunks that can be loaded on demand, reducing the initial bundle
+                size and improving load times.
               </p>
 
               <h4>React.lazy and Suspense</h4>
@@ -6690,20 +6708,31 @@ function AppWithRoutes() {
                     Performance Optimization Guidelines
                   </h4>
                   <ul class="mb-0">
-                    <li><strong>Measure first:</strong> Use React DevTools Profiler to identify actual performance bottlenecks</li>
-                    <li><strong>Don't optimize prematurely:</strong> Only optimize when you have a proven performance problem</li>
-                    <li><strong>Consider bundle size:</strong> Code splitting can reduce initial load time but may increase complexity</li>
-                    <li><strong>Test thoroughly:</strong> Performance optimizations can introduce bugs if not properly tested</li>
-                    <li><strong>Monitor in production:</strong> Real-world performance may differ from development</li>
+                    <li>
+                      <strong>Measure first:</strong> Use React DevTools
+                      Profiler to identify actual performance bottlenecks
+                    </li>
+                    <li>
+                      <strong>Don't optimize prematurely:</strong> Only optimize
+                      when you have a proven performance problem
+                    </li>
+                    <li>
+                      <strong>Consider bundle size:</strong> Code splitting can
+                      reduce initial load time but may increase complexity
+                    </li>
+                    <li>
+                      <strong>Test thoroughly:</strong> Performance
+                      optimizations can introduce bugs if not properly tested
+                    </li>
+                    <li>
+                      <strong>Monitor in production:</strong> Real-world
+                      performance may differ from development
+                    </li>
                   </ul>
                 </div>
               </div>
             </section>
           </article>
-
-
-
-          
 
           <!-- Testing Section -->
           <article class="docs-article" id="section-14">
@@ -6711,7 +6740,10 @@ function AppWithRoutes() {
               <h1 class="docs-heading">Testing</h1>
               <section class="docs-intro">
                 <p>
-                  Testing React components ensures your application works correctly and prevents regressions. React Testing Library provides utilities for testing components in a way that resembles how users interact with your app.
+                  Testing React components ensures your application works
+                  correctly and prevents regressions. React Testing Library
+                  provides utilities for testing components in a way that
+                  resembles how users interact with your app.
                 </p>
               </section>
             </header>
@@ -6719,7 +6751,9 @@ function AppWithRoutes() {
             <section class="docs-section" id="item-14-1">
               <h2 class="section-heading">React Testing Library</h2>
               <p>
-                React Testing Library is the recommended way to test React components. It encourages testing user interactions rather than implementation details.
+                React Testing Library is the recommended way to test React
+                components. It encourages testing user interactions rather than
+                implementation details.
               </p>
 
               <h4>Basic Component Testing</h4>
@@ -6931,7 +6965,9 @@ describe('LoginForm', () =&gt; {
             <section class="docs-section" id="item-14-2">
               <h2 class="section-heading">Component Testing</h2>
               <p>
-                Testing components involves verifying their rendering, interactions, and integration with other components. Focus on testing behavior rather than implementation details.
+                Testing components involves verifying their rendering,
+                interactions, and integration with other components. Focus on
+                testing behavior rather than implementation details.
               </p>
 
               <h4>Testing Component Integration</h4>
@@ -7204,7 +7240,9 @@ describe('useCounter Hook', () =&gt; {
             <section class="docs-section" id="item-14-3">
               <h2 class="section-heading">Mocking</h2>
               <p>
-                Mocking allows you to isolate components for testing by replacing dependencies with controlled implementations. This helps create predictable test conditions.
+                Mocking allows you to isolate components for testing by
+                replacing dependencies with controlled implementations. This
+                helps create predictable test conditions.
               </p>
 
               <h4>Mocking API Calls</h4>
@@ -7515,19 +7553,35 @@ describe('App with Function Mock', () =&gt; {
                     Testing Best Practices
                   </h4>
                   <ul class="mb-0">
-                    <li><strong>Test behavior, not implementation:</strong> Focus on what users can see and do</li>
-                    <li><strong>Use accessible queries:</strong> Prefer getByRole, getByLabelText over getByTestId</li>
-                    <li><strong>Test user interactions:</strong> Use userEvent instead of fireEvent for more realistic tests</li>
-                    <li><strong>Mock external dependencies:</strong> Isolate components by mocking APIs and third-party libraries</li>
-                    <li><strong>Test error states:</strong> Don't forget to test loading, error, and edge cases</li>
-                    <li><strong>Keep tests simple:</strong> Each test should focus on one specific behavior</li>
+                    <li>
+                      <strong>Test behavior, not implementation:</strong> Focus
+                      on what users can see and do
+                    </li>
+                    <li>
+                      <strong>Use accessible queries:</strong> Prefer getByRole,
+                      getByLabelText over getByTestId
+                    </li>
+                    <li>
+                      <strong>Test user interactions:</strong> Use userEvent
+                      instead of fireEvent for more realistic tests
+                    </li>
+                    <li>
+                      <strong>Mock external dependencies:</strong> Isolate
+                      components by mocking APIs and third-party libraries
+                    </li>
+                    <li>
+                      <strong>Test error states:</strong> Don't forget to test
+                      loading, error, and edge cases
+                    </li>
+                    <li>
+                      <strong>Keep tests simple:</strong> Each test should focus
+                      on one specific behavior
+                    </li>
                   </ul>
                 </div>
               </div>
             </section>
           </article>
-
-  
 
           <!-- Best Practices Section -->
           <article class="docs-article" id="section-15">
@@ -7535,7 +7589,9 @@ describe('App with Function Mock', () =&gt; {
               <h1 class="docs-heading">Best Practices</h1>
               <section class="docs-intro">
                 <p>
-                  Following React best practices ensures your applications are maintainable, performant, and scalable. These guidelines help you write clean, reliable React code.
+                  Following React best practices ensures your applications are
+                  maintainable, performant, and scalable. These guidelines help
+                  you write clean, reliable React code.
                 </p>
               </section>
             </header>
@@ -7543,7 +7599,9 @@ describe('App with Function Mock', () =&gt; {
             <section class="docs-section" id="item-15-1">
               <h2 class="section-heading">Component Design</h2>
               <p>
-                Well-designed components are the foundation of maintainable React applications. They should be focused, reusable, and easy to understand.
+                Well-designed components are the foundation of maintainable
+                React applications. They should be focused, reusable, and easy
+                to understand.
               </p>
 
               <h4>Single Responsibility Principle</h4>
@@ -7765,7 +7823,9 @@ function UserCard() {
             <section class="docs-section" id="item-15-2">
               <h2 class="section-heading">Code Organization</h2>
               <p>
-                Proper code organization makes your React applications easier to navigate, maintain, and scale. Follow consistent patterns for file structure and naming.
+                Proper code organization makes your React applications easier to
+                navigate, maintain, and scale. Follow consistent patterns for
+                file structure and naming.
               </p>
 
               <h4>File and Folder Structure</h4>
@@ -7821,6 +7881,402 @@ const TodoItem = memo(({
     &lt;/div&gt;
   );
 });</code></pre>
+            </section>
+
+            <section class="docs-section" id="item-15-3">
+              <h2 class="section-heading">Error Boundaries</h2>
+              <p>
+                Error boundaries are React components that catch JavaScript
+                errors anywhere in their child component tree. While error
+                boundaries must be class components, you can create reusable
+                error boundary components and use modern patterns with
+                functional components for error handling.
+              </p>
+
+              <h4>Simple Reusable Error Boundary</h4>
+              <pre><code class="language-tsx">import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+// Minimal error boundary class component (reusable)
+class ErrorBoundary extends Component&lt;ErrorBoundaryProps, ErrorBoundaryState&gt; {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.props.onError?.(error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        &lt;div className="error-fallback"&gt;
+          &lt;h2&gt;Something went wrong&lt;/h2&gt;
+          &lt;button onClick={() =&gt; this.setState({ hasError: false })}&gt;
+            Try again
+          &lt;/button&gt;
+        &lt;/div&gt;
+      );
+    }
+    return this.props.children;
+  }
+}</code></pre>
+
+              <h4>Functional Component Error Handling Patterns</h4>
+              <pre><code class="language-tsx">import { useState, useEffect, ReactNode } from 'react';
+
+// Custom hook for error handling in functional components
+function useErrorHandler() {
+  const [error, setError] = useState&lt;Error | null&gt;(null);
+
+  const throwError = (error: Error) =&gt; {
+    setError(error);
+    throw error; // This will be caught by the nearest error boundary
+  };
+
+  const clearError = () =&gt; setError(null);
+
+  return { error, throwError, clearError };
+}
+
+// Higher-order component for error handling
+function withErrorBoundary&lt;P extends object&gt;(
+  WrappedComponent: React.ComponentType&lt;P&gt;,
+  fallbackComponent?: React.ComponentType&lt;{ error?: Error; retry?: () =&gt; void }&gt;
+) {
+  return function WithErrorBoundaryComponent(props: P) {
+    return (
+      &lt;ErrorBoundary
+        fallback={
+          fallbackComponent ? (
+            React.createElement(fallbackComponent, {
+              error: undefined,
+              retry: () =&gt; window.location.reload()
+            })
+          ) : undefined
+        }
+      &gt;
+        &lt;WrappedComponent {...props} /&gt;
+      &lt;/ErrorBoundary&gt;
+    );
+  };
+}
+
+// Example functional component with error handling
+function UserProfile({ userId }: { userId: string }) {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const { throwError } = useErrorHandler();
+
+  useEffect(() =&gt; {
+    fetchUser(userId)
+      .then(setUser)
+      .catch(throwError) // This will trigger the error boundary
+      .finally(() =&gt; setLoading(false));
+  }, [userId, throwError]);
+
+  if (loading) return &lt;div&gt;Loading...&lt;/div&gt;;
+  if (!user) return &lt;div&gt;No user found&lt;/div&gt;;
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;{user.name}&lt;/h1&gt;
+      &lt;p&gt;{user.email}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+// Usage with HOC
+const UserProfileWithErrorBoundary = withErrorBoundary(UserProfile);</code></pre>
+
+              <h4>React-Error-Boundary Library (Recommended)</h4>
+              <pre><code class="language-tsx">// npm install react-error-boundary
+import { ErrorBoundary, withErrorBoundary } from 'react-error-boundary';
+
+// Error fallback component
+function ErrorFallback({ 
+  error, 
+  resetErrorBoundary 
+}: { 
+  error: Error; 
+  resetErrorBoundary: () =&gt; void; 
+}) {
+  return (
+    &lt;div role="alert" className="error-boundary"&gt;
+      &lt;h2&gt;Something went wrong:&lt;/h2&gt;
+      &lt;pre&gt;{error.message}&lt;/pre&gt;
+      &lt;button onClick={resetErrorBoundary}&gt;Try again&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+// Using ErrorBoundary component
+function App() {
+  return (
+    &lt;ErrorBoundary
+      FallbackComponent={ErrorFallback}
+      onError={(error, errorInfo) =&gt; {
+        console.log('Error caught:', error, errorInfo);
+        // Send to error reporting service
+      }}
+      onReset={() =&gt; {
+        // Clear any state if needed
+        window.location.reload();
+      }}
+    &gt;
+      &lt;Header /&gt;
+      &lt;MainContent /&gt;
+      &lt;Footer /&gt;
+    &lt;/ErrorBoundary&gt;
+  );
+}
+
+// Using withErrorBoundary HOC
+const SafeComponent = withErrorBoundary(MyComponent, {
+  fallback: ErrorFallback,
+  onError: (error, errorInfo) =&gt; {
+    console.log('Error in SafeComponent:', error, errorInfo);
+  }
+});
+
+// Using useErrorHandler hook from react-error-boundary
+import { useErrorHandler } from 'react-error-boundary';
+
+function DataFetcher() {
+  const [data, setData] = useState(null);
+  const handleError = useErrorHandler();
+
+  useEffect(() =&gt; {
+    fetchData()
+      .then(setData)
+      .catch(handleError); // Automatically triggers error boundary
+  }, [handleError]);
+
+  return &lt;div&gt;{data ? JSON.stringify(data) : 'Loading...'}&lt;/div&gt;;
+}</code></pre>
+
+              <h4>Async Error Handling in Functional Components</h4>
+              <pre><code class="language-tsx">// Custom hook for async operations with error boundaries
+function useAsyncError() {
+  const [, setError] = useState();
+  return (error: Error) =&gt; {
+    setError(() =&gt; {
+      throw error;
+    });
+  };
+}
+
+// Hook for safe async operations
+function useSafeAsync&lt;T&gt;() {
+  const [state, setState] = useState&lt;{
+    data: T | null;
+    loading: boolean;
+    error: Error | null;
+  }&gt;({
+    data: null,
+    loading: false,
+    error: null
+  });
+
+  const throwError = useAsyncError();
+
+  const execute = async (asyncFunction: () =&gt; Promise&lt;T&gt;) =&gt; {
+    try {
+      setState(prev =&gt; ({ ...prev, loading: true, error: null }));
+      const data = await asyncFunction();
+      setState({ data, loading: false, error: null });
+      return data;
+    } catch (error) {
+      const errorObj = error instanceof Error ? error : new Error(String(error));
+      setState({ data: null, loading: false, error: errorObj });
+      throwError(errorObj); // This will trigger error boundary
+    }
+  };
+
+  return { ...state, execute };
+}
+
+// Usage example
+function ProductList() {
+  const { data: products, loading, error, execute } = useSafeAsync&lt;Product[]&gt;();
+
+  useEffect(() =&gt; {
+    execute(() =&gt; fetchProducts());
+  }, [execute]);
+
+  if (loading) return &lt;div&gt;Loading products...&lt;/div&gt;;
+  if (error) return &lt;div&gt;Error: {error.message}&lt;/div&gt;;
+
+  return (
+    &lt;ul&gt;
+      {products?.map(product =&gt; (
+        &lt;li key={product.id}&gt;{product.name}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}</code></pre>
+
+              <h4>Error Boundary Best Practices</h4>
+              <pre><code class="language-tsx">// Granular error boundaries for better UX
+function AppWithGranularErrorBoundaries() {
+  return (
+    &lt;div className="app"&gt;
+      {/* Header with its own error boundary */}
+      &lt;ErrorBoundary fallback={&lt;div&gt;Header unavailable&lt;/div&gt;}&gt;
+        &lt;Header /&gt;
+      &lt;/ErrorBoundary&gt;
+
+      &lt;main&gt;
+        {/* Sidebar with its own error boundary */}
+        &lt;ErrorBoundary fallback={&lt;div&gt;Sidebar unavailable&lt;/div&gt;}&gt;
+          &lt;Sidebar /&gt;
+        &lt;/ErrorBoundary&gt;
+
+        {/* Main content with its own error boundary */}
+        &lt;ErrorBoundary 
+          fallback={
+            &lt;div&gt;
+              &lt;h2&gt;Main content failed to load&lt;/h2&gt;
+              &lt;button onClick={() =&gt; window.location.reload()}&gt;
+                Refresh page
+              &lt;/button&gt;
+            &lt;/div&gt;
+          }
+        &gt;
+          &lt;MainContent /&gt;
+        &lt;/ErrorBoundary&gt;
+      &lt;/main&gt;
+
+      {/* Footer with its own error boundary */}
+      &lt;ErrorBoundary fallback={&lt;div&gt;Footer unavailable&lt;/div&gt;}&gt;
+        &lt;Footer /&gt;
+      &lt;/ErrorBoundary&gt;
+    &lt;/div&gt;
+  );
+}
+
+// Error reporting utility
+function reportError(error: Error, errorInfo?: any) {
+  // Send to error tracking service (Sentry, LogRocket, etc.)
+  console.error('Error reported:', { error, errorInfo });
+  
+  // Example with a hypothetical error service
+  // errorTrackingService.captureException(error, {
+  //   extra: errorInfo,
+  //   tags: {
+  //     component: 'ErrorBoundary'
+  //   }
+  // });
+}
+
+// Production-ready error boundary setup
+function ProductionApp() {
+  return (
+    &lt;ErrorBoundary
+      FallbackComponent={({ error, resetErrorBoundary }) =&gt; (
+        &lt;div className="error-page"&gt;
+          &lt;h1&gt;Oops! Something went wrong&lt;/h1&gt;
+          &lt;p&gt;We apologize for the inconvenience. Please try again.&lt;/p&gt;
+          &lt;details style={{ whiteSpace: 'pre-wrap', marginTop: '1rem' }}&gt;
+            &lt;summary&gt;Error details (for developers)&lt;/summary&gt;
+            {error.stack}
+          &lt;/details&gt;
+          &lt;div style={{ marginTop: '1rem' }}&gt;
+            &lt;button onClick={resetErrorBoundary}&gt;
+              Try again
+            &lt;/button&gt;
+            &lt;button onClick={() =&gt; window.location.href = '/'}&gt;
+              Go to homepage
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      )}
+      onError={reportError}
+    &gt;
+      &lt;Router&gt;
+        &lt;Routes&gt;
+          &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+          &lt;Route path="/products" element={&lt;Products /&gt;} /&gt;
+          &lt;Route path="/profile" element={&lt;Profile /&gt;} /&gt;
+        &lt;/Routes&gt;
+      &lt;/Router&gt;
+    &lt;/ErrorBoundary&gt;
+  );
+}</code></pre>
+
+              <div class="callout-block callout-block-info">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-info-circle"></i>
+                    </span>
+                    Error Boundary Limitations
+                  </h4>
+                  <p>
+                    <strong>Error boundaries do NOT catch errors for:</strong>
+                  </p>
+                  <ul class="mb-0">
+                    <li>Event handlers (use try-catch instead)</li>
+                    <li>
+                      Asynchronous code (e.g., setTimeout or
+                      requestAnimationFrame callbacks)
+                    </li>
+                    <li>Errors thrown during server-side rendering</li>
+                    <li>Errors thrown in the error boundary itself</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="callout-block callout-block-success">
+                <div class="content">
+                  <h4 class="callout-title">
+                    <span class="callout-icon-holder me-1">
+                      <i class="fas fa-lightbulb"></i>
+                    </span>
+                    Best Practices
+                  </h4>
+                  <ul class="mb-0">
+                    <li>
+                      <strong>Use multiple error boundaries:</strong> Don't wrap
+                      your entire app in one boundary
+                    </li>
+                    <li>
+                      <strong>Provide meaningful fallbacks:</strong> Show
+                      helpful error messages, not just "Something went wrong"
+                    </li>
+                    <li>
+                      <strong>Log errors:</strong> Always log errors to
+                      monitoring services
+                    </li>
+                    <li>
+                      <strong>Test error scenarios:</strong> Deliberately throw
+                      errors in development to test boundaries
+                    </li>
+                    <li>
+                      <strong>Consider react-error-boundary:</strong> Use the
+                      library for more features and better DX
+                    </li>
+                    <li>
+                      <strong>Handle async errors:</strong> Use custom hooks to
+                      bridge async errors to error boundaries
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </section>
           </article>
 

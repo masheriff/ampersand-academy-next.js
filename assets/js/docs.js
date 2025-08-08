@@ -151,12 +151,53 @@ function setupInteractiveExamples() {
 	  });
 	});
   }
-  
-  // Call this function after the document is loaded
-  document.addEventListener('DOMContentLoaded', function() {
-	setupInteractiveExamples();
-  });
 
+  document.addEventListener('DOMContentLoaded', function() {
+  // Call this function after the document is loaded
+
+	setupInteractiveExamples();
+
+  // Get current page filename
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  // Map of pages to nav IDs
+  const pageNavMap = {
+    'index.html': 'nav-home',
+    'introduction.html': 'nav-introduction',
+    'html5.html': 'nav-html5',
+    'css3.html': 'nav-css3',
+    'tailwindcss.html': 'nav-tailwind',
+    'javascript.html': 'nav-javascript',
+    'typescript.html': 'nav-typescript',
+    'reactjs.html': 'nav-reactjs',
+    'nextjs.html': 'nav-nextjs'
+  };
+  
+  // Remove active class from all nav links
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.classList.remove('active');
+  });
+  
+  // Add active class to current page nav link
+  const activeNavId = pageNavMap[currentPage];
+  if (activeNavId) {
+    const activeNavLink = document.getElementById(activeNavId);
+    if (activeNavLink) {
+      activeNavLink.classList.add('active');
+    }
+  }
+  
+  // Close mobile menu when clicking on a nav link
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileNavMenu');
+      if (mobileMenu.classList.contains('show')) {
+        const bsCollapse = new bootstrap.Collapse(mobileMenu);
+        bsCollapse.hide();
+      }
+    });
+  });
+});
 
 
 
